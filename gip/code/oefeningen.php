@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet"
           type="text/css"
-          href="../../css/css.css" />
+          href="../css/css.css" />
 </head>
 <body>
 <?php
@@ -49,10 +49,7 @@ $oefid = $oef['oefeningid'];
 
         <table border="1">
             <tr>
-                <td>
-
-                    <img src="../../img/instructie.png" height="50" width="50" />
-                </td>
+              
                 <td id="instructie2">
 
                <?php

@@ -16,7 +16,7 @@
    echo(" <a href='" . $this->urlGoto. ".php' id='midden2' class='flexListOfAdminFunctionsItems'>");
    echo(" <h2> ". $this->name ."</h2> "); 
  
-     echo(" <img  src='../../img/" . $this->imgPath ."' height='". $this->imgHoog."' width='". $this->imgBreed."' />");
+     echo(" <img  src='../img/" . $this->imgPath ."' height='". $this->imgHoog."' width='". $this->imgBreed."' />");
   echo ("</a>");
    }
 
