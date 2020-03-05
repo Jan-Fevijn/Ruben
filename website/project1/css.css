@@ -1,0 +1,211 @@
+#login
+{
+  width: 60%;
+  height:200px;
+  margin: 0 auto;
+  
+}
+
+.midden {
+    text-align: center;
+}
+
+
+#loginSubmit{
+    font-size:300%;
+}
+
+
+* {
+      background-color: lightblue;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+#banner {
+  /*margin-top: 20px;*/
+  /*background-color: aquamarine;*/
+  height: 50%;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+#naamInBanner {
+  position: absolute;
+  margin-top: -3%;
+  margin-left: 5%;
+  background-color:none ;
+  color: red;
+}
+#logoutInBanner {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 70%;
+    background-color: none;
+    color: red;
+}
+#statusInBanner {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 90%;
+    background-color: none;
+    color: red;
+}
+#homeInBanner {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 80%;
+    background-color: none;
+    color: red;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+
+.mameMenuBut {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 30px 100px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    margin-top : 5%;
+}
+
+    .mameMenuBut:hover {
+        background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+        background-color: #f6f6f6;
+    }
+
+    .mameMenuBut:active {
+        position: relative;
+        top: 1px;
+    }
+
+.adminAdd {
+    position: absolute;
+    float: right;
+    margin-left: 50%;
+    margin-top: -80%;
+    text-align: center;
+}
+.adminChange {
+    position: absolute;
+    float: right;
+    margin-left: 50%;
+    margin-top: -50%;
+    text-align: center;
+    
+}
+.addUser {
+    position: absolute;
+    float: right;
+    margin-left: 50%;
+    margin-top: -25%;
+    text-align: center;
+}
+#inuit {
+font-size:200%;
+display: block;
+}
+#beschrijving {
+    display: block;
+    text-align: center;
+}
+#beschrijving {
+    display: block;
+    text-align:center;
+}
+#lblBeschrijving {
+    display: block;
+    text-align: center;
+}
+#lblinkuitg {
+    display: block;
+    text-align: center;
+}
+#inkuitg {
+    display: block;
+}
+#lblBedrag {
+    display: block;
+    text-align: center;
+}
+#bedrag {
+    display: block;
+}
+#lblUsername {
+    display: block;
+    text-align: center;
+}
+
+#username {
+    display: block;
+}
+#code {
+    display: block;
+}
+#lblcode {
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+#cbeschrijving {
+    display: block;
+    text-align: center;
+}
+
+#clblBeschrijving {
+    display: block;
+    text-align: center;
+}
+#clblinkuitg {
+    display: block;
+    text-align: center;
+}
+#cinkuitg {
+    display: block;
+}
+#clblBedrag {
+    display: block;
+    text-align: center;
+}
+#cbedrag {
+    display: block;
+}
+#clblUsername {
+    display: block;
+    text-align: center;
+}
+
+#cusername {
+    display: block;
+}
+#ccode {
+    display: block;
+}
+#clblcode {
+    display: block;
+    text-align: center;
+}
