@@ -1,0 +1,177 @@
+﻿
+
+
+
+
+body, input, button {
+    font-family: 'Source Sans Pro', sans-serif;
+    opacity: 1;
+}
+
+@mixin normalize-input {
+    display: block;
+    width: auto;
+    height: auto;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    border-radius: 0px;
+    opacity: 1;
+}
+
+.login {
+    background-color: rgba(0,0,0,0.3);
+    padding: 15px;
+    width: 80%;
+    min-height: 400px;
+    margin: 2% auto 0 auto;
+    color: white;
+}
+.heading {
+    text-align: center;
+    margin-top: 1%;
+    opacity: 1;
+}
+   
+h2,a {
+    color:white;
+    opacity:1;
+}
+
+input {
+    opacity: 1;
+    color: black;
+}
+
+
+
+
+span {
+    background: transparent;
+    min-width: 70%;
+    background-color: gray;
+    border: none;
+    
+}
+    i {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.form-control {
+    text-align: center;
+    @include normalize-input;
+    padding: 10px;
+    font-size: 2.6em;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 60px;
+    border: 3px solid blue;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+
+
+button {
+    background-color: #599bb3;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 30px 51px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+    button:hover {
+        background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+        background-color: #408c99;
+    }
+
+    button:active {
+        position: relative;
+        top: 1px;
+    }
+
+        
+
+
+
+
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1500px) {
+}
+
+@media only screen and (max-width : 1200px) {
+    .login {
+        width:7000px;
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+    .login {
+        margin-top: 2%;
+        width: 600px;
+        font-size: 1.7em;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .login {
+        margin-top: 1%;
+        width: 550px;
+        font-size: 1.7em;
+        min-height: 0;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .login {
+        margin-top: 0;
+        width: 500px;
+        font-size: 1.3em;
+        min-height: 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .login {
+    
+    margin-top: 0;
+
+margin-top: 0;
+width: 400px;
+font-size: 1em;
+min-height: 0;
+}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+    .login {
+        margin-top: 0;
+        width: 200px;
+        font-size: 0.7em;
+        min-height: 0;
+    }
+}
+
+placeholder {
+    color:black;
+}
