@@ -6,7 +6,14 @@
     <title></title>
     <link rel="stylesheet"
           type="text/css"
-          href="../css/css.css" />       
+          href="../css/css.css" />  
+      <style>
+        h2 {
+
+       
+          line-height: 1.8;
+        }
+        </style>
 </head>
 <body>
 
@@ -25,7 +32,7 @@ include("banner.php");
       $functie->write();
 
         // change instructie
-        $functie->set("change instructie / oefening", "instructie.png", "changeInstructie", 200 , 200);
+        $functie->set("change instructie / oefening", "instructie.png", "changeInstructie", 200 , 150);
         $functie->write();
         // leerlingen 
         $functie->set("leerlingen", "logoStudent.jfif", "leerlingenbeheer", 300 , 200);
