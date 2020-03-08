@@ -6,6 +6,9 @@
     h3 {
         background-color: lightgrey;
     }
+    .noSpaceBetween {
+        background-color: lightgrey;
+    }
     </style>
 </head>
 <body>
@@ -16,18 +19,6 @@ include("banner.php");
 
 // echo($_SESSION['iduser']);
 $iduser = $_SESSION['iduser'];
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -49,7 +40,12 @@ if ($result->num_rows > 0) {
         echo("<img src='" . $row['img'] . " ' height='100'>");
        
 
-       
+       ?>
+       <br>
+       <form class='noSpaceBetween'>
+        <input class='noSpaceBetween' value='inschrijven' name='inschrijven' type='submit'>
+       </form>
+       <?php
         
 
 
@@ -59,8 +55,8 @@ if ($result->num_rows > 0) {
    
     echo("</div>");
 }
-
-$sql2 = " select egg.naam,egg.img, event.idEvent, egg.idGerecht, egg.vegan ,egg.veganistisch from event inner join ( SELECT  naam,img,vegan,veganistisch,idEvent, g.idGerecht FROM kokenvoorgroepen.gerecht as g inner join kokenvoorgroepen.eventgerecht as eg on g.idgerecht = eg.idgerecht ) as egg on egg.idEvent =  event.idEvent ";
+echo("<br><br><br>");
+$sql2 = " select egg.naam,egg.img, event.idEvent, egg.idGerecht, egg.vegan ,egg.veganistisch from event inner join ( SELECT  naam,img,vegan,veganistisch,idEvent, g.idGerecht FROM kokenvoorgroepen.gerecht as g inner join kokenvoorgroepen.eventgerecht as eg on g.idgerecht = eg.idgerecht ) as egg on egg.idEvent =  event.idEvent WHERE event.idEvent = '$idEvent' ";
 $result2 = $conn->query($sql2);
 
 
@@ -83,12 +79,15 @@ if ($result2->num_rows > 0) {
            $string = "niet vegitaris / veganistisch";
        }
        echo($string);
+       echo("<div class='noSpaceBetween'>");
        echo("<br> ingrediënten : ");
-       $sql3 = "  select naam from product  inner join  ( SELECT productid FROM gerecht as g inner join produtgerecht as pg on pg.gerechtid = g.idgerecht ) as a on product.idproduct = a.productid ";
+       $gerechtid = $row2['idGerecht'];
+       $sql3 = "  select naam from product  inner join  ( SELECT productid ,gerechtid FROM gerecht as g inner join produtgerecht as pg on pg.gerechtid = g.idgerecht ) as a on product.idproduct = a.productid where a.gerechtid = '$gerechtid'; ";
        $result3 = $conn->query($sql3);
        while($row3 = $result3->fetch_assoc()) {
-           echo($row3['naam'] . ",");
+           echo($row3['naam'] . ", ");
        }
+       echo("</div>");
         echo("</div>");
         echo("</div>");
     }

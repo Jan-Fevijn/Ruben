@@ -1,0 +1,2 @@
+code:;omschrijving:;bedrag:;inkomst/uitgave:;  
+1;zakgeld;50;inkkomsten

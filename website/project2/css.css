@@ -28,7 +28,7 @@
   /*background-color: aquamarine;*/
   height: 50%;
   width: 100%;
-  margin-bottom: 20px;
+ 
 
 }
 #naamInBanner {
@@ -240,4 +240,7 @@ h3 {
 .info {
     font-size:50%;
     background-color: lightgrey ;
+}
+.noSpaceBetween {
+    line-height: 1;
 }
