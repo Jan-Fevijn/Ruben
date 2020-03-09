@@ -88,6 +88,13 @@ CREATE TABLE `event` (
   PRIMARY KEY (`ideenheden`),
   UNIQUE INDEX `voluit_UNIQUE` (`voluit` ASC),
   UNIQUE INDEX `afkorting_UNIQUE` (`afkorting` ASC));
+ALTER TABLE `kokenvoorgroepen`.`event` 
+CHANGE COLUMN `idevent` `idevent` INT(11) NOT NULL AUTO_INCREMENT ;
+ALTER TABLE `kokenvoorgroepen`.`event` 
+CHANGE COLUMN `datumStart` `datumStart` DATETIME NULL DEFAULT NULL ,
+CHANGE COLUMN `datumEnd` `datumEnd` DATETIME NULL DEFAULT NULL ;
+ALTER TABLE `kokenvoorgroepen`.`eventgerecht` 
+CHANGE COLUMN `ideventGerecht` `ideventGerecht` INT(11) NOT NULL AUTO_INCREMENT ;
 
   -- data records 
   INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('1', 'g', 'gram');
@@ -224,8 +231,9 @@ INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `
 INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('9', '2', '8');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('56', '8', '24', '5');
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('52', 'Kaneelpoeder', '100', 'tee', '1');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('56', '8', '24', '5');
+
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('57', '8', '1', '100');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('58', '8', '52', '100');
 INSERT INTO `kokenvoorgroepen`.`user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES ('5', 'ADMIN', 'ADMIN', 'ADMIN', '0', '0', '1', 'ADMIN');
+UPDATE `kokenvoorgroepen`.`gerecht` SET `vegan` = '1', `veganistisch` = '0' WHERE (`idgerecht` = '7');
 

@@ -99,31 +99,11 @@ h2, h3, h4, h5, h6 {
         top: 1px;
     }
 
-.adminAdd {
-    position: absolute;
-    float: right;
-    margin-left: 50%;
-    margin-top: -80%;
-    text-align: center;
-}
-.adminChange {
-    position: absolute;
-    float: right;
-    margin-left: 50%;
-    margin-top: -50%;
-    text-align: center;
-    
-}
-.addUser {
-    position: absolute;
-    float: right;
-    margin-left: 50%;
-    margin-top: -25%;
-    text-align: center;
-}
+
 
 
 .flexbox{
+    margin-top:5%;
     height: 100px;
     display: flex;
    
@@ -134,6 +114,16 @@ justify-content: space-around;
 
     align-items: center;
    
+}
+
+.flexbox2 {
+    margin-top: 0%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 300%;
+    justify-content: space-around;
+    align-items: center;
 }
 h3 {
     font-size: 100%;
@@ -146,14 +136,16 @@ h3 {
     font-size: 50%;
     line-height: 150%;
     text-align: center;
-    color:black;
-   
+    color: black;
+    display: block;
 }
 .flexItamEvent {
+    display:block;
     background-color: lightgreen;
-    width: 80%;
+    width: 100%;
+    padding:2%;
     height: auto;
-    margin-bottom: 20%;
+    
     font-size: 90%;
     line-height: 150%;
     text-align: center;

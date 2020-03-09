@@ -9,6 +9,9 @@
     .noSpaceBetween {
         background-color: lightgrey;
     }
+    .blue {
+        background-color: lightgreen;
+            }
     </style>
 </head>
 <body>
@@ -32,21 +35,21 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    echo("<div class='flexbox' >");
+    echo("<div class='flexbox2' >");
    $row = $result->fetch_assoc();
     $idevent =    $row['idevent'];
     echo("<div class='flexItamEvent' ");
         echo("<h3>" . $row['naam']. "</h3>");
         echo("<img class='eventImg' src='" . $row['img'] . " ' height='100'>");
        
-
+    
        ?>
        <br>
-       <form class='noSpaceBetween'>
-        <input class='noSpaceBetween' value='inschrijven' name='inschrijven' type='submit'>
+       <form class='blue'>
+        <input  value='inschrijven' class='blue' name='inschrijven' type='submit'>
        </form>
        <?php
-        
+        echo("</div>");
 
 
 

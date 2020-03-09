@@ -49,6 +49,9 @@ include("banner.php");
 <form class='flexItam' method='POST'>
 <a href='deleteGerecht.php'> <h3> gerecht verwijderen </h3></a>
 </form>
+<form class='flexItam' method='POST'>
+<a href='adminVieuws.php'> <h3> gerecht verwijderen </h3></a>
+</form>
 </div>
 <h2> 
 </body>
