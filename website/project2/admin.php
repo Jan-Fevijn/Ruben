@@ -7,6 +7,11 @@
     .flexItam {
         background-color: unset;
     }
+    a {
+        color:black;
+        text-decoration: none;
+        font-size: 100%;
+    }
     </style>
 </head>
 <body>
@@ -19,30 +24,30 @@ include("banner.php");
 <div class='flexbox'>
 
 <form class='flexItam' method='POST'>
-<h3> event toevoegen </h3>
+<a href='addEvent.php'> <h3> event toevoegen </h3></a>
 
 </form>
 
 <form class='flexItam' method='POST'>
-<h3> event wijzigen </h3>
+<a href='changeEvent.php'> <h3> event wijzigen </h3></a>
 </form>
 
 <form class='flexItam' method='POST'>
-<h3> event verwijderen </h3>
+<a href='deleteEvent.php'> <h3> event verwijderen </h3></a>
 </form>
 
 
 
 <form class='flexItam' method='POST'>
-<h3> gerecht toevoegen </h3>
+<a href='addGerecht.php'> <h3> gerecht toevoegen </h3></a>
 </form>
 
 <form class='flexItam' method='POST'>
-<h3> gerecht wijzigen </h3>
+<a href='changeGerecht.php'> <h3> gerecht wijzigen </h3></a>
 </form>
 
 <form class='flexItam' method='POST'>
-<h3> gerecht verwijderen </h3>
+<a href='deleteGerecht.php'> <h3> gerecht verwijderen </h3></a>
 </form>
 </div>
 <h2> 
