@@ -35,9 +35,9 @@ if ($result->num_rows > 0) {
     echo("<div class='flexbox' >");
    $row = $result->fetch_assoc();
     $idevent =    $row['idevent'];
-    echo("<div class='flexItam' ");
+    echo("<div class='flexItamEvent' ");
         echo("<h3>" . $row['naam']. "</h3>");
-        echo("<img src='" . $row['img'] . " ' height='100'>");
+        echo("<img class='eventImg' src='" . $row['img'] . " ' height='100'>");
        
 
        ?>

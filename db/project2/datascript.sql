@@ -80,8 +80,25 @@ CREATE TABLE `event` (
   `naam` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idwinkel`));
   
+   DROP TABLE IF EXISTS `eenheden`;
+  CREATE TABLE `kokenvoorgroepen`.`eenheden` (
+  `ideenheden` INT NOT NULL AUTO_INCREMENT,
+  `afkorting` VARCHAR(3) NULL,
+  `voluit` VARCHAR(45) NULL,
+  PRIMARY KEY (`ideenheden`),
+  UNIQUE INDEX `voluit_UNIQUE` (`voluit` ASC),
+  UNIQUE INDEX `afkorting_UNIQUE` (`afkorting` ASC));
+
   -- data records 
-  
+  INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('1', 'g', 'gram');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('2', 'sne', 'sneetje');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('3', 'stu', 'stuks');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('4', 'tak', 'takje');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('5', 'sch', 'schel');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('6', 'dl', 'deciliter');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('7', 'kg', 'kilo');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('8', 'gra', 'gram.');
+
 INSERT INTO `user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES (1,'Ruben','Aspeslag','Ruben2001',0,0,0,'ruben'),(2,'Ruben','Ruben','azerty123',0,0,0,'admin33'),(3,'Ruben','Ruben','azerty123',1,0,0,'ruben2001'),(4,'Ruben','Aspeslag','azerty123',0,1,0,'999');
 INSERT INTO `produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES (1,1,1,'62.5'),(2,1,2,'1.25'),(3,1,3,'0.75'),(4,1,4,'0.25');
 INSERT INTO `product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES (1,'suiker','100','gra',1),(2,'bloem','100','gra',1),(3,'melk','1','lie',1),(4,'eieren','1','stu',1);
@@ -203,4 +220,12 @@ INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `e
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('23', 'kaneel', '100', 'the', '1');
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('24', 'appel', '100', 'stu', '1');
 UPDATE `kokenvoorgroepen`.`produtgerecht` SET `gerechtid` = '7' WHERE (`idprodutGerecht` = '54');
+INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('8', 'apelmoes', 'https://www.appelmoesmaken.eu/wp-content/uploads/2019/07/Appelmoes-maken-748x410.jpg', '0', '1');
+INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('9', '2', '8');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('56', '8', '24', '5');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('52', 'Kaneelpoeder', '100', 'tee', '1');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('56', '8', '24', '5');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('57', '8', '1', '100');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('58', '8', '52', '100');
+INSERT INTO `kokenvoorgroepen`.`user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES ('5', 'ADMIN', 'ADMIN', 'ADMIN', '0', '0', '1', 'ADMIN');
 

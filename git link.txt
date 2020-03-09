@@ -1,4 +1,4 @@
-https://githup.com/Jan-Fevijn/ruben.git
+https://github.com/Jan-Fevijn/ruben.git
 
 
 git remote 'https://github.com/Jan-Fevijn/Ruben.git'

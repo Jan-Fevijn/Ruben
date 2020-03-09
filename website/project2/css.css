@@ -121,94 +121,6 @@ h2, h3, h4, h5, h6 {
     margin-top: -25%;
     text-align: center;
 }
-#inuit {
-font-size:200%;
-display: block;
-}
-#beschrijving {
-    display: block;
-    text-align: center;
-}
-#beschrijving {
-    display: block;
-    text-align:center;
-}
-#lblBeschrijving {
-    display: block;
-    text-align: center;
-}
-#lblinkuitg {
-    display: block;
-    text-align: center;
-}
-#inkuitg {
-    display: block;
-}
-#lblBedrag {
-    display: block;
-    text-align: center;
-}
-#bedrag {
-    display: block;
-}
-#lblUsername {
-    display: block;
-    text-align: center;
-}
-
-#username {
-    display: block;
-}
-#code {
-    display: block;
-}
-#lblcode {
-    display: block;
-    text-align: center;
-}
-
-
-
-
-
-#cbeschrijving {
-    display: block;
-    text-align: center;
-}
-
-#clblBeschrijving {
-    display: block;
-    text-align: center;
-}
-#clblinkuitg {
-    display: block;
-    text-align: center;
-}
-#cinkuitg {
-    display: block;
-}
-#clblBedrag {
-    display: block;
-    text-align: center;
-}
-#cbedrag {
-    display: block;
-}
-#clblUsername {
-    display: block;
-    text-align: center;
-}
-
-#cusername {
-    display: block;
-}
-#ccode {
-    display: block;
-}
-#clblcode {
-    display: block;
-    text-align: center;
-}
 
 
 .flexbox{
@@ -237,9 +149,25 @@ h3 {
     color:black;
    
 }
+.flexItamEvent {
+    background-color: lightgreen;
+    width: 80%;
+    height: auto;
+    margin-bottom: 20%;
+    font-size: 90%;
+    line-height: 150%;
+    text-align: center;
+    color: black;
+}
+.eventImg {
+    display:block;
+    text-align:center;
+    margin-left:40%;
+    width:10%;
+}
 .info {
-    font-size:50%;
-    background-color: lightgrey ;
+    font-size: 50%;
+    background-color: lightgrey;
 }
 .noSpaceBetween {
     line-height: 1;
