@@ -236,4 +236,4 @@ INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, 
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('58', '8', '52', '100');
 INSERT INTO `kokenvoorgroepen`.`user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES ('5', 'ADMIN', 'ADMIN', 'ADMIN', '0', '0', '1', 'ADMIN');
 UPDATE `kokenvoorgroepen`.`gerecht` SET `vegan` = '1', `veganistisch` = '0' WHERE (`idgerecht` = '7');
-
+UPDATE `kokenvoorgroepen`.`gerecht` SET `naam` = 'appelmoes' WHERE (`idgerecht` = '8');

@@ -13,5 +13,11 @@
     include("banner.php");
     
     ?>
+
+    <form method='POST'>
+        <label for='naam'> naam </label>
+        <input type='text' name='naam' id='naam'>
+        <label>  </label>
+    </form>
 </body>
 </html>

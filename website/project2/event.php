@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
        
     
        ?>
-       <br>
+       
        <form class='blue'>
         <input  value='inschrijven' class='blue' name='inschrijven' type='submit'>
        </form>

@@ -26,7 +26,7 @@
 #banner {
   /*margin-top: 20px;*/
   /*background-color: aquamarine;*/
-  height: 50%;
+  height: auto;
   width: 100%;
  
 
@@ -154,7 +154,7 @@ h3 {
 .eventImg {
     display:block;
     text-align:center;
-    margin-left:40%;
+    margin-left:45%;
     width:10%;
 }
 .info {
