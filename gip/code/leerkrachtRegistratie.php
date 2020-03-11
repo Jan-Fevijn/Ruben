@@ -47,42 +47,42 @@ include("banner.php");
 				Email: 
 				</td>
 				<td>
-				<input class='input' name="email" type="email" value="" />
+				<input title='voer hier een geldig email adres in die nog niet in gebruik is.' class='input' name="email" type="email" value="" />
 				</td>
 
 				<td>
-				 <input tytle value="freeTrail:" type="radio" name="formule">eerste 3 oefeningen gratis  voor 3 leerlingen 
+				 <input title='' value="freeTrail:" type="radio" name="formule">eerste 3 oefeningen gratis  voor 3 leerlingen 
 				</td>
 				</tr>
 
 				<tr>
 				<td>voornaam:
 				</td>
-				<td><input class='input' type="text" name="voornaam" value="" />
+				<td><input  title='voer hier u voornaam in' class='input' type="text" name="voornaam" value="" />
 				</td>
 
 				<td>
-				<input class='input' value="pay:" onselect="pay()" type="radio" name="formule">betaal 6 euro per klas (max 20 leerlingen) per schooljaar 
+				<input  class='input' value="pay:" onselect="pay()" type="radio" name="formule">betaal 6 euro per klas (max 20 leerlingen) per schooljaar 
 				</td>
 				</tr>
 
 				<tr>
 				<td>familienaam:
 				</td>
-				<td><input class='input' type="text" name="famielienaam" value=""/>
+				<td><input  title='voer hier u famielinaam in' class='input' type="text" name="famielienaam" value=""/>
 				</td>
 
 				<td>
-				 <input class='input' type="radio" value="freeCode:" name="formule">voer een schoolregistratiecode in en krijg het volledige pakket gratis. Dit geldt alleen voor leerkrachten van Jan Fevijn. <br>  <input class='input' name="freeCode" type="numeric" >
+				 <input  class='input' type="radio" value="freeCode:" name="formule">voer een schoolregistratiecode in en krijg het volledige pakket gratis. Dit geldt alleen voor leerkrachten van Jan Fevijn. <br>  <input  title='voer hier de school code in indien je een leerkracht bent van JAN FEVIJN.' class='input' name="freeCode" type="numeric" >
 				</td>
 				</tr>
 
 				<tr>
 				<td>wachtwoord:
 				</td>
-				<td><input class='input' type="password" name="password1" value="" />
+				<td><input  title='voer hier u wachtwoord in, deze moet 8 tekens bevatten.' class='input' type="password" name="password1" value="" />
 				</td>
-				<td>klasnaam (voor je eerste klas) : <input class='input' type="text" name="klasNaam" value="" />
+				<td>klasnaam (voor je eerste klas) : <input  title='voer hier de klasnaam aan van de 1e klas die je wil toevoegen, je leerlingen kunnen dit zien. Als je geregistreerd bent kan je er altijd nog toevoegen (mits betaaling indien geen Jan Fevijn leerkracht.)' class='input' type="text" name="klasNaam" value="" />
 				</td>
 				</tr>
 				
@@ -90,7 +90,7 @@ include("banner.php");
            	<tr>
 				<td>herhaal uw wachtwoord:
 				</td>
-				<td><input class='input' type="password" name="password2" value="">
+				<td><input  title='voer hier u wachtwoord in, deze moet identiek gelijk zijn aan het wachtwoord die je hier boven hebt ingevoerd' class='input' type="password" name="password2" value="">
 				</td>
 				<td>
 					gelieve dit formulier in te vullen indien u nog <b> geen </b> account hebt .				</td>

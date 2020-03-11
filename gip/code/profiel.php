@@ -51,10 +51,10 @@ include("banner.php");
             
             <form method='POST' >
           
-          <input  title="gelieve hier nieuw u wachtwoord in te vullen, indien je die wil veranderen, deze moet minstens 2 tekens bevatten." value="44" class='input'  size="30" name='password1' type='password' value=''> <br><br>
+          <input  title="gelieve hier nieuw u wachtwoord in te vullen, indien je die wil veranderen, deze moet minstens 8 tekens bevatten." value="44" class='input'  size="30" name='password1' type='password' value=''> <br><br>
    
           
-            <input title="gelieve hier nieuw u wachtwoord opnieuw in te vullen, indien je die wil veranderen, deze moet minstens 2 tekens bevatten en gelijk zijn aan het wachtwoord die je hierbooven ingevuld hebt." value="44" class='input' size="30"  name='password2' type='password' value=''> <br><br>
+            <input title="gelieve hier nieuw u wachtwoord opnieuw in te vullen, indien je die wil veranderen, deze moet minstens 8 tekens bevatten en gelijk zijn aan het wachtwoord die je hierbooven ingevuld hebt." value="44" class='input' size="30"  name='password2' type='password' value=''> <br><br>
            
             <input class='input'  type='submit' value='wachtwoord wijzigen' >
             </form>
@@ -117,7 +117,7 @@ if(isset($_POST['password1'])){
      }
 
 
-     if ($conn->query($sql) === TRUE) {
+     if ($conn->query($sql)) {
        if ($debug) echo "Record updated successfully";
     } else {
         echo "Error updating record: " . $conn->error;

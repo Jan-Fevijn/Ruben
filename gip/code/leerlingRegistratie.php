@@ -45,7 +45,7 @@
 			 gebruikersnaam:
 			</td>
 			<td>
-			<input type="text" value="" name="gebruikersnaam" /><br>
+			<input  title='voer hier u gebruikersnaam in' type="text" value="" name="gebruikersnaam" /><br>
 			</td>
 			</tr>
 
@@ -54,13 +54,13 @@
 			voornaam:
 			</td>
 			<td >
-			  <input type="text" value=" " name="naam" /><br />
+			  <input  title='voer hier u naam in ' type="text" value=" " name="naam" /><br />
 			</td>
 			<td>
 			 wachtwoord:
 			</td>
 			<td>
-			<input type="password" value="" name="passwoord1" /><br>
+			<input  title='voer hier u wachtwoord in, deze moet meer dan 8 tekens bevatten.' type="password" value="" name="passwoord1" /><br>
 			</td>
 			</tr>
 
@@ -69,13 +69,13 @@
 			 familienaam:
 			</td>
 			<td>
-			<input type="text" value="" name="famielienaam" /><br />
+			<input   title='voer hier u famielinaam in.' type="text" value="" name="famielienaam" /><br />
 			</td>
 			<td id="midden">
 			 herhaal uw wachtwoord:
 			</td>
 			<td>
-			 <input type="password" value="" name="passwoord2" /><br />
+			 <input  title='herhaal u wachtwoord, deze moet identiek het zelvde zijn als het wachtwoord die je hierboven hebt ingevoert.' type="password" value="" name="passwoord2" /><br />
 			</td>
 			</tr>
 

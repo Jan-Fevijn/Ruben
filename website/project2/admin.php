@@ -50,8 +50,9 @@ include("banner.php");
 <a href='deleteGerecht.php'> <h3> gerecht verwijderen </h3></a>
 </form>
 <form class='flexItam' method='POST'>
-<a href='adminVieuws.php'> <h3> gerecht verwijderen </h3></a>
+<a href='adminVieuws.php'> <h3>lijsten trekken </h3></a>
 </form>
+
 </div>
 <h2> 
 </body>
