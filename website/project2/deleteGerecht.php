@@ -11,7 +11,7 @@
     include("dbconn.php");
     include("checkIfLogedIn.php");
     include("banner.php");
-    
+    include("adminBanner.html");
     ?>
 </body>
 </html>

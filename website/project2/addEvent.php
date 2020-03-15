@@ -27,6 +27,7 @@
     include("dbconn.php");
     include("checkIfLogedIn.php");
     include("banner.php");
+    include("adminBanner.html");
     
     ?>
     <h2> event toevoegen </h2>

@@ -95,6 +95,9 @@ CHANGE COLUMN `datumStart` `datumStart` DATETIME NULL DEFAULT NULL ,
 CHANGE COLUMN `datumEnd` `datumEnd` DATETIME NULL DEFAULT NULL ;
 ALTER TABLE `kokenvoorgroepen`.`eventgerecht` 
 CHANGE COLUMN `ideventGerecht` `ideventGerecht` INT(11) NOT NULL AUTO_INCREMENT ;
+ALTER TABLE `kokenvoorgroepen`.`product` 
+ADD UNIQUE INDEX `idproduct_UNIQUE` (`idproduct` ASC);
+;
 
   -- data records 
   INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('1', 'g', 'gram');

@@ -1,0 +1,79 @@
+
+
+<div id='Adminbanner'>
+    <div id='mainbuttons'>
+        <div onclick="eventen()" id='event'>
+            event
+        </div>
+        <div onclick="gerechten()" id='gerecht'>
+            gerecht
+        </div>
+        <div onclick="lijsten()" id='lijsten'>
+            lijsten
+        </div>
+    </div>
+    <div id='supbuttons'>
+        <div id='eventSub'>
+            <a href='addEvent.php'>  event toevoegen </a>
+            <a href='changeEvent.php'>    event wijzigen</a>
+            <a href='deleteEvent.php'>   event verwijderen</a>
+        </div>
+        <div id='gerechtSub'>
+            <a href='addGerecht.php'>    gerecht toevoegen</a>
+            <a href='changeGerecht.php'>     gerecht wijzigen</a>
+            <a href='deleteGerecht.php'>     gerecht verwijderen</a>
+        </div>
+        <div id='lijstenSub'>
+            <a href='adminVieuws.php'>   bekijk lijsten </a>
+        </div>
+    </div>
+</div>
+
+        <script>
+            x = 0;
+            clear();
+            function clear() {
+                document.getElementById("eventSub").style.display = "none";
+                document.getElementById("gerechtSub").style.display = "none";
+                document.getElementById("lijstenSub").style.display = "none";
+            }
+           
+            
+            function eventen() {
+                clear();
+                if (x == 0) {
+                    x = 1;
+                    document.getElementById("eventSub").style.display = "";
+                } else {
+                    x = 0;
+                    document.getElementById("eventSub").style.display = "none";
+                }
+               // document.getElementById("eventSub").style.display = "";
+            }
+            function gerechten() {
+                clear();
+                if (x == 0) {
+                    x = 1;
+                    document.getElementById("gerechtSub").style.display = "";
+                } else {
+                    x = 0;
+                    document.getElementById("gerechtSub").style.display = "none";
+                }
+              //  document.getElementById("gerechtSub").style.display = "";
+            }
+            function lijsten() {
+                clear();
+                if (x == 0) {
+                    x = 1;
+                    document.getElementById("lijstenSub").style.display = "";
+                } else {
+                    x = 0; 
+                   
+                    document.getElementById("lijstenSub").style.display = "none";
+                }
+              
+            }
+        </script>
+
+
+  

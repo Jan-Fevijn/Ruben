@@ -25,6 +25,7 @@
     include("dbconn.php");
     include("checkIfLogedIn.php");
     include("banner.php");
+    include("adminBanner.html");
     echo("<h2> admin lijsten </h2>");
     echo("<h3> eventen </h3>");
     $sql = 'select * from event';

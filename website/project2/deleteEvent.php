@@ -20,6 +20,7 @@
     include("dbconn.php");
     include("checkIfLogedIn.php");
     include("banner.php");
+    include("adminBanner.html");
     echo("<h2> welk event wil je verwijderen? </h2>");
 
     if (isset($_GET['id'])) {

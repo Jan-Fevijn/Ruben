@@ -30,7 +30,7 @@
     include("dbconn.php");
     include("checkIfLogedIn.php");
     include("banner.php");
-
+    include("adminBanner.html");
     if (isset($_POST['naam'])){
         $naam = $_POST['naam'];
         
@@ -40,7 +40,7 @@
         $datVan = $_POST['dateVan'];
         $datTot = $_POST['dateTot'];
 
-            $sql = "UPDATE `kokenvoorgroepen`.`event` SET `datumStart` = '$datVan', `datumEnd` = '$datTot', `img` = '$img', `naam` = 'kokedn voor beginners' WHERE (`idevent` = $idEvent)  ";
+            $sql = "UPDATE `kokenvoorgroepen`.`event` SET `datumStart` = '$datVan', `datumEnd` = '$datTot', `img` = '$img', `naam` = '$naam' WHERE (`idevent` = $idEvent)  ";
             echo($sql . "<br>");
         if ($conn->query($sql) === TRUE) {
             echo "Record deleted successfully";

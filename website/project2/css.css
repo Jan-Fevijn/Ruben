@@ -16,7 +16,7 @@
 }
 
 
-* {
+body {
       background-color: lightblue;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -163,4 +163,95 @@ h3 {
 }
 .noSpaceBetween {
     line-height: 1;
+}
+a {
+    background-color: lightgray;
+    font-size: 100%;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+#Adminbanner {
+    display:block;
+    width: 100%;
+    height: 10%;
+    background-color: lightgray;
+ 
+}
+* {
+    z-index: 0;
+}
+#event {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 20%;
+    font-size: 50%;
+    color: black;
+}
+
+#eventSub {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 20%;
+    font-size: 100%;
+    width: 20%;
+    background-color: lightgray;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+
+#gerecht {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 50%;
+    font-size: 50%;
+    color: black;
+}
+
+#gerechtSub {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 50%;
+    font-size: 100%;
+    width: 20%;
+    background-color: lightgray;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+#gerechtSub:hover {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 50%;
+    font-size: 100%;
+    width: 20%;
+    background-color: blue;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+
+#lijsten {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 80%;
+    font-size: 50%;
+    color: black;
+}
+
+#lijstenSub {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 80%;
+    font-size: 100%;
+    width: 20%;
+    background-color: lightgray;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+
+#mainbuttons {
+    font-size: 500%;
+    color: black;
+    background-color: lightgray;
 }
