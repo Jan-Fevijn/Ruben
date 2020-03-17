@@ -113,10 +113,10 @@ echo("<h3>gerechten: </h3>");
         if ($resultGerechtProduct->num_rows > 0) {
             // output data of each row
             echo("<table border = '1'>");
-            echo("<tr> <th> naam </th> <th> begindatum </th> <th> eintdatum </th> <th> voornaam </th> <th> naam </th></tr>");
+            echo("<tr> <th> ingrediënt </th> <th> hoeveelheid </th> <th colspan='2'> eenheid </th>  <th> winkel </th></tr>");
             while($rowGerechtProduct = $resultGerechtProduct->fetch_assoc()) {
                 echo("<tr>");
-                echo("<td>".$rowGerechtProduct['product'] ."</td><td>". $rowGerechtProduct['product'] ."</td><td>".  $rowGerechtProduct['hoeveelheid']  ."</td><td>". $rowGerechtProduct['eenheidFull']  ."</td><td>".  $rowGerechtProduct['eenheidAfk'] ."</td><td>".  $rowGerechtProduct['winkel']);
+                echo("<td>". $rowGerechtProduct['product'] ."</td><td>".  $rowGerechtProduct['hoeveelheid']  ."</td><td>". $rowGerechtProduct['eenheidFull']  ."</td><td>".  $rowGerechtProduct['eenheidAfk'] ."</td><td>".  $rowGerechtProduct['winkel']);
                echo("</tr>");
             }
             echo("</table>");
@@ -128,8 +128,38 @@ echo("<h3>gerechten: </h3>");
 
 
 echo ("<h1 class='event'> producten in stock : </h1> ");
-$sqlStock = "";
+$sqlStock = "select w.naam as winkel, sub.naam as product, hoeveelheid, voluit as eenheid from winkel as w inner join(
+    SELECT naam, hoeveelheid, voluit, afkorting, idwinkel from product as p inner join 
+    (SELECT * from eenheden) as e
+    on e.afkorting = p.eenheid) as sub on sub.idwinkel = w.idwinkel";
+if ($result = $conn->query($sqlStock) ) {
 
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    echo("<table border='1'>");
+    echo("<tr> <th>product</th><th>hoeveelheid</th><th>eenheid</th> </tr>");
+    while($row = $result->fetch_assoc()) {
+        echo("<tr>");
+        echo("<td>");
+            echo($row['product']);
+        echo("</td>");
+
+        echo("<td>");
+        echo($row['hoeveelheid']);
+    echo("</td>");
+
+    echo("<td>");
+    echo($row['eenheid']);
+echo("</td>");
+        echo("<tr>");
+    }
+    echo("</table>");
+}
+} else {
+   
+}
     ?>
 </body>
 </html>

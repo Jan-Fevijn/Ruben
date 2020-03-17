@@ -98,6 +98,9 @@ CHANGE COLUMN `ideventGerecht` `ideventGerecht` INT(11) NOT NULL AUTO_INCREMENT 
 ALTER TABLE `kokenvoorgroepen`.`product` 
 ADD UNIQUE INDEX `idproduct_UNIQUE` (`idproduct` ASC);
 ;
+ALTER TABLE `kokenvoorgroepen`.`user` 
+ADD UNIQUE INDEX `username_UNIQUE` (`username` ASC);
+;
 
   -- data records 
   INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('1', 'g', 'gram');
