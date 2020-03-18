@@ -4,7 +4,7 @@ Imports System
 Imports System.Data
 
 Public Class userHome
-    Public evenementen As List(Of evenement)
+    Public evenementen As New List(Of evenement)
 
     Private Sub userHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim username
@@ -82,7 +82,7 @@ Public Class userHome
 
         While (rd.Read())
 
-            ' MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
+            MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
             Dim evenement As New evenement
             evenement.idevent = rd(0)
             evenement.van = rd(1)
@@ -96,7 +96,7 @@ Public Class userHome
 
         End While
         For Each evenement In evenementen
-            eventen.Items.Add(evenement.naam)
+            eventen.Items.Add(evenement.naam & " van " & evenement.van & " tot" & evenement.datumEnd)
         Next
 
         '   Catch ex As Exception
@@ -107,4 +107,31 @@ Public Class userHome
         conn.Close()
     End Sub
 
+    Private Sub eventen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventen.SelectedIndexChanged
+        Dim idEvent = eventen.FocusedItem.Index + 1
+        MsgBox(idEvent)
+
+        Dim connStr As String = "server=localhost;user=root;database=kokenvoorgroepen;port=3307;password=usbw;"
+        Dim conn As New MySqlConnection(connStr)
+        '  Try
+
+
+        conn.Open()
+
+        Dim mySelectQuery As String = " select egg.naam,egg.img, event.idEvent, egg.idGerecht, egg.vegan ,egg.veganistisch from event inner join ( SELECT  naam,img,vegan,veganistisch,idEvent, g.idGerecht FROM kokenvoorgroepen.gerecht as g inner join kokenvoorgroepen.eventgerecht as eg on g.idgerecht = eg.idgerecht ) as egg on egg.idEvent =  event.idEvent WHERE event.idEvent = ' " & idEvent & "' "
+        Dim myCommand As New MySqlCommand(mySelectQuery, conn)
+
+        Dim rd As MySqlDataReader
+        rd = myCommand.ExecuteReader()
+        Dim user As New user
+
+
+        While (rd.Read())
+
+            MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
+
+
+
+        End While
+    End Sub
 End Class

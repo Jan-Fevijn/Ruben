@@ -26,6 +26,8 @@ Partial Class userHome
         Me.lblNaam = New System.Windows.Forms.Label()
         Me.eventen = New System.Windows.Forms.ListView()
         Me.lblEventen = New System.Windows.Forms.Label()
+        Me.lblGerechten = New System.Windows.Forms.Label()
+        Me.Gerechten = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'lblUsername
@@ -51,24 +53,44 @@ Partial Class userHome
         Me.eventen.HideSelection = False
         Me.eventen.Location = New System.Drawing.Point(26, 118)
         Me.eventen.Name = "eventen"
-        Me.eventen.Size = New System.Drawing.Size(251, 169)
+        Me.eventen.Size = New System.Drawing.Size(969, 223)
         Me.eventen.TabIndex = 2
         Me.eventen.UseCompatibleStateImageBehavior = False
         '
         'lblEventen
         '
         Me.lblEventen.AutoSize = True
-        Me.lblEventen.Location = New System.Drawing.Point(81, 78)
+        Me.lblEventen.Location = New System.Drawing.Point(366, 81)
         Me.lblEventen.Name = "lblEventen"
         Me.lblEventen.Size = New System.Drawing.Size(82, 25)
         Me.lblEventen.TabIndex = 3
         Me.lblEventen.Text = "eventen"
         '
+        'lblGerechten
+        '
+        Me.lblGerechten.AutoSize = True
+        Me.lblGerechten.Location = New System.Drawing.Point(366, 365)
+        Me.lblGerechten.Name = "lblGerechten"
+        Me.lblGerechten.Size = New System.Drawing.Size(105, 25)
+        Me.lblGerechten.TabIndex = 5
+        Me.lblGerechten.Text = "gerechten:"
+        '
+        'Gerechten
+        '
+        Me.Gerechten.HideSelection = False
+        Me.Gerechten.Location = New System.Drawing.Point(26, 402)
+        Me.Gerechten.Name = "Gerechten"
+        Me.Gerechten.Size = New System.Drawing.Size(969, 223)
+        Me.Gerechten.TabIndex = 4
+        Me.Gerechten.UseCompatibleStateImageBehavior = False
+        '
         'userHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1066, 569)
+        Me.ClientSize = New System.Drawing.Size(1572, 646)
+        Me.Controls.Add(Me.lblGerechten)
+        Me.Controls.Add(Me.Gerechten)
         Me.Controls.Add(Me.lblEventen)
         Me.Controls.Add(Me.eventen)
         Me.Controls.Add(Me.lblNaam)
@@ -84,4 +106,6 @@ Partial Class userHome
     Friend WithEvents lblNaam As Label
     Friend WithEvents eventen As ListView
     Friend WithEvents lblEventen As Label
+    Friend WithEvents lblGerechten As Label
+    Friend WithEvents Gerechten As ListView
 End Class

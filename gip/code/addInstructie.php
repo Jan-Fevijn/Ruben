@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet"
           type="text/css"
-          href="../../css/css.css" />
+          href="../css/css.css" />
 	<script src="http://YOUR-DOMAIN/YOUR-DIRECTORY/textboxio/textboxio.js"></script>
 		<script src="../js/textboxio.js"></script>
 		<style>

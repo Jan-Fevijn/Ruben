@@ -46,7 +46,7 @@ blockquote, q {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 1px;
 }
 
 fomr {
@@ -70,19 +70,18 @@ tr {
     border: 5px;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+
 
 body {
    
     background-image: url(../img/achtergrond1.PNG);
+
     background-repeat: no-repeat;
     background-size: 100%;
     /*background-color: #290bea;*/
     color: black;
     font-size: 130%;
+    position: absolute;
 }
 
 #banner {
@@ -560,11 +559,14 @@ justify-content: space-around;
 
 
 td, th, tr, table {
-    text-align: central;
+    text-align: center;
     border: 3px solid black;
     position: relative;
     padding: 15px;
-    background-color: lightblue;
+    background-color: none;
+}
+td, th {
+  
 }
 .input {
     border-radius:60px;

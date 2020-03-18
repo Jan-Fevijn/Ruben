@@ -1,0 +1,91 @@
+Globale eindwerk taak
+Het eindwerk voor 6 ITN is een opgegeven opdracht + extra deel taken. Het eindwerk wordt uitgebreid uitgewerkt en moet onderstaande zaken bevatten
+Bundel
+Algemene verwoording (inleiding) van het eindwerk (Door de leerkracht).
+Opdracht onderverdeeld in verschillende deeltaken.
+Planning en logboek van de gepresteerde uren per deeltaak 
+Uitgebreide omschrijving alsook uitwerking van het eindwerk
+Evaluatie bladen (Door de leerkracht) 
+Extra info en bijlagen
+Extra info
+Presentatie materiaal
+Website met dezelfde inhoud als de bundel
+Eindwerk zelf
+
+De bundel moet enkel digitaal ingediend worden
+
+Het eindwerk zal 2x voorgesteld moeten worden 
+In de helft van het jaar (eind januari) 
+Op het einde van het jaar tijdens de examenperiode
+
+
+Omschrijven van opdracht 1:
+Titel: Uitleendienst 
+Elk toestel heeft een barcode alsook een omschrijving + extra benodigdheden (zoals oplaad kabel - muis - enz. ) Deze zaken worden opgeslagen in een databank en moeten uitgeleend kunnen worden aan leerlingen / leerkrachten. Door middel van een scansysteem moeten de zaken uitgeleend kunnen worden. 
+Eerst wordt het toestel gescand, vervolgens de studentenkaart van de lln/lkr. 
+Eenmaal terug gebracht worden dezelfde codes worden gescand. 
+Het volledige systeem bevat een log alsook een meldpunt bij defecte of ontbrekende onderdelen. 
+
+
+Omschrijven van opdracht 2:
+Titel: Klas monitor. 
+Om een overzicht te krijgen over het computergebruik tijdens de lesuren - tijdens de les moet software ontwikkeld worden die de computerschermen (activiteiten) centraliseren op 1 website. De leerkracht krijgt een overzicht hiervan en kan ook ingrijpen indien nodig. 
+Het beeld van de leerkracht moet ook kunnen worden doorgestuurd naar de lln om zo goed mee te kunnen volgen (in dit geval zou het ideaal zijn mochten de leerlingen niets kunnen doen op die pc op dat moment). 
+1 pc wordt aangesteld als server - de andere als clients. Op die manier kan het systeem eenvoudig gebruikt worden in verschillende computer klassen.
+
+
+Omschrijven van opdracht 3:
+Titel: Aanmelden in Jan Fevijn. 
+Om een dagelijkse controle te hebben over de werking van de computers in het volledige computerpark is een speciale aanmeldprocedure handig. 
+Bedoeling is dat de leerlingen aanmelden met leerling als gebruikersnaam en leerling als wachtwoord (of misschien zelfs helemaal niet) maar bij het opstarten moet de leerling zijn studenten code ingeven + een soort random gegenereerde code via een app, die bevestigd dat het wel degelijk om de juiste persoon gaat. Na deze aanmelding moet de leerling bevestigen dat hij de computer op een goede manier heeft aangetroffen (met muis en toetsenbord in goede staat). 
+Alle info wordt volledig opgeslagen in een databank van de school en kan via een eenvoudige website snel geconsulteerd worden.
+
+
+Omschrijven van opdracht 4:
+Titel: Te laat SMS. 
+In voorgaand jaar werd een app ontwikkeld die een sms stuurde naar ouders van een leerling die te laat gekomen is. Dit systeem staat nog niet volledig op punt en moet geoptimaliseerd worden. Als bron krijg je volledig code van de voorganger. Deze moet in connectie gebracht worden met data uit smartschool (voor gebruikersinfo alsook GSM nummers). Ouders moeten ook registreren (hiervoor moet een goede aanvraag voor ontwikkeld worden. Ouders moeten ook op een eenvoudige (liefst geautomatiseerde wijze) kunnen uitschrijven. 
+
+
+Omschrijven van opdracht 5:
+Titel: Buiten school registratie. 
+Op basis van een scan van de studentenkaart kunnen leerlingen registreren wanneer ze de school over de middag verlaten. Als ze terug zijn scannen ze opnieuw. Indien iemand ongewettigd de school verlaat wordt dit geregistreerd. Alles wordt gesynchroniseerd met smartschool (het al dan niet de school mogen verlaten, alsook het onwettig verlaten van de school). Misbruik door middel van het gebruik maken van een verkeerde studentenkaart moet geregistreerd worden. 
+Het systeem wordt bij voorkeur opgebouwd met een raspberry py.  
+
+
+Omschrijven van opdracht 6:
+Titel: automatic restore. 
+Niets lastiger dan op een pc terecht komen waar vreemde software op te vinden is of in het ergste geval helemaal niet wil starten. 
+Ontwikkel een systeem die met een eenvoudige druk op de knop bij het opstarten een nieuwe image plaats op de computer en dus een volledig nieuw systeem plaatst op de pc.   
+
+
+Omschrijven van opdracht 7:
+Titel: kopie kosten. 
+Op de school is er reeds een systeem die kan bijhouden voor welke klas welk aantal kopieën genomen zijn. Deze gegevens kunnen geëxporteerd worden naar Excel. Op basis van deze gegevens moeten de kosten verdeeld worden over de verschillende leerlingen. 
+Bouw een website of systeem op waar je het excel document kan in opladen en automatisch de kosten per lln kan zien. 
+
+
+Omschrijven van opdracht 8:
+Titel: Arduino educatief. 
+Bouw een website op waar je educatief leert werken met een arduino (doelpubliek leerlingen 1ste graad) Je zorgt voor een mooi opgebouwd systeem met een mooie lading aan leermateriaal. (eventueel op te bouwen panelen worden gebouwd door de leerkracht).
+Je kan je registreren op de website en zo het nodige materiaal bezichtigen. Panelen kunnen te aangekocht worden (zorg dus voor een bepaald betalingssysteem)
+Kortom, jij zorgd voor het systeem, de leerkracht voor de educatieve kant.
+Nieuwe fiches / instructies moeten op een eenvoudige manier toegevoegd kunnen worden. 
+
+
+Omschrijven van opdracht 9:
+Titel:Te laat in de les. 
+Zorg voor een app/systeem die het gebruik maken van blaadjes doet verdwijnen. 
+Als een leerling te laat komt moet hij dit met een briefje verantwoorden. Ontwikkel een systeem die deze blaadje overbodig maken. Alles wordt geregistreerd en opgeslagen in een databank waar vervolgens ook de nodige rapporten de diagnoses kunnen uitgetrokken worden.   
+
+
+Omschrijven van opdracht 10:
+Titel:toezichten en P van collega’s. 
+Ontwikkel een programma die het volgende kan genereren.
+Op basis van een bestaand lessenrooster worden de mogelijke toezichten en p’s ingevuld.
+Er wordt bijgehouden hoe vaak een leerkracht reeds wordt ingezet en bij het overschrijden van de max aantal uren kan deze leerkracht niet meer ingezet worden.  
+
+
+Omschrijven van opdracht 12:
+Titel:Steward agenda. 
+Ontwikkel een app die op basis van een aangeleverd excel document het schema van een steward toont. De verantwoordelijken kunnen met een uitgebreide zoekfunctie op een eenvoudige manier te weten komen wie op welke plaats zou moeten staan. 
+Het systeem is real-time aanpasbaar en stewards worden hiervan dus ook real-time van op de hoogte gebracht.  

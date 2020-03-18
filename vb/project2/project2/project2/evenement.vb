@@ -38,7 +38,7 @@
         End Set
     End Property
     Private _naam As String
-    Private v As Object
+
 
     Public Property naam() As String
         Get
