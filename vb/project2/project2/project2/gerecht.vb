@@ -59,5 +59,12 @@
         End Set
     End Property
 
-
+    Public Sub New(naam As String, img As String, idEvent As Integer, idGerecht As Integer, vegan As Boolean, veganistisch As Boolean)
+        _naam = naam
+        _img = img
+        _idEvent = idEvent
+        _idGerecht = idGerecht
+        _vegan = vegan
+        _veganistisch = veganistisch
+    End Sub
 End Class

@@ -28,6 +28,11 @@ Partial Class userHome
         Me.lblEventen = New System.Windows.Forms.Label()
         Me.lblGerechten = New System.Windows.Forms.Label()
         Me.Gerechten = New System.Windows.Forms.ListView()
+        Me.lblEventNaam = New System.Windows.Forms.Label()
+        Me.lblEventPer = New System.Windows.Forms.Label()
+        Me.lblGerechtNaam = New System.Windows.Forms.Label()
+        Me.lblGerechtVegan = New System.Windows.Forms.Label()
+        Me.lblGerechtProducten = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblUsername
@@ -84,11 +89,59 @@ Partial Class userHome
         Me.Gerechten.TabIndex = 4
         Me.Gerechten.UseCompatibleStateImageBehavior = False
         '
+        'lblEventNaam
+        '
+        Me.lblEventNaam.AutoSize = True
+        Me.lblEventNaam.Location = New System.Drawing.Point(1065, 132)
+        Me.lblEventNaam.Name = "lblEventNaam"
+        Me.lblEventNaam.Size = New System.Drawing.Size(0, 25)
+        Me.lblEventNaam.TabIndex = 6
+        '
+        'lblEventPer
+        '
+        Me.lblEventPer.AutoSize = True
+        Me.lblEventPer.Location = New System.Drawing.Point(1065, 176)
+        Me.lblEventPer.Name = "lblEventPer"
+        Me.lblEventPer.Size = New System.Drawing.Size(0, 25)
+        Me.lblEventPer.TabIndex = 7
+        '
+        'lblGerechtNaam
+        '
+        Me.lblGerechtNaam.AutoSize = True
+        Me.lblGerechtNaam.Location = New System.Drawing.Point(1046, 425)
+        Me.lblGerechtNaam.Name = "lblGerechtNaam"
+        Me.lblGerechtNaam.Size = New System.Drawing.Size(71, 25)
+        Me.lblGerechtNaam.TabIndex = 8
+        Me.lblGerechtNaam.Text = "Label3"
+        '
+        'lblGerechtVegan
+        '
+        Me.lblGerechtVegan.AutoSize = True
+        Me.lblGerechtVegan.Location = New System.Drawing.Point(1046, 467)
+        Me.lblGerechtVegan.Name = "lblGerechtVegan"
+        Me.lblGerechtVegan.Size = New System.Drawing.Size(71, 25)
+        Me.lblGerechtVegan.TabIndex = 9
+        Me.lblGerechtVegan.Text = "Label4"
+        '
+        'lblGerechtProducten
+        '
+        Me.lblGerechtProducten.AutoSize = True
+        Me.lblGerechtProducten.Location = New System.Drawing.Point(1046, 511)
+        Me.lblGerechtProducten.Name = "lblGerechtProducten"
+        Me.lblGerechtProducten.Size = New System.Drawing.Size(71, 25)
+        Me.lblGerechtProducten.TabIndex = 10
+        Me.lblGerechtProducten.Text = "Label4"
+        '
         'userHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1572, 646)
+        Me.Controls.Add(Me.lblGerechtProducten)
+        Me.Controls.Add(Me.lblGerechtVegan)
+        Me.Controls.Add(Me.lblGerechtNaam)
+        Me.Controls.Add(Me.lblEventPer)
+        Me.Controls.Add(Me.lblEventNaam)
         Me.Controls.Add(Me.lblGerechten)
         Me.Controls.Add(Me.Gerechten)
         Me.Controls.Add(Me.lblEventen)
@@ -108,4 +161,9 @@ Partial Class userHome
     Friend WithEvents lblEventen As Label
     Friend WithEvents lblGerechten As Label
     Friend WithEvents Gerechten As ListView
+    Friend WithEvents lblEventNaam As Label
+    Friend WithEvents lblEventPer As Label
+    Friend WithEvents lblGerechtNaam As Label
+    Friend WithEvents lblGerechtVegan As Label
+    Friend WithEvents lblGerechtProducten As Label
 End Class
