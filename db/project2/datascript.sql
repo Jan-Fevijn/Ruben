@@ -102,8 +102,20 @@ ALTER TABLE `kokenvoorgroepen`.`user`
 ADD UNIQUE INDEX `username_UNIQUE` (`username` ASC);
 ;
 
+	-- from key's 
+alter table produtgerecht 
+add constraint fk_gerecht 
+foreign key (gerechtid) references gerecht(idgerecht);
+
+alter table product
+add constraint fk_winkel
+foreign key (idwinkel) references winkel(idwinkel);
+
+
+
   -- data records 
-  INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('1', 'g', 'gram');
+INSERT INTO `winkel` (`idwinkel`, `naam`) VALUES (1,'ALDI');
+INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('1', 'g', 'gram');
 INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('2', 'sne', 'sneetje');
 INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('3', 'stu', 'stuks');
 INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('4', 'tak', 'takje');
@@ -113,14 +125,13 @@ INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) 
 INSERT INTO `kokenvoorgroepen`.`eenheden` (`ideenheden`, `afkorting`, `voluit`) VALUES ('8', 'gra', 'gram.');
 
 INSERT INTO `user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES (1,'Ruben','Aspeslag','Ruben2001',0,0,0,'ruben'),(2,'Ruben','Ruben','azerty123',0,0,0,'admin33'),(3,'Ruben','Ruben','azerty123',1,0,0,'ruben2001'),(4,'Ruben','Aspeslag','azerty123',0,1,0,'999');
-INSERT INTO `produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES (1,1,1,'62.5'),(2,1,2,'1.25'),(3,1,3,'0.75'),(4,1,4,'0.25');
 INSERT INTO `product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES (1,'suiker','100','gra',1),(2,'bloem','100','gra',1),(3,'melk','1','lie',1),(4,'eieren','1','stu',1);
 INSERT INTO `inschrijving` (`idinschrijving`, `iduser`, `idevent`) VALUES (1,1,1);
 INSERT INTO `eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES (1,'1','1');
 INSERT INTO `gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES (1,'pannenkoeken','https://vegetus.nl/wp-content/uploads/2013/02/Pannenkoeken-veganistisch-zonder-melk-zonder-ei.jpg',1,0);
 INSERT INTO `event` (`idevent`, `datumStart`, `datumEnd`, `img`, `naam`) VALUES (1,'2020-03-04','2020-03-04','https://vegetus.nl/wp-content/uploads/2013/02/Pannenkoeken-veganistisch-zonder-melk-zonder-ei.jpg','bak pannenkoeken');
 
-INSERT INTO `winkel` (`idwinkel`, `naam`) VALUES (1,'ALDI');
+
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('5', 'soepvlees', '100', 'gra', '1');
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('6', 'basilicum gehakt', '100', 'il', '1');
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('7', 'gehakt', '700', 'gra', '1');
@@ -139,22 +150,6 @@ INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `i
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('20', 'zout', '100', '', '1');
 INSERT INTO `kokenvoorgroepen`.`event` (`idevent`, `datumStart`, `datumEnd`, `img`, `naam`) VALUES ('2', '2020-03-07', '2020-03-09', 'https://img.static-rmg.be/a/food/image/q75/w640/h400/12475/tomatensoep-met-balletjes.jpg', 'koken voor beginners');
 INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('2', '2', '2');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('5', '2', '5', '100');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('6', '2', '6', '0.5');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('7', '2', '7', '75');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('8', '2', '8', '0.5');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('9', '2', '9', '0.25');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('10', '2', '10', '0.5');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('11', '2', '11', '1.25');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('12', '2', '12', '0.25');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('13', '2', '13', '0.25');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('14', '2', '14', '0.25');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('15', '2', '15', '0.25');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('16', '2', '16', '0.5');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('17', '2', '17', '1');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('18', '2', '18', '1');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('19', '2', '19', '1');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('20', '2', '20', '1');
 INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('2', 'tomatensoep', 'https://img.static-rmg.be/a/food/image/q75/w640/h400/12475/tomatensoep-met-balletjes.jpg', '0', '0');
 INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('3', 'omelet', 'http://i1.wp.com/lotkookt.com/wp-content/uploads/2015/07/goedgevulde-omelet-met-feta-tomaat-en-rucola2.png?zoom=1.75&resize=683%2C478', '1', '0');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('21', '3', '9', '2');
@@ -199,6 +194,42 @@ INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `i
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `idwinkel`) VALUES ('48', 'peper van de molen', '100', '1');
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `idwinkel`) VALUES ('49', 'zout', '100', '1');
 INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `idwinkel`) VALUES ('50', 'gemalen Emmental kaas', '100', '1');
+INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('7', 'boterham met choco', 'https://images3.persgroep.net/rcs/OOwUxAWaKRQFN518VpSm4fubAGM/diocontent/63408847/_fitwidth/763?appId=2dc96dd3f167e919913d808324cbfeb2&quality=0.8', '0', '1');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('51', 'choco', '100', 'sne', '1');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('53', '7', '25', '6');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `productid`, `hoeveelheid`) VALUES ('54', '51', '3');
+INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('8', '2', '7');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('21', 'suiker', '100', 'el', '1');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('22', 'bladerdeeg ', '100', 'pla', '1');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('23', 'kaneel', '100', 'the', '1');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('24', 'appel', '100', 'stu', '1');
+INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('8', 'apelmoes', 'https://www.appelmoesmaken.eu/wp-content/uploads/2019/07/Appelmoes-maken-748x410.jpg', '0', '1');
+INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('9', '2', '8');
+INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('52', 'Kaneelpoeder', '100', 'tee', '1');
+INSERT INTO `kokenvoorgroepen`.`user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES ('5', 'ADMIN', 'ADMIN', 'ADMIN', '0', '0', '1', 'ADMIN');
+
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('57', '8', '1', '100');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('58', '8', '52', '100');
+
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('56', '8', '24', '5');
+
+INSERT INTO `produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES (1,1,1,'62.5'),(2,1,2,'1.25'),(3,1,3,'0.75'),(4,1,4,'0.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('5', '2', '5', '100');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('6', '2', '6', '0.5');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('7', '2', '7', '75');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('8', '2', '8', '0.5');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('9', '2', '9', '0.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('10', '2', '10', '0.5');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('11', '2', '11', '1.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('12', '2', '12', '0.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('13', '2', '13', '0.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('14', '2', '14', '0.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('15', '2', '15', '0.25');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('16', '2', '16', '0.5');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('17', '2', '17', '1');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('18', '2', '18', '1');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('19', '2', '19', '1');
+INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('20', '2', '20', '1');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('29', '6', '28', '0.25');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('30', '6', '29', '1');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('31', '6', '30', '0.25');
@@ -222,24 +253,10 @@ INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, 
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`) VALUES ('49', '6', '48');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`) VALUES ('50', '6', '49');
 INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`) VALUES ('51', '6', '50');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `hoeveelheid`) VALUES ('', '', '');
-INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('7', 'boterham met choco', 'https://images3.persgroep.net/rcs/OOwUxAWaKRQFN518VpSm4fubAGM/diocontent/63408847/_fitwidth/763?appId=2dc96dd3f167e919913d808324cbfeb2&quality=0.8', '0', '1');
-INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('51', 'choco', '100', 'sne', '1');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('53', '7', '25', '6');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `productid`, `hoeveelheid`) VALUES ('54', '51', '3');
-INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('8', '2', '7');
-INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('21', 'suiker', '100', 'el', '1');
-INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('22', 'bladerdeeg ', '100', 'pla', '1');
-INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('23', 'kaneel', '100', 'the', '1');
-INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('24', 'appel', '100', 'stu', '1');
-UPDATE `kokenvoorgroepen`.`produtgerecht` SET `gerechtid` = '7' WHERE (`idprodutGerecht` = '54');
-INSERT INTO `kokenvoorgroepen`.`gerecht` (`idgerecht`, `naam`, `img`, `vegan`, `veganistisch`) VALUES ('8', 'apelmoes', 'https://www.appelmoesmaken.eu/wp-content/uploads/2019/07/Appelmoes-maken-748x410.jpg', '0', '1');
-INSERT INTO `kokenvoorgroepen`.`eventgerecht` (`ideventGerecht`, `idEvent`, `idGerecht`) VALUES ('9', '2', '8');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('56', '8', '24', '5');
-INSERT INTO `kokenvoorgroepen`.`product` (`idproduct`, `naam`, `hoeveelheid`, `eenheid`, `idwinkel`) VALUES ('52', 'Kaneelpoeder', '100', 'tee', '1');
 
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('57', '8', '1', '100');
-INSERT INTO `kokenvoorgroepen`.`produtgerecht` (`idprodutGerecht`, `gerechtid`, `productid`, `hoeveelheid`) VALUES ('58', '8', '52', '100');
-INSERT INTO `kokenvoorgroepen`.`user` (`iduser`, `voornaam`, `naam`, `password`, `vegan`, `veganistisch`, `admin`, `username`) VALUES ('5', 'ADMIN', 'ADMIN', 'ADMIN', '0', '0', '1', 'ADMIN');
+UPDATE `kokenvoorgroepen`.`produtgerecht` SET `gerechtid` = '7' WHERE (`idprodutGerecht` = '54');
+
 UPDATE `kokenvoorgroepen`.`gerecht` SET `vegan` = '1', `veganistisch` = '0' WHERE (`idgerecht` = '7');
 UPDATE `kokenvoorgroepen`.`gerecht` SET `naam` = 'appelmoes' WHERE (`idgerecht` = '8');
+
+

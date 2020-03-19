@@ -77,12 +77,78 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addEvent.Designer.vb">
+      <DependentUpon>addEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addGerecht.Designer.vb">
+      <DependentUpon>addGerecht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addGerecht.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addProduct.Designer.vb">
+      <DependentUpon>addProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN.Designer.vb">
+      <DependentUpon>ADMIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeEvent.Designer.vb">
+      <DependentUpon>changeEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="changeEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeGerecht.Designer.vb">
+      <DependentUpon>changeGerecht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="changeGerecht.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeProduct.Designer.vb">
+      <DependentUpon>changeProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="changeProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteEvent.Designer.vb">
+      <DependentUpon>deleteEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deleteEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteGerecht.Designer.vb">
+      <DependentUpon>deleteGerecht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deleteGerecht.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteProduct.Designer.vb">
+      <DependentUpon>deleteProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deleteProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="evenement.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gerecht.vb" />
@@ -116,6 +182,36 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addEvent.resx">
+      <DependentUpon>addEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addGerecht.resx">
+      <DependentUpon>addGerecht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addProduct.resx">
+      <DependentUpon>addProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN.resx">
+      <DependentUpon>ADMIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeEvent.resx">
+      <DependentUpon>changeEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeGerecht.resx">
+      <DependentUpon>changeGerecht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeProduct.resx">
+      <DependentUpon>changeProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteEvent.resx">
+      <DependentUpon>deleteEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteGerecht.resx">
+      <DependentUpon>deleteGerecht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteProduct.resx">
+      <DependentUpon>deleteProduct.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

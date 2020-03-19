@@ -29,7 +29,12 @@ Public Class Login
         While (rd.Read())
 
             MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4) & rd(5) & rd(6) & rd(7))
-            userHome.Show()
+            If rd(6) = 1 Then
+                ADMIN.Show()
+            Else
+                userHome.Show()
+            End If
+
             Me.Hide()
 
 

@@ -88,6 +88,7 @@ Public Class userHome
             '  MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
             Dim evenement As New evenement
             evenement.idevent = rd(0)
+            MsgBox(rd(1))
             evenement.van = rd(1)
             evenement.datumEnd = rd(2)
             evenement.img = rd(3)
