@@ -1,6 +1,12 @@
-﻿Public Class deleteEvent
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Sql
+Imports System
+Imports System.Data
+Imports System.Data.OleDb
+Public Class deleteEvent
     Private Sub deleteEvent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblNaam.Text = ADMIN.voornaam & " " & ADMIN.naam
+        lblUsername.Text = ADMIN.gebruikersnaam
     End Sub
     '----------------------------<MENUSTRIP>-----------------------------------'
     '-----------event

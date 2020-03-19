@@ -36,6 +36,9 @@ Partial Class addEvent
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.lblNaam = New System.Windows.Forms.Label()
+        Me.lblUsernamee = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +48,7 @@ Partial Class addEvent
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1495, 38)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -130,11 +133,41 @@ Partial Class addEvent
         Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
         Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
+        'lblUsername
+        '
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Location = New System.Drawing.Point(-319, 213)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(99, 25)
+        Me.lblUsername.TabIndex = 24
+        Me.lblUsername.Text = "username"
+        '
+        'lblNaam
+        '
+        Me.lblNaam.AutoSize = True
+        Me.lblNaam.Location = New System.Drawing.Point(708, 66)
+        Me.lblNaam.Name = "lblNaam"
+        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
+        Me.lblNaam.TabIndex = 26
+        Me.lblNaam.Text = "voornaam  naam"
+        '
+        'lblUsernamee
+        '
+        Me.lblUsernamee.AutoSize = True
+        Me.lblUsernamee.Location = New System.Drawing.Point(48, 66)
+        Me.lblUsernamee.Name = "lblUsernamee"
+        Me.lblUsernamee.Size = New System.Drawing.Size(99, 25)
+        Me.lblUsernamee.TabIndex = 25
+        Me.lblUsernamee.Text = "username"
+        '
         'addEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1495, 563)
+        Me.Controls.Add(Me.lblNaam)
+        Me.Controls.Add(Me.lblUsernamee)
+        Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "addEvent"
         Me.Text = "addEvent"
@@ -159,4 +192,7 @@ Partial Class addEvent
     Friend WithEvents VerwijderenToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents WijzigenToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents lblNaam As Label
+    Friend WithEvents lblUsernamee As Label
 End Class

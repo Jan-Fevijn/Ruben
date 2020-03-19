@@ -6,7 +6,9 @@ Imports System.Data
 Imports System.Data.OleDb
 
 Public Class ADMIN
-
+    Public voornaam As String
+    Public naam As String
+    Public gebruikersnaam As String
 
     Public listGerechtID As New List(Of Integer)
         Public evenementen As New List(Of evenement)
@@ -29,92 +31,95 @@ Public Class ADMIN
 
 
 
-        Private Sub inloggen(username)
-            Dim connStr As String = "server=localhost;user=root;database=kokenvoorgroepen;port=3307;password=usbw;"
-            Dim conn As New MySqlConnection(connStr)
-            '  Try
+    Public Sub inloggen(username)
+        Dim connStr As String = "server=localhost;user=root;database=kokenvoorgroepen;port=3307;password=usbw;"
+        Dim conn As New MySqlConnection(connStr)
+        '  Try
 
 
-            conn.Open()
+        conn.Open()
 
-            Dim mySelectQuery As String = "select * from user WHERE username = '" & username & "'"
-            Dim myCommand As New MySqlCommand(mySelectQuery, conn)
+        Dim mySelectQuery As String = "select * from user WHERE username = '" & username & "'"
+        Dim myCommand As New MySqlCommand(mySelectQuery, conn)
 
-            Dim rd As MySqlDataReader
-            rd = myCommand.ExecuteReader()
-            Dim user As New user
-            While (rd.Read())
+        Dim rd As MySqlDataReader
+        rd = myCommand.ExecuteReader()
+        Dim user As New user
+        While (rd.Read())
 
-                '  MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4) & rd(5) & rd(6) & rd(7))
-                user.id = rd(0)
-                user.voornaam = rd(1)
-                user.naam = rd(2)
-                user.password = rd(3)
-                user.vegan = rd(4)
-                user.veganistisch = rd(5)
-                user.admin = rd(6)
-                user.username = rd(7)
-
-
-
-            End While
-            lblNaam.Text = user.voornaam & " " & user.naam
-            lblUsername.Text = user.username
-
-            '   Catch ex As Exception
-            '    MsgBox("error: there went somiting wrong.")
-
-
-            '    End Try
-            conn.Close()
-
-        End Sub
-
-        Private Sub loadEventen()
-
-            Dim connStr As String = "server=localhost;user=root;database=kokenvoorgroepen;port=3307;password=usbw;"
-            Dim conn As New MySqlConnection(connStr)
-            '  Try
-
-
-            conn.Open()
-
-            Dim mySelectQuery As String = "select * from event "
-            Dim myCommand As New MySqlCommand(mySelectQuery, conn)
-
-            Dim rd As MySqlDataReader
-            rd = myCommand.ExecuteReader()
-            Dim user As New user
-
-
-            While (rd.Read())
-
-                '  MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
-                Dim evenement As New evenement
-                evenement.idevent = rd(0)
-                evenement.van = rd(1)
-                evenement.datumEnd = rd(2)
-                evenement.img = rd(3)
-                evenement.naam = rd(4)
-                '   MsgBox(evenement.idevent & " " & evenement.van & " " & evenement.datumEnd & " " & evenement.img & " " & evenement.naam)
-                evenementen.Add(evenement)
+            '  MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4) & rd(5) & rd(6) & rd(7))
+            user.id = rd(0)
+            user.voornaam = rd(1)
+            user.naam = rd(2)
+            user.password = rd(3)
+            user.vegan = rd(4)
+            user.veganistisch = rd(5)
+            user.admin = rd(6)
+            user.username = rd(7)
 
 
 
-            End While
-            For Each evenement In evenementen
-                eventen.Items.Add(evenement.naam & " van " & evenement.van & " tot" & evenement.datumEnd)
-            Next
+        End While
+        lblNaam.Text = user.voornaam & " " & user.naam
+        lblUsername.Text = user.username
 
-            '   Catch ex As Exception
-            '    MsgBox("error: there went somiting wrong.")
+        voornaam = user.voornaam
+        naam = user.naam
+        gebruikersnaam = user.username
+        '   Catch ex As Exception
+        '    MsgBox("error: there went somiting wrong.")
 
 
-            '    End Try
-            conn.Close()
-        End Sub
+        '    End Try
+        conn.Close()
 
-        Private Sub eventen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventen.SelectedIndexChanged
+    End Sub
+
+    Public Sub loadEventen()
+
+        Dim connStr As String = "server=localhost;user=root;database=kokenvoorgroepen;port=3307;password=usbw;"
+        Dim conn As New MySqlConnection(connStr)
+        '  Try
+
+
+        conn.Open()
+
+        Dim mySelectQuery As String = "select * from event "
+        Dim myCommand As New MySqlCommand(mySelectQuery, conn)
+
+        Dim rd As MySqlDataReader
+        rd = myCommand.ExecuteReader()
+        Dim user As New user
+
+
+        While (rd.Read())
+
+            '  MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
+            Dim evenement As New evenement
+            evenement.idevent = rd(0)
+            evenement.van = rd(1)
+            evenement.datumEnd = rd(2)
+            evenement.img = rd(3)
+            evenement.naam = rd(4)
+            '   MsgBox(evenement.idevent & " " & evenement.van & " " & evenement.datumEnd & " " & evenement.img & " " & evenement.naam)
+            evenementen.Add(evenement)
+
+
+
+        End While
+        For Each evenement In evenementen
+            eventen.Items.Add(evenement.naam & " van " & evenement.van & " tot" & evenement.datumEnd)
+        Next
+
+        '   Catch ex As Exception
+        '    MsgBox("error: there went somiting wrong.")
+
+
+        '    End Try
+        conn.Close()
+    End Sub
+
+    Private Sub eventen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventen.SelectedIndexChanged
             Gerechten.Clear()
             listOfgerechten.Clear()
             Dim idEvent = eventen.FocusedItem.Index + 1

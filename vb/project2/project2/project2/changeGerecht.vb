@@ -1,6 +1,12 @@
-﻿Public Class changeGerecht
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Sql
+Imports System
+Imports System.Data
+Imports System.Data.OleDb
+Public Class changeGerecht
     Private Sub changeGerecht_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblNaam.Text = ADMIN.voornaam & " " & ADMIN.naam
+        lblUsername.Text = ADMIN.gebruikersnaam
     End Sub
     '----------------------------<MENUSTRIP>-----------------------------------'
     '-----------event

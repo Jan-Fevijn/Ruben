@@ -1,6 +1,13 @@
-﻿Public Class addEvent
-    Private Sub addEvent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Sql
+Imports System
+Imports System.Data
+Imports System.Data.OleDb
 
+Public Class addEvent
+    Private Sub addEvent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblNaam.Text = ADMIN.voornaam & " " & ADMIN.naam
+        lblUsernamee.Text = ADMIN.gebruikersnaam
     End Sub
     '----------------------------<MENUSTRIP>-----------------------------------'
     '-----------event

@@ -132,7 +132,7 @@ Partial Class ADMIN
         'lblNaam
         '
         Me.lblNaam.AutoSize = True
-        Me.lblNaam.Location = New System.Drawing.Point(1353, 42)
+        Me.lblNaam.Location = New System.Drawing.Point(1356, 50)
         Me.lblNaam.Name = "lblNaam"
         Me.lblNaam.Size = New System.Drawing.Size(158, 25)
         Me.lblNaam.TabIndex = 12
@@ -141,7 +141,7 @@ Partial Class ADMIN
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Location = New System.Drawing.Point(73, 42)
+        Me.lblUsername.Location = New System.Drawing.Point(76, 50)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(99, 25)
         Me.lblUsername.TabIndex = 11
@@ -217,19 +217,19 @@ Partial Class ADMIN
         'ToevoegenToolStripMenuItem1
         '
         Me.ToevoegenToolStripMenuItem1.Name = "ToevoegenToolStripMenuItem1"
-        Me.ToevoegenToolStripMenuItem1.Size = New System.Drawing.Size(288, 34)
+        Me.ToevoegenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
         Me.ToevoegenToolStripMenuItem1.Text = "&toevoegen"
         '
         'VerwijderenToolStripMenuItem1
         '
         Me.VerwijderenToolStripMenuItem1.Name = "VerwijderenToolStripMenuItem1"
-        Me.VerwijderenToolStripMenuItem1.Size = New System.Drawing.Size(288, 34)
+        Me.VerwijderenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
         Me.VerwijderenToolStripMenuItem1.Text = "&verwijderen"
         '
         'WijzigenToolStripMenuItem3
         '
         Me.WijzigenToolStripMenuItem3.Name = "WijzigenToolStripMenuItem3"
-        Me.WijzigenToolStripMenuItem3.Size = New System.Drawing.Size(288, 34)
+        Me.WijzigenToolStripMenuItem3.Size = New System.Drawing.Size(210, 34)
         Me.WijzigenToolStripMenuItem3.Text = "&wijzigen"
         '
         'LijstenToolStripMenuItem

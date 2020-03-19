@@ -1,6 +1,12 @@
-﻿Public Class deleteGerecht
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Sql
+Imports System
+Imports System.Data
+Imports System.Data.OleDb
+Public Class deleteGerecht
     Private Sub deleteGerecht_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblNaam.Text = ADMIN.voornaam & " " & ADMIN.naam
+        lblusername.Text = ADMIN.gebruikersnaam
     End Sub
     '----------------------------<MENUSTRIP>-----------------------------------'
     '-----------event
