@@ -38,6 +38,15 @@ Partial Class addGerecht
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblNaam = New System.Windows.Forms.Label()
         Me.lblusername = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.lblImg = New System.Windows.Forms.Label()
+        Me.txtNaam = New System.Windows.Forms.TextBox()
+        Me.txtUrl = New System.Windows.Forms.TextBox()
+        Me.radVegan = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.btnAddGerecht = New System.Windows.Forms.Button()
+        Me.producten = New System.Windows.Forms.ListView()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +56,7 @@ Partial Class addGerecht
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
+        Me.MenuStrip1.Size = New System.Drawing.Size(789, 38)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -135,7 +144,7 @@ Partial Class addGerecht
         'lblNaam
         '
         Me.lblNaam.AutoSize = True
-        Me.lblNaam.Location = New System.Drawing.Point(556, 74)
+        Me.lblNaam.Location = New System.Drawing.Point(448, 71)
         Me.lblNaam.Name = "lblNaam"
         Me.lblNaam.Size = New System.Drawing.Size(158, 25)
         Me.lblNaam.TabIndex = 28
@@ -144,17 +153,109 @@ Partial Class addGerecht
         'lblusername
         '
         Me.lblusername.AutoSize = True
-        Me.lblusername.Location = New System.Drawing.Point(9, 74)
+        Me.lblusername.Location = New System.Drawing.Point(93, 71)
         Me.lblusername.Name = "lblusername"
         Me.lblusername.Size = New System.Drawing.Size(99, 25)
         Me.lblusername.TabIndex = 27
         Me.lblusername.Text = "username"
         '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(165, 141)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(61, 25)
+        Me.lblName.TabIndex = 29
+        Me.lblName.Text = "naam"
+        '
+        'lblImg
+        '
+        Me.lblImg.AutoSize = True
+        Me.lblImg.Location = New System.Drawing.Point(142, 197)
+        Me.lblImg.Name = "lblImg"
+        Me.lblImg.Size = New System.Drawing.Size(128, 25)
+        Me.lblImg.TabIndex = 30
+        Me.lblImg.Text = "afbeelding url"
+        '
+        'txtNaam
+        '
+        Me.txtNaam.Location = New System.Drawing.Point(326, 141)
+        Me.txtNaam.Name = "txtNaam"
+        Me.txtNaam.Size = New System.Drawing.Size(197, 29)
+        Me.txtNaam.TabIndex = 31
+        '
+        'txtUrl
+        '
+        Me.txtUrl.Location = New System.Drawing.Point(325, 197)
+        Me.txtUrl.Name = "txtUrl"
+        Me.txtUrl.Size = New System.Drawing.Size(198, 29)
+        Me.txtUrl.TabIndex = 32
+        '
+        'radVegan
+        '
+        Me.radVegan.AutoSize = True
+        Me.radVegan.Location = New System.Drawing.Point(96, 282)
+        Me.radVegan.Name = "radVegan"
+        Me.radVegan.Size = New System.Drawing.Size(130, 29)
+        Me.radVegan.TabIndex = 33
+        Me.radVegan.TabStop = True
+        Me.radVegan.Text = "vegitarisch"
+        Me.radVegan.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(272, 282)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(145, 29)
+        Me.RadioButton2.TabIndex = 34
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "veganistisch"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(453, 282)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(175, 29)
+        Me.RadioButton3.TabIndex = 35
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "geen van bijden"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'btnAddGerecht
+        '
+        Me.btnAddGerecht.Location = New System.Drawing.Point(165, 679)
+        Me.btnAddGerecht.Name = "btnAddGerecht"
+        Me.btnAddGerecht.Size = New System.Drawing.Size(179, 90)
+        Me.btnAddGerecht.TabIndex = 36
+        Me.btnAddGerecht.Text = "add gerecht"
+        Me.btnAddGerecht.UseVisualStyleBackColor = True
+        '
+        'producten
+        '
+        Me.producten.HideSelection = False
+        Me.producten.Location = New System.Drawing.Point(14, 362)
+        Me.producten.Name = "producten"
+        Me.producten.Size = New System.Drawing.Size(743, 264)
+        Me.producten.TabIndex = 37
+        Me.producten.UseCompatibleStateImageBehavior = False
+        '
         'addGerecht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(789, 818)
+        Me.Controls.Add(Me.producten)
+        Me.Controls.Add(Me.btnAddGerecht)
+        Me.Controls.Add(Me.RadioButton3)
+        Me.Controls.Add(Me.RadioButton2)
+        Me.Controls.Add(Me.radVegan)
+        Me.Controls.Add(Me.txtUrl)
+        Me.Controls.Add(Me.txtNaam)
+        Me.Controls.Add(Me.lblImg)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblusername)
         Me.Controls.Add(Me.MenuStrip1)
@@ -183,4 +284,13 @@ Partial Class addGerecht
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblNaam As Label
     Friend WithEvents lblusername As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents lblImg As Label
+    Friend WithEvents txtNaam As TextBox
+    Friend WithEvents txtUrl As TextBox
+    Friend WithEvents radVegan As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents btnAddGerecht As Button
+    Friend WithEvents producten As ListView
 End Class
