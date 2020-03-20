@@ -100,6 +100,9 @@ ADD UNIQUE INDEX `idproduct_UNIQUE` (`idproduct` ASC);
 ;
 ALTER TABLE `kokenvoorgroepen`.`user` 
 ADD UNIQUE INDEX `username_UNIQUE` (`username` ASC);
+ALTER TABLE `kokenvoorgroepen`.`product` 
+CHANGE COLUMN `idproduct` `idproduct` INT(11) NOT NULL AUTO_INCREMENT ;
+
 ;
 
 	-- from key's 

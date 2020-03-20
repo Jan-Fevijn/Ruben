@@ -10,6 +10,8 @@ Public Class ADMIN
     Public naam As String
     Public gebruikersnaam As String
     Public producten As New List(Of product)
+    Public winkels As New List(Of winkel)
+    Public eenheden As New List(Of eenheid)
 
     Public listGerechtID As New List(Of Integer)
         Public evenementen As New List(Of evenement)

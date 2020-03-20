@@ -119,6 +119,7 @@
     <Compile Include="changeProduct.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Class1.vb" />
     <Compile Include="deleteEvent.Designer.vb">
       <DependentUpon>deleteEvent.vb</DependentUpon>
     </Compile>
@@ -137,6 +138,7 @@
     <Compile Include="deleteProduct.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="eenheid.vb" />
     <Compile Include="evenement.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -181,6 +183,7 @@
     <Compile Include="userHome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="winkel.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="addEvent.resx">
