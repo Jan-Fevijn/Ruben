@@ -38,7 +38,18 @@ Partial Class changeProduct
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblNaam = New System.Windows.Forms.Label()
         Me.lblusername = New System.Windows.Forms.Label()
+        Me.add = New System.Windows.Forms.Button()
+        Me.winkels = New System.Windows.Forms.ComboBox()
+        Me.eenheden = New System.Windows.Forms.ComboBox()
+        Me.numHoeveelheid = New System.Windows.Forms.NumericUpDown()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtNaam = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.producten = New System.Windows.Forms.ListView()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -47,7 +58,7 @@ Partial Class changeProduct
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1320, 38)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -135,7 +146,7 @@ Partial Class changeProduct
         'lblNaam
         '
         Me.lblNaam.AutoSize = True
-        Me.lblNaam.Location = New System.Drawing.Point(619, 53)
+        Me.lblNaam.Location = New System.Drawing.Point(900, 59)
         Me.lblNaam.Name = "lblNaam"
         Me.lblNaam.Size = New System.Drawing.Size(158, 25)
         Me.lblNaam.TabIndex = 30
@@ -144,17 +155,112 @@ Partial Class changeProduct
         'lblusername
         '
         Me.lblusername.AutoSize = True
-        Me.lblusername.Location = New System.Drawing.Point(12, 53)
+        Me.lblusername.Location = New System.Drawing.Point(57, 59)
         Me.lblusername.Name = "lblusername"
         Me.lblusername.Size = New System.Drawing.Size(99, 25)
         Me.lblusername.TabIndex = 29
         Me.lblusername.Text = "username"
         '
+        'add
+        '
+        Me.add.Location = New System.Drawing.Point(896, 370)
+        Me.add.Name = "add"
+        Me.add.Size = New System.Drawing.Size(186, 71)
+        Me.add.TabIndex = 51
+        Me.add.Text = "add product"
+        Me.add.UseVisualStyleBackColor = True
+        '
+        'winkels
+        '
+        Me.winkels.FormattingEnabled = True
+        Me.winkels.Location = New System.Drawing.Point(1005, 311)
+        Me.winkels.Name = "winkels"
+        Me.winkels.Size = New System.Drawing.Size(157, 32)
+        Me.winkels.TabIndex = 50
+        '
+        'eenheden
+        '
+        Me.eenheden.FormattingEnabled = True
+        Me.eenheden.Location = New System.Drawing.Point(1005, 260)
+        Me.eenheden.Name = "eenheden"
+        Me.eenheden.Size = New System.Drawing.Size(157, 32)
+        Me.eenheden.TabIndex = 49
+        '
+        'numHoeveelheid
+        '
+        Me.numHoeveelheid.Location = New System.Drawing.Point(1009, 208)
+        Me.numHoeveelheid.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
+        Me.numHoeveelheid.Name = "numHoeveelheid"
+        Me.numHoeveelheid.Size = New System.Drawing.Size(154, 29)
+        Me.numHoeveelheid.TabIndex = 48
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(819, 311)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 25)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "winkel"
+        '
+        'txtNaam
+        '
+        Me.txtNaam.Location = New System.Drawing.Point(1005, 162)
+        Me.txtNaam.Name = "txtNaam"
+        Me.txtNaam.Size = New System.Drawing.Size(158, 29)
+        Me.txtNaam.TabIndex = 46
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(819, 266)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 25)
+        Me.Label3.TabIndex = 45
+        Me.Label3.Text = "eenheid"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(819, 212)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(118, 25)
+        Me.Label2.TabIndex = 44
+        Me.Label2.Text = "hoeveelheid"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(819, 162)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 25)
+        Me.Label1.TabIndex = 43
+        Me.Label1.Text = "naam"
+        '
+        'producten
+        '
+        Me.producten.HideSelection = False
+        Me.producten.Location = New System.Drawing.Point(57, 125)
+        Me.producten.Name = "producten"
+        Me.producten.Size = New System.Drawing.Size(743, 264)
+        Me.producten.TabIndex = 42
+        Me.producten.UseCompatibleStateImageBehavior = False
+        '
         'changeProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1320, 499)
+        Me.Controls.Add(Me.add)
+        Me.Controls.Add(Me.winkels)
+        Me.Controls.Add(Me.eenheden)
+        Me.Controls.Add(Me.numHoeveelheid)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtNaam)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.producten)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblusername)
         Me.Controls.Add(Me.MenuStrip1)
@@ -162,6 +268,7 @@ Partial Class changeProduct
         Me.Text = "changeProduct"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -183,4 +290,14 @@ Partial Class changeProduct
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblNaam As Label
     Friend WithEvents lblusername As Label
+    Friend WithEvents add As Button
+    Friend WithEvents winkels As ComboBox
+    Friend WithEvents eenheden As ComboBox
+    Friend WithEvents numHoeveelheid As NumericUpDown
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtNaam As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents producten As ListView
 End Class

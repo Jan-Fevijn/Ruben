@@ -199,9 +199,9 @@ Partial Class addProduct
         '
         'txtNaam
         '
-        Me.txtNaam.Location = New System.Drawing.Point(963, 158)
+        Me.txtNaam.Location = New System.Drawing.Point(984, 158)
         Me.txtNaam.Name = "txtNaam"
-        Me.txtNaam.Size = New System.Drawing.Size(179, 29)
+        Me.txtNaam.Size = New System.Drawing.Size(158, 29)
         Me.txtNaam.TabIndex = 36
         '
         'Label4
