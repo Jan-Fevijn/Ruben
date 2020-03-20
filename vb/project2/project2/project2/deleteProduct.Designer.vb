@@ -38,6 +38,8 @@ Partial Class deleteProduct
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblNaam = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
+        Me.producten = New System.Windows.Forms.ListView()
+        Me.btnDeleteSelected = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +49,7 @@ Partial Class deleteProduct
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
+        Me.MenuStrip1.Size = New System.Drawing.Size(877, 38)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -150,11 +152,31 @@ Partial Class deleteProduct
         Me.lblUsername.TabIndex = 29
         Me.lblUsername.Text = "username"
         '
+        'producten
+        '
+        Me.producten.HideSelection = False
+        Me.producten.Location = New System.Drawing.Point(45, 134)
+        Me.producten.Name = "producten"
+        Me.producten.Size = New System.Drawing.Size(743, 264)
+        Me.producten.TabIndex = 31
+        Me.producten.UseCompatibleStateImageBehavior = False
+        '
+        'btnDeleteSelected
+        '
+        Me.btnDeleteSelected.Location = New System.Drawing.Point(325, 421)
+        Me.btnDeleteSelected.Name = "btnDeleteSelected"
+        Me.btnDeleteSelected.Size = New System.Drawing.Size(184, 62)
+        Me.btnDeleteSelected.TabIndex = 32
+        Me.btnDeleteSelected.Text = "delete selected"
+        Me.btnDeleteSelected.UseVisualStyleBackColor = True
+        '
         'deleteProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(877, 536)
+        Me.Controls.Add(Me.btnDeleteSelected)
+        Me.Controls.Add(Me.producten)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.MenuStrip1)
@@ -183,4 +205,6 @@ Partial Class deleteProduct
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblNaam As Label
     Friend WithEvents lblUsername As Label
+    Friend WithEvents producten As ListView
+    Friend WithEvents btnDeleteSelected As Button
 End Class

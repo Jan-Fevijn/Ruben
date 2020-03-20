@@ -9,6 +9,7 @@ Public Class ADMIN
     Public voornaam As String
     Public naam As String
     Public gebruikersnaam As String
+    Public producten As New List(Of product)
 
     Public listGerechtID As New List(Of Integer)
         Public evenementen As New List(Of evenement)
