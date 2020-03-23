@@ -78,24 +78,24 @@ Public Class deleteProduct
     End Sub
     '----------------------------<MENUSTRIP>-----------------------------------'
     '-----------event
-    Private Sub ToevoegenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToevoegenToolStripMenuItem.Click
+    Private Sub ToevoegenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         ' add event
         addEvent.Show()
         Me.Hide()
     End Sub
-    Private Sub VerwijderenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerwijderenToolStripMenuItem.Click
+    Private Sub VerwijderenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         ' delete event
         deleteEvent.Show()
         Me.Hide()
     End Sub
-    Private Sub WijzigenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WijzigenToolStripMenuItem.Click
+    Private Sub WijzigenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         ' delete event
         changeEvent.Show()
         Me.Hide()
     End Sub
 
     '-----------------gerecht
-    Private Sub WijzigenToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles WijzigenToolStripMenuItem1.Click
+    Private Sub WijzigenToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         ' add gerecht
         addGerecht.Show()
         Me.Hide()
@@ -103,36 +103,43 @@ Public Class deleteProduct
 
 
 
-    Private Sub WijzigenToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles WijzigenToolStripMenuItem2.Click
+    Private Sub WijzigenToolStripMenuItem2_Click(sender As Object, e As EventArgs)
         ' delete gerecht
         deleteGerecht.Show()
         Me.Hide()
     End Sub
 
-    Private Sub WijzigenToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles WijzigenToolStripMenuItem4.Click
+    Private Sub WijzigenToolStripMenuItem4_Click(sender As Object, e As EventArgs)
         ' change gerecht
         changeGerecht.Show()
         Me.Hide()
     End Sub
 
     '----------product
-    Private Sub ToevoegenToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToevoegenToolStripMenuItem1.Click
+    Private Sub ToevoegenToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         ' add product
         addProduct.Show()
         Me.Hide()
     End Sub
-    Private Sub VerwijderenToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles VerwijderenToolStripMenuItem1.Click
+    Private Sub VerwijderenToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         'delete product 
         Me.Show()
         Me.Hide()
     End Sub
 
-    Private Sub WijzigenToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles WijzigenToolStripMenuItem3.Click
+    Private Sub WijzigenToolStripMenuItem3_Click(sender As Object, e As EventArgs)
         'change product 
         changeProduct.Show()
         Me.Hide()
     End Sub
 
-
+    Private Sub KoppelingenToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        koppelingen.Show()
+        Me.Hide()
+    End Sub
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        ADMIN.Show()
+        Me.Hide()
+    End Sub
     '----------------------------</MENUSTRIP>-----------------------------------'
 End Class

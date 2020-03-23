@@ -47,6 +47,8 @@ Partial Class ADMIN
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KoppelingenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -150,7 +152,7 @@ Partial Class ADMIN
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem, Me.KoppelingenToolStripMenuItem, Me.HomeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1854, 38)
@@ -238,6 +240,18 @@ Partial Class ADMIN
         Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
         Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
+        'KoppelingenToolStripMenuItem
+        '
+        Me.KoppelingenToolStripMenuItem.Name = "KoppelingenToolStripMenuItem"
+        Me.KoppelingenToolStripMenuItem.Size = New System.Drawing.Size(139, 34)
+        Me.KoppelingenToolStripMenuItem.Text = "koppelingen"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(78, 34)
+        Me.HomeToolStripMenuItem.Text = "home"
+        '
         'ADMIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -290,4 +304,6 @@ Partial Class ADMIN
     Friend WithEvents VerwijderenToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents WijzigenToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents KoppelingenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class

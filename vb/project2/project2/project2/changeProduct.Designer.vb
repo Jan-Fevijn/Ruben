@@ -22,6 +22,18 @@ Partial Class changeProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.lblNaam = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
+        Me.add = New System.Windows.Forms.Button()
+        Me.winkels = New System.Windows.Forms.ComboBox()
+        Me.eenheden = New System.Windows.Forms.ComboBox()
+        Me.numHoeveelheid = New System.Windows.Forms.NumericUpDown()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtNaam = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.producten = New System.Windows.Forms.ListView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToevoegenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,112 +48,11 @@ Partial Class changeProduct
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblNaam = New System.Windows.Forms.Label()
-        Me.lblusername = New System.Windows.Forms.Label()
-        Me.add = New System.Windows.Forms.Button()
-        Me.winkels = New System.Windows.Forms.ComboBox()
-        Me.eenheden = New System.Windows.Forms.ComboBox()
-        Me.numHoeveelheid = New System.Windows.Forms.NumericUpDown()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtNaam = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.producten = New System.Windows.Forms.ListView()
-        Me.MenuStrip1.SuspendLayout()
+        Me.KoppelingenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1320, 38)
-        Me.MenuStrip1.TabIndex = 23
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'EventToolStripMenuItem
-        '
-        Me.EventToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToevoegenToolStripMenuItem, Me.VerwijderenToolStripMenuItem, Me.WijzigenToolStripMenuItem})
-        Me.EventToolStripMenuItem.Name = "EventToolStripMenuItem"
-        Me.EventToolStripMenuItem.Size = New System.Drawing.Size(76, 34)
-        Me.EventToolStripMenuItem.Text = "&event"
-        '
-        'ToevoegenToolStripMenuItem
-        '
-        Me.ToevoegenToolStripMenuItem.Name = "ToevoegenToolStripMenuItem"
-        Me.ToevoegenToolStripMenuItem.Size = New System.Drawing.Size(210, 34)
-        Me.ToevoegenToolStripMenuItem.Text = "&toevoegen"
-        '
-        'VerwijderenToolStripMenuItem
-        '
-        Me.VerwijderenToolStripMenuItem.Name = "VerwijderenToolStripMenuItem"
-        Me.VerwijderenToolStripMenuItem.Size = New System.Drawing.Size(210, 34)
-        Me.VerwijderenToolStripMenuItem.Text = "&verwijderen"
-        '
-        'WijzigenToolStripMenuItem
-        '
-        Me.WijzigenToolStripMenuItem.Name = "WijzigenToolStripMenuItem"
-        Me.WijzigenToolStripMenuItem.Size = New System.Drawing.Size(210, 34)
-        Me.WijzigenToolStripMenuItem.Text = "&wijzigen"
-        '
-        'GerechtToolStripMenuItem
-        '
-        Me.GerechtToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WijzigenToolStripMenuItem1, Me.WijzigenToolStripMenuItem2, Me.WijzigenToolStripMenuItem4})
-        Me.GerechtToolStripMenuItem.Name = "GerechtToolStripMenuItem"
-        Me.GerechtToolStripMenuItem.Size = New System.Drawing.Size(95, 34)
-        Me.GerechtToolStripMenuItem.Text = "&gerecht"
-        '
-        'WijzigenToolStripMenuItem1
-        '
-        Me.WijzigenToolStripMenuItem1.Name = "WijzigenToolStripMenuItem1"
-        Me.WijzigenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
-        Me.WijzigenToolStripMenuItem1.Text = "&toevoegen"
-        '
-        'WijzigenToolStripMenuItem2
-        '
-        Me.WijzigenToolStripMenuItem2.Name = "WijzigenToolStripMenuItem2"
-        Me.WijzigenToolStripMenuItem2.Size = New System.Drawing.Size(210, 34)
-        Me.WijzigenToolStripMenuItem2.Text = "&verwijderen"
-        '
-        'WijzigenToolStripMenuItem4
-        '
-        Me.WijzigenToolStripMenuItem4.Name = "WijzigenToolStripMenuItem4"
-        Me.WijzigenToolStripMenuItem4.Size = New System.Drawing.Size(210, 34)
-        Me.WijzigenToolStripMenuItem4.Text = "&wijzigen"
-        '
-        'ProductToolStripMenuItem
-        '
-        Me.ProductToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToevoegenToolStripMenuItem1, Me.VerwijderenToolStripMenuItem1, Me.WijzigenToolStripMenuItem3})
-        Me.ProductToolStripMenuItem.Name = "ProductToolStripMenuItem"
-        Me.ProductToolStripMenuItem.Size = New System.Drawing.Size(97, 34)
-        Me.ProductToolStripMenuItem.Text = "&product"
-        '
-        'ToevoegenToolStripMenuItem1
-        '
-        Me.ToevoegenToolStripMenuItem1.Name = "ToevoegenToolStripMenuItem1"
-        Me.ToevoegenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
-        Me.ToevoegenToolStripMenuItem1.Text = "&toevoegen"
-        '
-        'VerwijderenToolStripMenuItem1
-        '
-        Me.VerwijderenToolStripMenuItem1.Name = "VerwijderenToolStripMenuItem1"
-        Me.VerwijderenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
-        Me.VerwijderenToolStripMenuItem1.Text = "&verwijderen"
-        '
-        'WijzigenToolStripMenuItem3
-        '
-        Me.WijzigenToolStripMenuItem3.Name = "WijzigenToolStripMenuItem3"
-        Me.WijzigenToolStripMenuItem3.Size = New System.Drawing.Size(210, 34)
-        Me.WijzigenToolStripMenuItem3.Text = "&wijzigen"
-        '
-        'LijstenToolStripMenuItem
-        '
-        Me.LijstenToolStripMenuItem.Name = "LijstenToolStripMenuItem"
-        Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
-        Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
         'lblNaam
         '
@@ -246,11 +157,115 @@ Partial Class changeProduct
         Me.producten.TabIndex = 42
         Me.producten.UseCompatibleStateImageBehavior = False
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem, Me.KoppelingenToolStripMenuItem, Me.HomeToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1320, 38)
+        Me.MenuStrip1.TabIndex = 52
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'EventToolStripMenuItem
+        '
+        Me.EventToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToevoegenToolStripMenuItem, Me.VerwijderenToolStripMenuItem, Me.WijzigenToolStripMenuItem})
+        Me.EventToolStripMenuItem.Name = "EventToolStripMenuItem"
+        Me.EventToolStripMenuItem.Size = New System.Drawing.Size(76, 34)
+        Me.EventToolStripMenuItem.Text = "&event"
+        '
+        'ToevoegenToolStripMenuItem
+        '
+        Me.ToevoegenToolStripMenuItem.Name = "ToevoegenToolStripMenuItem"
+        Me.ToevoegenToolStripMenuItem.Size = New System.Drawing.Size(210, 34)
+        Me.ToevoegenToolStripMenuItem.Text = "&toevoegen"
+        '
+        'VerwijderenToolStripMenuItem
+        '
+        Me.VerwijderenToolStripMenuItem.Name = "VerwijderenToolStripMenuItem"
+        Me.VerwijderenToolStripMenuItem.Size = New System.Drawing.Size(210, 34)
+        Me.VerwijderenToolStripMenuItem.Text = "&verwijderen"
+        '
+        'WijzigenToolStripMenuItem
+        '
+        Me.WijzigenToolStripMenuItem.Name = "WijzigenToolStripMenuItem"
+        Me.WijzigenToolStripMenuItem.Size = New System.Drawing.Size(210, 34)
+        Me.WijzigenToolStripMenuItem.Text = "&wijzigen"
+        '
+        'GerechtToolStripMenuItem
+        '
+        Me.GerechtToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WijzigenToolStripMenuItem1, Me.WijzigenToolStripMenuItem2, Me.WijzigenToolStripMenuItem4})
+        Me.GerechtToolStripMenuItem.Name = "GerechtToolStripMenuItem"
+        Me.GerechtToolStripMenuItem.Size = New System.Drawing.Size(95, 34)
+        Me.GerechtToolStripMenuItem.Text = "&gerecht"
+        '
+        'WijzigenToolStripMenuItem1
+        '
+        Me.WijzigenToolStripMenuItem1.Name = "WijzigenToolStripMenuItem1"
+        Me.WijzigenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
+        Me.WijzigenToolStripMenuItem1.Text = "&toevoegen"
+        '
+        'WijzigenToolStripMenuItem2
+        '
+        Me.WijzigenToolStripMenuItem2.Name = "WijzigenToolStripMenuItem2"
+        Me.WijzigenToolStripMenuItem2.Size = New System.Drawing.Size(210, 34)
+        Me.WijzigenToolStripMenuItem2.Text = "&verwijderen"
+        '
+        'WijzigenToolStripMenuItem4
+        '
+        Me.WijzigenToolStripMenuItem4.Name = "WijzigenToolStripMenuItem4"
+        Me.WijzigenToolStripMenuItem4.Size = New System.Drawing.Size(210, 34)
+        Me.WijzigenToolStripMenuItem4.Text = "&wijzigen"
+        '
+        'ProductToolStripMenuItem
+        '
+        Me.ProductToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToevoegenToolStripMenuItem1, Me.VerwijderenToolStripMenuItem1, Me.WijzigenToolStripMenuItem3})
+        Me.ProductToolStripMenuItem.Name = "ProductToolStripMenuItem"
+        Me.ProductToolStripMenuItem.Size = New System.Drawing.Size(97, 34)
+        Me.ProductToolStripMenuItem.Text = "&product"
+        '
+        'ToevoegenToolStripMenuItem1
+        '
+        Me.ToevoegenToolStripMenuItem1.Name = "ToevoegenToolStripMenuItem1"
+        Me.ToevoegenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
+        Me.ToevoegenToolStripMenuItem1.Text = "&toevoegen"
+        '
+        'VerwijderenToolStripMenuItem1
+        '
+        Me.VerwijderenToolStripMenuItem1.Name = "VerwijderenToolStripMenuItem1"
+        Me.VerwijderenToolStripMenuItem1.Size = New System.Drawing.Size(210, 34)
+        Me.VerwijderenToolStripMenuItem1.Text = "&verwijderen"
+        '
+        'WijzigenToolStripMenuItem3
+        '
+        Me.WijzigenToolStripMenuItem3.Name = "WijzigenToolStripMenuItem3"
+        Me.WijzigenToolStripMenuItem3.Size = New System.Drawing.Size(210, 34)
+        Me.WijzigenToolStripMenuItem3.Text = "&wijzigen"
+        '
+        'LijstenToolStripMenuItem
+        '
+        Me.LijstenToolStripMenuItem.Name = "LijstenToolStripMenuItem"
+        Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
+        Me.LijstenToolStripMenuItem.Text = "&lijsten"
+        '
+        'KoppelingenToolStripMenuItem
+        '
+        Me.KoppelingenToolStripMenuItem.Name = "KoppelingenToolStripMenuItem"
+        Me.KoppelingenToolStripMenuItem.Size = New System.Drawing.Size(139, 34)
+        Me.KoppelingenToolStripMenuItem.Text = "koppelingen"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(78, 34)
+        Me.HomeToolStripMenuItem.Text = "home"
+        '
         'changeProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1320, 499)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.add)
         Me.Controls.Add(Me.winkels)
         Me.Controls.Add(Me.eenheden)
@@ -263,17 +278,27 @@ Partial Class changeProduct
         Me.Controls.Add(Me.producten)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblusername)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "changeProduct"
         Me.Text = "changeProduct"
+        CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
+    Friend WithEvents lblNaam As Label
+    Friend WithEvents lblusername As Label
+    Friend WithEvents add As Button
+    Friend WithEvents winkels As ComboBox
+    Friend WithEvents eenheden As ComboBox
+    Friend WithEvents numHoeveelheid As NumericUpDown
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtNaam As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents producten As ListView
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents EventToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToevoegenToolStripMenuItem As ToolStripMenuItem
@@ -288,16 +313,6 @@ Partial Class changeProduct
     Friend WithEvents VerwijderenToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents WijzigenToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lblNaam As Label
-    Friend WithEvents lblusername As Label
-    Friend WithEvents add As Button
-    Friend WithEvents winkels As ComboBox
-    Friend WithEvents eenheden As ComboBox
-    Friend WithEvents numHoeveelheid As NumericUpDown
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtNaam As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents producten As ListView
+    Friend WithEvents KoppelingenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -12,6 +12,7 @@ Public Class ADMIN
     Public producten As New List(Of product)
     Public winkels As New List(Of winkel)
     Public eenheden As New List(Of eenheid)
+    Public adminGerechten As New List(Of adminGerecht)
 
     Public listGerechtID As New List(Of Integer)
         Public evenementen As New List(Of evenement)
@@ -311,6 +312,16 @@ Public Class ADMIN
     Private Sub WijzigenToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles WijzigenToolStripMenuItem3.Click
         'change product 
         changeProduct.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub KoppelingenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KoppelingenToolStripMenuItem.Click
+        koppelingen.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        ADMIN.Show()
         Me.Hide()
     End Sub
     '----------------------------</MENUSTRIP>-----------------------------------'

@@ -101,6 +101,7 @@
     <Compile Include="ADMIN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="adminGerecht.vb" />
     <Compile Include="changeEvent.Designer.vb">
       <DependentUpon>changeEvent.vb</DependentUpon>
     </Compile>

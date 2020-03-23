@@ -36,16 +36,28 @@ Partial Class addEvent
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KoppelingenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblNaam = New System.Windows.Forms.Label()
         Me.lblUsernamee = New System.Windows.Forms.Label()
+        Me.btnAddEvent = New System.Windows.Forms.Button()
+        Me.lblUrl = New System.Windows.Forms.Label()
+        Me.txtNaam = New System.Windows.Forms.TextBox()
+        Me.lblTot = New System.Windows.Forms.Label()
+        Me.lblVan = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.eventen = New System.Windows.Forms.ListView()
+        Me.txtVan = New System.Windows.Forms.TextBox()
+        Me.txtTot = New System.Windows.Forms.TextBox()
+        Me.txtUrl = New System.Windows.Forms.TextBox()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem, Me.KoppelingenToolStripMenuItem, Me.HomeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1495, 38)
@@ -133,6 +145,12 @@ Partial Class addEvent
         Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
         Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
+        'KoppelingenToolStripMenuItem
+        '
+        Me.KoppelingenToolStripMenuItem.Name = "KoppelingenToolStripMenuItem"
+        Me.KoppelingenToolStripMenuItem.Size = New System.Drawing.Size(139, 34)
+        Me.KoppelingenToolStripMenuItem.Text = "koppelingen"
+        '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
@@ -160,11 +178,109 @@ Partial Class addEvent
         Me.lblUsernamee.TabIndex = 25
         Me.lblUsernamee.Text = "username"
         '
+        'btnAddEvent
+        '
+        Me.btnAddEvent.Location = New System.Drawing.Point(894, 358)
+        Me.btnAddEvent.Name = "btnAddEvent"
+        Me.btnAddEvent.Size = New System.Drawing.Size(186, 71)
+        Me.btnAddEvent.TabIndex = 61
+        Me.btnAddEvent.Text = "add event"
+        Me.btnAddEvent.UseVisualStyleBackColor = True
+        '
+        'lblUrl
+        '
+        Me.lblUrl.AutoSize = True
+        Me.lblUrl.Location = New System.Drawing.Point(817, 299)
+        Me.lblUrl.Name = "lblUrl"
+        Me.lblUrl.Size = New System.Drawing.Size(128, 25)
+        Me.lblUrl.TabIndex = 57
+        Me.lblUrl.Text = "afbeelding url"
+        '
+        'txtNaam
+        '
+        Me.txtNaam.Location = New System.Drawing.Point(1003, 150)
+        Me.txtNaam.Name = "txtNaam"
+        Me.txtNaam.Size = New System.Drawing.Size(158, 29)
+        Me.txtNaam.TabIndex = 56
+        '
+        'lblTot
+        '
+        Me.lblTot.AutoSize = True
+        Me.lblTot.Location = New System.Drawing.Point(817, 254)
+        Me.lblTot.Name = "lblTot"
+        Me.lblTot.Size = New System.Drawing.Size(33, 25)
+        Me.lblTot.TabIndex = 55
+        Me.lblTot.Text = "tot"
+        '
+        'lblVan
+        '
+        Me.lblVan.AutoSize = True
+        Me.lblVan.Location = New System.Drawing.Point(817, 200)
+        Me.lblVan.Name = "lblVan"
+        Me.lblVan.Size = New System.Drawing.Size(44, 25)
+        Me.lblVan.TabIndex = 54
+        Me.lblVan.Text = "van"
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(817, 150)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(61, 25)
+        Me.lblName.TabIndex = 53
+        Me.lblName.Text = "naam"
+        '
+        'eventen
+        '
+        Me.eventen.HideSelection = False
+        Me.eventen.Location = New System.Drawing.Point(53, 129)
+        Me.eventen.Name = "eventen"
+        Me.eventen.Size = New System.Drawing.Size(743, 324)
+        Me.eventen.TabIndex = 52
+        Me.eventen.UseCompatibleStateImageBehavior = False
+        '
+        'txtVan
+        '
+        Me.txtVan.Location = New System.Drawing.Point(1003, 196)
+        Me.txtVan.Name = "txtVan"
+        Me.txtVan.Size = New System.Drawing.Size(158, 29)
+        Me.txtVan.TabIndex = 62
+        '
+        'txtTot
+        '
+        Me.txtTot.Location = New System.Drawing.Point(1003, 250)
+        Me.txtTot.Name = "txtTot"
+        Me.txtTot.Size = New System.Drawing.Size(158, 29)
+        Me.txtTot.TabIndex = 63
+        '
+        'txtUrl
+        '
+        Me.txtUrl.Location = New System.Drawing.Point(1003, 296)
+        Me.txtUrl.Name = "txtUrl"
+        Me.txtUrl.Size = New System.Drawing.Size(158, 29)
+        Me.txtUrl.TabIndex = 64
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(78, 34)
+        Me.HomeToolStripMenuItem.Text = "home"
+        '
         'addEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1495, 563)
+        Me.Controls.Add(Me.txtUrl)
+        Me.Controls.Add(Me.txtTot)
+        Me.Controls.Add(Me.txtVan)
+        Me.Controls.Add(Me.btnAddEvent)
+        Me.Controls.Add(Me.lblUrl)
+        Me.Controls.Add(Me.txtNaam)
+        Me.Controls.Add(Me.lblTot)
+        Me.Controls.Add(Me.lblVan)
+        Me.Controls.Add(Me.lblName)
+        Me.Controls.Add(Me.eventen)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblUsernamee)
         Me.Controls.Add(Me.lblUsername)
@@ -195,4 +311,16 @@ Partial Class addEvent
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblNaam As Label
     Friend WithEvents lblUsernamee As Label
+    Friend WithEvents btnAddEvent As Button
+    Friend WithEvents lblUrl As Label
+    Friend WithEvents txtNaam As TextBox
+    Friend WithEvents lblTot As Label
+    Friend WithEvents lblVan As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents eventen As ListView
+    Friend WithEvents txtVan As TextBox
+    Friend WithEvents txtTot As TextBox
+    Friend WithEvents txtUrl As TextBox
+    Friend WithEvents KoppelingenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class

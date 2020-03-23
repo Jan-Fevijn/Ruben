@@ -22,6 +22,10 @@ Partial Class deleteEvent
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.lblNaam = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
+        Me.eventen = New System.Windows.Forms.ListView()
+        Me.btnDeleteEvent = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToevoegenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,19 +40,55 @@ Partial Class deleteEvent
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblNaam = New System.Windows.Forms.Label()
-        Me.lblusername = New System.Windows.Forms.Label()
+        Me.KoppelingenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblNaam
+        '
+        Me.lblNaam.AutoSize = True
+        Me.lblNaam.Location = New System.Drawing.Point(619, 57)
+        Me.lblNaam.Name = "lblNaam"
+        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
+        Me.lblNaam.TabIndex = 30
+        Me.lblNaam.Text = "voornaam  naam"
+        '
+        'lblusername
+        '
+        Me.lblusername.AutoSize = True
+        Me.lblusername.Location = New System.Drawing.Point(12, 57)
+        Me.lblusername.Name = "lblusername"
+        Me.lblusername.Size = New System.Drawing.Size(99, 25)
+        Me.lblusername.TabIndex = 29
+        Me.lblusername.Text = "username"
+        '
+        'eventen
+        '
+        Me.eventen.HideSelection = False
+        Me.eventen.Location = New System.Drawing.Point(17, 100)
+        Me.eventen.Name = "eventen"
+        Me.eventen.Size = New System.Drawing.Size(743, 324)
+        Me.eventen.TabIndex = 53
+        Me.eventen.UseCompatibleStateImageBehavior = False
+        '
+        'btnDeleteEvent
+        '
+        Me.btnDeleteEvent.Location = New System.Drawing.Point(240, 430)
+        Me.btnDeleteEvent.Name = "btnDeleteEvent"
+        Me.btnDeleteEvent.Size = New System.Drawing.Size(271, 83)
+        Me.btnDeleteEvent.TabIndex = 54
+        Me.btnDeleteEvent.Text = "delete selected"
+        Me.btnDeleteEvent.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem, Me.KoppelingenToolStripMenuItem, Me.HomeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
-        Me.MenuStrip1.TabIndex = 23
+        Me.MenuStrip1.Size = New System.Drawing.Size(868, 38)
+        Me.MenuStrip1.TabIndex = 55
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'EventToolStripMenuItem
@@ -132,32 +172,28 @@ Partial Class deleteEvent
         Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
         Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
-        'lblNaam
+        'KoppelingenToolStripMenuItem
         '
-        Me.lblNaam.AutoSize = True
-        Me.lblNaam.Location = New System.Drawing.Point(619, 57)
-        Me.lblNaam.Name = "lblNaam"
-        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
-        Me.lblNaam.TabIndex = 30
-        Me.lblNaam.Text = "voornaam  naam"
+        Me.KoppelingenToolStripMenuItem.Name = "KoppelingenToolStripMenuItem"
+        Me.KoppelingenToolStripMenuItem.Size = New System.Drawing.Size(139, 34)
+        Me.KoppelingenToolStripMenuItem.Text = "koppelingen"
         '
-        'lblusername
+        'HomeToolStripMenuItem
         '
-        Me.lblusername.AutoSize = True
-        Me.lblusername.Location = New System.Drawing.Point(12, 57)
-        Me.lblusername.Name = "lblusername"
-        Me.lblusername.Size = New System.Drawing.Size(99, 25)
-        Me.lblusername.TabIndex = 29
-        Me.lblusername.Text = "username"
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(78, 34)
+        Me.HomeToolStripMenuItem.Text = "home"
         '
         'deleteEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(868, 538)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.btnDeleteEvent)
+        Me.Controls.Add(Me.eventen)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblusername)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "deleteEvent"
         Me.Text = "deleteEvent"
         Me.MenuStrip1.ResumeLayout(False)
@@ -166,7 +202,10 @@ Partial Class deleteEvent
         Me.PerformLayout()
 
     End Sub
-
+    Friend WithEvents lblNaam As Label
+    Friend WithEvents lblusername As Label
+    Friend WithEvents eventen As ListView
+    Friend WithEvents btnDeleteEvent As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents EventToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToevoegenToolStripMenuItem As ToolStripMenuItem
@@ -181,6 +220,6 @@ Partial Class deleteEvent
     Friend WithEvents VerwijderenToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents WijzigenToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lblNaam As Label
-    Friend WithEvents lblusername As Label
+    Friend WithEvents KoppelingenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class

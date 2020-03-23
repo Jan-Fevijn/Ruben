@@ -22,6 +22,10 @@ Partial Class deleteProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.lblNaam = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.producten = New System.Windows.Forms.ListView()
+        Me.btnDeleteSelected = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToevoegenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,21 +40,55 @@ Partial Class deleteProduct
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblNaam = New System.Windows.Forms.Label()
-        Me.lblUsername = New System.Windows.Forms.Label()
-        Me.producten = New System.Windows.Forms.ListView()
-        Me.btnDeleteSelected = New System.Windows.Forms.Button()
+        Me.KoppelingenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblNaam
+        '
+        Me.lblNaam.AutoSize = True
+        Me.lblNaam.Location = New System.Drawing.Point(630, 65)
+        Me.lblNaam.Name = "lblNaam"
+        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
+        Me.lblNaam.TabIndex = 30
+        Me.lblNaam.Text = "voornaam  naam"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Location = New System.Drawing.Point(23, 65)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(99, 25)
+        Me.lblUsername.TabIndex = 29
+        Me.lblUsername.Text = "username"
+        '
+        'producten
+        '
+        Me.producten.HideSelection = False
+        Me.producten.Location = New System.Drawing.Point(45, 134)
+        Me.producten.Name = "producten"
+        Me.producten.Size = New System.Drawing.Size(743, 264)
+        Me.producten.TabIndex = 31
+        Me.producten.UseCompatibleStateImageBehavior = False
+        '
+        'btnDeleteSelected
+        '
+        Me.btnDeleteSelected.Location = New System.Drawing.Point(325, 421)
+        Me.btnDeleteSelected.Name = "btnDeleteSelected"
+        Me.btnDeleteSelected.Size = New System.Drawing.Size(184, 62)
+        Me.btnDeleteSelected.TabIndex = 32
+        Me.btnDeleteSelected.Text = "delete selected"
+        Me.btnDeleteSelected.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem, Me.KoppelingenToolStripMenuItem, Me.HomeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(877, 38)
-        Me.MenuStrip1.TabIndex = 23
+        Me.MenuStrip1.TabIndex = 33
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'EventToolStripMenuItem
@@ -134,52 +172,28 @@ Partial Class deleteProduct
         Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
         Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
-        'lblNaam
+        'KoppelingenToolStripMenuItem
         '
-        Me.lblNaam.AutoSize = True
-        Me.lblNaam.Location = New System.Drawing.Point(630, 65)
-        Me.lblNaam.Name = "lblNaam"
-        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
-        Me.lblNaam.TabIndex = 30
-        Me.lblNaam.Text = "voornaam  naam"
+        Me.KoppelingenToolStripMenuItem.Name = "KoppelingenToolStripMenuItem"
+        Me.KoppelingenToolStripMenuItem.Size = New System.Drawing.Size(139, 34)
+        Me.KoppelingenToolStripMenuItem.Text = "koppelingen"
         '
-        'lblUsername
+        'HomeToolStripMenuItem
         '
-        Me.lblUsername.AutoSize = True
-        Me.lblUsername.Location = New System.Drawing.Point(23, 65)
-        Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(99, 25)
-        Me.lblUsername.TabIndex = 29
-        Me.lblUsername.Text = "username"
-        '
-        'producten
-        '
-        Me.producten.HideSelection = False
-        Me.producten.Location = New System.Drawing.Point(45, 134)
-        Me.producten.Name = "producten"
-        Me.producten.Size = New System.Drawing.Size(743, 264)
-        Me.producten.TabIndex = 31
-        Me.producten.UseCompatibleStateImageBehavior = False
-        '
-        'btnDeleteSelected
-        '
-        Me.btnDeleteSelected.Location = New System.Drawing.Point(325, 421)
-        Me.btnDeleteSelected.Name = "btnDeleteSelected"
-        Me.btnDeleteSelected.Size = New System.Drawing.Size(184, 62)
-        Me.btnDeleteSelected.TabIndex = 32
-        Me.btnDeleteSelected.Text = "delete selected"
-        Me.btnDeleteSelected.UseVisualStyleBackColor = True
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(78, 34)
+        Me.HomeToolStripMenuItem.Text = "home"
         '
         'deleteProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(877, 536)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnDeleteSelected)
         Me.Controls.Add(Me.producten)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblUsername)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "deleteProduct"
         Me.Text = "deleteProduct"
         Me.MenuStrip1.ResumeLayout(False)
@@ -188,7 +202,10 @@ Partial Class deleteProduct
         Me.PerformLayout()
 
     End Sub
-
+    Friend WithEvents lblNaam As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents producten As ListView
+    Friend WithEvents btnDeleteSelected As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents EventToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToevoegenToolStripMenuItem As ToolStripMenuItem
@@ -203,8 +220,6 @@ Partial Class deleteProduct
     Friend WithEvents VerwijderenToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents WijzigenToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lblNaam As Label
-    Friend WithEvents lblUsername As Label
-    Friend WithEvents producten As ListView
-    Friend WithEvents btnDeleteSelected As Button
+    Friend WithEvents KoppelingenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class

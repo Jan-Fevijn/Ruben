@@ -22,6 +22,17 @@ Partial Class changeGerecht
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.lblNaam = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
+        Me.producten = New System.Windows.Forms.ListView()
+        Me.btnAddGerecht = New System.Windows.Forms.Button()
+        Me.radGeen = New System.Windows.Forms.RadioButton()
+        Me.radVeganistisch = New System.Windows.Forms.RadioButton()
+        Me.radVegan = New System.Windows.Forms.RadioButton()
+        Me.txtUrl = New System.Windows.Forms.TextBox()
+        Me.txtNaam = New System.Windows.Forms.TextBox()
+        Me.lblImg = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToevoegenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,19 +47,120 @@ Partial Class changeGerecht
         Me.VerwijderenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WijzigenToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LijstenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblNaam = New System.Windows.Forms.Label()
-        Me.lblusername = New System.Windows.Forms.Label()
+        Me.KoppelingenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblNaam
+        '
+        Me.lblNaam.AutoSize = True
+        Me.lblNaam.Location = New System.Drawing.Point(619, 57)
+        Me.lblNaam.Name = "lblNaam"
+        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
+        Me.lblNaam.TabIndex = 30
+        Me.lblNaam.Text = "voornaam  naam"
+        '
+        'lblusername
+        '
+        Me.lblusername.AutoSize = True
+        Me.lblusername.Location = New System.Drawing.Point(12, 57)
+        Me.lblusername.Name = "lblusername"
+        Me.lblusername.Size = New System.Drawing.Size(99, 25)
+        Me.lblusername.TabIndex = 29
+        Me.lblusername.Text = "username"
+        '
+        'producten
+        '
+        Me.producten.HideSelection = False
+        Me.producten.Location = New System.Drawing.Point(34, 112)
+        Me.producten.Name = "producten"
+        Me.producten.Size = New System.Drawing.Size(743, 264)
+        Me.producten.TabIndex = 46
+        Me.producten.UseCompatibleStateImageBehavior = False
+        '
+        'btnAddGerecht
+        '
+        Me.btnAddGerecht.Location = New System.Drawing.Point(944, 308)
+        Me.btnAddGerecht.Name = "btnAddGerecht"
+        Me.btnAddGerecht.Size = New System.Drawing.Size(179, 90)
+        Me.btnAddGerecht.TabIndex = 45
+        Me.btnAddGerecht.Text = "add gerecht"
+        Me.btnAddGerecht.UseVisualStyleBackColor = True
+        '
+        'radGeen
+        '
+        Me.radGeen.AutoSize = True
+        Me.radGeen.Location = New System.Drawing.Point(1159, 253)
+        Me.radGeen.Name = "radGeen"
+        Me.radGeen.Size = New System.Drawing.Size(175, 29)
+        Me.radGeen.TabIndex = 44
+        Me.radGeen.TabStop = True
+        Me.radGeen.Text = "geen van bijden"
+        Me.radGeen.UseVisualStyleBackColor = True
+        '
+        'radVeganistisch
+        '
+        Me.radVeganistisch.AutoSize = True
+        Me.radVeganistisch.Location = New System.Drawing.Point(978, 253)
+        Me.radVeganistisch.Name = "radVeganistisch"
+        Me.radVeganistisch.Size = New System.Drawing.Size(145, 29)
+        Me.radVeganistisch.TabIndex = 43
+        Me.radVeganistisch.TabStop = True
+        Me.radVeganistisch.Text = "veganistisch"
+        Me.radVeganistisch.UseVisualStyleBackColor = True
+        '
+        'radVegan
+        '
+        Me.radVegan.AutoSize = True
+        Me.radVegan.Location = New System.Drawing.Point(802, 253)
+        Me.radVegan.Name = "radVegan"
+        Me.radVegan.Size = New System.Drawing.Size(130, 29)
+        Me.radVegan.TabIndex = 42
+        Me.radVegan.TabStop = True
+        Me.radVegan.Text = "vegitarisch"
+        Me.radVegan.UseVisualStyleBackColor = True
+        '
+        'txtUrl
+        '
+        Me.txtUrl.Location = New System.Drawing.Point(1031, 168)
+        Me.txtUrl.Name = "txtUrl"
+        Me.txtUrl.Size = New System.Drawing.Size(198, 29)
+        Me.txtUrl.TabIndex = 41
+        '
+        'txtNaam
+        '
+        Me.txtNaam.Location = New System.Drawing.Point(1032, 112)
+        Me.txtNaam.Name = "txtNaam"
+        Me.txtNaam.Size = New System.Drawing.Size(197, 29)
+        Me.txtNaam.TabIndex = 40
+        '
+        'lblImg
+        '
+        Me.lblImg.AutoSize = True
+        Me.lblImg.Location = New System.Drawing.Point(848, 168)
+        Me.lblImg.Name = "lblImg"
+        Me.lblImg.Size = New System.Drawing.Size(128, 25)
+        Me.lblImg.TabIndex = 39
+        Me.lblImg.Text = "afbeelding url"
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(871, 112)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(61, 25)
+        Me.lblName.TabIndex = 38
+        Me.lblName.Text = "naam"
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventToolStripMenuItem, Me.GerechtToolStripMenuItem, Me.ProductToolStripMenuItem, Me.LijstenToolStripMenuItem, Me.KoppelingenToolStripMenuItem, Me.HomeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
-        Me.MenuStrip1.TabIndex = 23
+        Me.MenuStrip1.Size = New System.Drawing.Size(1402, 38)
+        Me.MenuStrip1.TabIndex = 47
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'EventToolStripMenuItem
@@ -132,32 +244,35 @@ Partial Class changeGerecht
         Me.LijstenToolStripMenuItem.Size = New System.Drawing.Size(79, 34)
         Me.LijstenToolStripMenuItem.Text = "&lijsten"
         '
-        'lblNaam
+        'KoppelingenToolStripMenuItem
         '
-        Me.lblNaam.AutoSize = True
-        Me.lblNaam.Location = New System.Drawing.Point(619, 57)
-        Me.lblNaam.Name = "lblNaam"
-        Me.lblNaam.Size = New System.Drawing.Size(158, 25)
-        Me.lblNaam.TabIndex = 30
-        Me.lblNaam.Text = "voornaam  naam"
+        Me.KoppelingenToolStripMenuItem.Name = "KoppelingenToolStripMenuItem"
+        Me.KoppelingenToolStripMenuItem.Size = New System.Drawing.Size(139, 34)
+        Me.KoppelingenToolStripMenuItem.Text = "koppelingen"
         '
-        'lblusername
+        'HomeToolStripMenuItem
         '
-        Me.lblusername.AutoSize = True
-        Me.lblusername.Location = New System.Drawing.Point(12, 57)
-        Me.lblusername.Name = "lblusername"
-        Me.lblusername.Size = New System.Drawing.Size(99, 25)
-        Me.lblusername.TabIndex = 29
-        Me.lblusername.Text = "username"
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(78, 34)
+        Me.HomeToolStripMenuItem.Text = "home"
         '
         'changeGerecht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1402, 450)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.producten)
+        Me.Controls.Add(Me.btnAddGerecht)
+        Me.Controls.Add(Me.radGeen)
+        Me.Controls.Add(Me.radVeganistisch)
+        Me.Controls.Add(Me.radVegan)
+        Me.Controls.Add(Me.txtUrl)
+        Me.Controls.Add(Me.txtNaam)
+        Me.Controls.Add(Me.lblImg)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.lblNaam)
         Me.Controls.Add(Me.lblusername)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "changeGerecht"
         Me.Text = "changeGerecht"
         Me.MenuStrip1.ResumeLayout(False)
@@ -166,7 +281,17 @@ Partial Class changeGerecht
         Me.PerformLayout()
 
     End Sub
-
+    Friend WithEvents lblNaam As Label
+    Friend WithEvents lblusername As Label
+    Friend WithEvents producten As ListView
+    Friend WithEvents btnAddGerecht As Button
+    Friend WithEvents radGeen As RadioButton
+    Friend WithEvents radVeganistisch As RadioButton
+    Friend WithEvents radVegan As RadioButton
+    Friend WithEvents txtUrl As TextBox
+    Friend WithEvents txtNaam As TextBox
+    Friend WithEvents lblImg As Label
+    Friend WithEvents lblName As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents EventToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToevoegenToolStripMenuItem As ToolStripMenuItem
@@ -181,6 +306,6 @@ Partial Class changeGerecht
     Friend WithEvents VerwijderenToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents WijzigenToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LijstenToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lblNaam As Label
-    Friend WithEvents lblusername As Label
+    Friend WithEvents KoppelingenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class
