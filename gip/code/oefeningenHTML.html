@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        body {
+            text-align:center;
+        }
+    </style>
 </head>
 <body>
     <h3> deze file is niet belangrijk voor het systeem, het bevat alle instructies die ik al gemaakt heb (of nog mee bezig ben)  . </h3>
@@ -61,7 +66,13 @@
     <h1> 5 </h1>
     <table border="1"> <tbody> <tr><th>blokjes</th><th>functie</th></tr><tr><td><img src="../img/s4ablokjesStart.png" /></td><td>Dit is bijna altijd je eerste blokje die je nodig hebt. Die plaats je altijd vanboven in je script. De functie van de blokjes die je er onder hebt geplaatst zal uitgevoerd worden.(Deze staat bij besturen.)</td> </tr> <tr> <td><img src="../img/s4aBlokjesDigitaalAan.png" /></td><td>Hier kan je de digitale poort op je arduino aanzetten waardoor er stroom komt te staan op die poort. Als je alles goed aangesloten hebt aan die poort zullen&nbsp; er bv. aangesloten lichtjes moeten branden (dit leer je nog in deze cursus.)<br /> <img src="../img/s4aDigitaalPoorten.png" style="float:left; height:300px; width:300px" />Dat zijn de poorten die hiernaast met een accolade aangeduid zijn. Als je bv digitaal 13 hebt aangeduid in je code moet je er ook voor zorgen dat je poort 13 met je bord hebt verbonden. (dit is de energiebron )</td></tr><tr><td><img src="../img/s4aBlokjesDigitaalUit.png" /></td><td>Met dit blokje zet je de aangeduide digitale poort weer uit.</td></tr></tbody></table><p>De andere blokken spreken voor zich, heb je niet nodig in deze cursus of worden later nog uitgelegd wanneer ze wel relevant worden.</p>
     <h1> 6 </h1>
-    <p>Nu gaan we alles dat je in de vorige instructies geleerd hebt samenvoegen en toepassen.<br /> Dit is hoe het bord onderling verbonden is van binnen.<br /> <img src="../img/boardOnderlingVerbonden.jpg" style="height:300px" /><br /> Op deze manier moet je ervoor zorgen dat je een <strong>gesloten</strong> kring bekomt die begint in digitaal 10-13 en eindigd in de GND (zijn beiden poorten op je arduino)</p> <h2>Eerste schema : een lichtje aansluiten.</h2> <p>Op de volgende manier kan je een lichtje laten branden. Je hebt 2 draadje nodig, een ledje en een weerstand. Verbindt deze zoals hieronder op de afbeelding. Aan het ledje heb je twee draadjes, (een lange en een kortere). De langste moet het dichtst bij de energiebron (digitale poort) verbonden worden. Als je dit niet juist doet dan zal je ledje niet branden.<br /> <img src="../img/arduinoSchemaLicht.png" style="height:200px; width:400px" /><br /> Op je script gebruik je volgende blokjes . Links bovenaan vind je de knoppen met de hoofdfuncties vb: bewegen,besturen, waarnemen. Je zal zien dat elk soort blokje een bepaald kleur heeft. Als je een hoofdfunctie aanklikt verschijnen er verschillende blokjes links in beeld waaruit je kan kiezen. In dit geval is je eerste blokje het oranje blokje op de foto hieronder: je vindt deze onder de hoofdfunctie : besturen.<br />  <img src="../img/s4aCodeBrandentLichtje1.png" style="height:200px; width:400px" /><br /> Je draadje verbond je van poort 13 naar je bord. Dus moet je nu een blokje aan je script toevoegen die zorgt dat digitale poort 13 aanstaat. Je kan zelf het nummer aanpassen via het zwarte pijltje naast het cijfer. Het is belangrijk dat je draadje op je arduino in dezelfde poort zit als aangegeven op je script.<br /> <img src="../img/s4aCodeBrandentLichtje.png" style="height:200px; width:400px" /></p> <p>Probeer nu op dezelfde manier de blokjes te verbinden zoals op de afbeelding hierboven. Als je dit juist hebt gedaan dan zal het ledje knipperen. De duur van het knipperen kan je aanpassen op het blokje &#39; wacht... tellen&#39;.</p>
+    <p>Nu gaan we alles dat je in de vorige instructies geleerd hebt samenvoegen en toepassen.<br /> Dit is hoe het bord onderling verbonden is van binnen.<br /> <img src="../img/boardOnderlingVerbonden.jpg" style="height:300px" /><br /> Op deze manier moet je ervoor zorgen dat je een <strong>gesloten</strong> kring bekomt die begint in digitaal 10-13 en eindigd in de GND (zijn beiden poorten op je arduino)</p> <h2>Eerste schema : een lichtje aansluiten.</h2> <p>
+    Op de volgende manier kan je een lichtje laten branden. Je hebt 2 draadje nodig, een ledje en een weerstand. Verbindt deze zoals hieronder op de afbeelding. Aan het ledje heb je twee draadjes, (een lange en een kortere). De langste moet het dichtst bij de energiebron (digitale poort) verbonden worden. Als je dit niet juist doet dan zal je ledje niet branden.<br />
+    <br />dus voor de duidelijkheid je moet je ledje als volgd aansluiten:<br />
+    <img  alt="" src="../img/lichtDirection.png" style="height:137px; width:184px" />
+    <br />  <img src="../img/arduinoSchemaLicht.png" style="height:200px; width:400px" /><br /> Op je script gebruik je volgende blokjes . Links bovenaan vind je de knoppen met de hoofdfuncties vb: bewegen,besturen, waarnemen. Je zal zien dat elk soort blokje een bepaald kleur heeft. Als je een hoofdfunctie aanklikt verschijnen er verschillende blokjes links in beeld waaruit je kan kiezen. In dit geval is je eerste blokje het oranje blokje op de foto hieronder: je vindt deze onder de hoofdfunctie : besturen.<br />  <img src="../img/s4aCodeBrandentLichtje1.png" style="height:200px; width:400px" /><br /> Je draadje verbond je van poort 13 naar je bord. Dus moet je nu een blokje aan je script toevoegen die zorgt dat digitale poort 13 aanstaat. Je kan zelf het nummer aanpassen via het zwarte pijltje naast het cijfer. Het is belangrijk dat je draadje op je arduino in dezelfde poort zit als aangegeven op je script.<br />
+    <img src="../img/s4aCodeBrandentLichtje.png" style="height:200px; width:400px" />
+</p> <p>Probeer nu op dezelfde manier de blokjes te verbinden zoals op de afbeelding hierboven. Als je dit juist hebt gedaan dan zal het ledje knipperen. De duur van het knipperen kan je aanpassen op het blokje &#39; wacht... tellen&#39;.</p>
     <h1> 7 </h1>
     <h3>oefening 1</h3> <p>Probeer hetzelfde nu te bekomen nadat je het ledje verplaatst hebt met &eacute;&eacute;n of meerdere kabels indien nodig (denk eraan dat je kring gesloten moet zijn en dat je ledje in de juiste richting staat)<br /> Dit is wat je had.&nbsp;<br /> <img src="../img/arduinoSchemaLicht.png" style="height:200px; width:400px" /><br /> Je kan weten of je oefening juist is door te kijken of je lichtje effectief brandt / flikkert(bij het klikken op de startknop), als dit niet het geval is komt er nog een ander vorbeeld op als je op &quot;next&quot; drukt.</p>
     <h1> 8 </h1>
@@ -101,12 +112,11 @@
     <h1>13</h1>
 
     nu is het tijd om met de knopjes te leeren werken. <br /> <br />
-    <img alt="" src="../img/knop.png" style="height:137px; width:184px" /> <br />
+    <img ALIGN="left" alt="" src="../img/knop.png" style="height:137px; width:184px" /> <br />
     De switch, drukknop of schakelaar is een enkelpolige schakelaar waarvan de aansluitingen dubbel zijn<br />
-    uitgevoerd. De aansluitingen zijn in Afbeelding 5 links boven en onder met elkaar doorverbonden. Als<br />
+    uitgevoerd.  Als
     op de knop gedrukt wordt, zullen links en rechts met elkaar verbonden worden.<br />
-
-
+    
 
 
 </body>
