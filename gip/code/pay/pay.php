@@ -12,7 +12,7 @@
 <body>
 <div id="banner">
         <h1>arduino educatief</h1><br />
-        <a href="../index.php" id="bannerBut">home</a>
+        <a href="../../index.php" id="bannerBut">home</a>
         <a href="../ourService.php" id="bannerBut">onze service</a>
         <a href="../aboutUs.php" id="bannerBut">over ons</a>
         <a href="../contactUs.php" id="bannerBut">contacteer ons</a>

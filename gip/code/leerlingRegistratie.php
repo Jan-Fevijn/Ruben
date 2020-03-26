@@ -104,6 +104,34 @@
 				$password2 = $_POST['passwoord2'];
 				$email = $_POST['email'];
 				$code = $_POST['klascode'];
+				
+				// controleer of de klas geldig is 
+					 $sqlKlas = "SELECT 
+					 klas.idklas, code, klasnaam, leerkrachten.idleerkrachten , formule
+					 FROM dbarduinoeducatief.klas 
+					 inner join leerkrachten on klas.idleerkracht = 
+					 leerkrachten.idleerkrachten where code = $code";
+				$result = $conn->query($sqlKlas);
+				$row =  $result->fetch_assoc();
+				if ($row['formule'] == 2) {
+					// free trail
+					$sqlCount = "select count(*) as count from leerlingen where idklas = " .$row['idklas'];
+					$result = $conn->query($sqlCount);
+					$row =  $result->fetch_assoc();
+					$validClass = true ;
+					//echo("aangal leerlingen in deze klas" . $row['count']);
+				if ($row['count']  >= 3 ) {
+					// indien de leerkracht die deze klas heeft aangemaakt een free trail heeft gekozen en er al 
+					// 3 leerlingen in die klas zitten mag de leerling niet ingelogd worden.
+					$validClass = false ;
+				}
+
+				} else {
+					//leerkracht janfevijn / betaalde klas
+				}
+
+
+
 				if ($password1 == $password2) {
 					if (strlen($password1) > 8) {
 				$sql = "SELECT * FROM klas WHERE code = '$code'"; 
@@ -113,6 +141,9 @@
 					if ($result->num_rows == 1) {
 					$row = $result->fetch_assoc();
 					$klasid = $row['idklas'];
+						if ($validClass) {
+					
+
 					// insert 
 					
 					$password1 = md5($password1);//encrypt the password before saving in the database
@@ -141,7 +172,9 @@
 			echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
 			}
 		}
-
+	} else {
+		echo("Er kunnen maar 3 leerlingen in een gratis klas zitten. U kunt nog altijd een nieuwe klas aan maken door ervoor te betaalen. ");
+	}
 				} else {
 					echo("Voer de juiste klascode in die je gekregen hebt van je leerkracht. Indien je dit niet gekregen hebt, dien je deze aan te vragen. ");
 				}

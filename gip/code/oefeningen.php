@@ -29,6 +29,18 @@ if (isset($_POST['oefid'])) {
     } else echo ("error");
    
   if ($debug)  echo($oefid);
+  echo($oefid);
+  if ($oefid > 3 ) {
+      $sql ="SELECT idleerlingen ,klas.idklas,klas.formule as f FROM leerlingen inner join klas on leerlingen.idklas = klas.idklas  where idleerlingen = $id";
+     echo("<br>" . $sql . "<br>");
+      $resultaat = $conn->query($sql);
+      $rowr = $resultaat->fetch_assoc();
+      echo( "formulle = " . $rowr['f']);
+      echo("<br> tcp");
+      if ($rowr['f'] == 2) {
+        header('location: freeSessionOver.php ');
+      }
+  }
     $sql = "UPDATE leerlingen SET oefeningid='$oefid' WHERE idleerlingen='$id'";
     $resultaat = $conn->query($sql);
    echo(mysqli_error($conn));

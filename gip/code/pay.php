@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Bestelformulier game</title>
+    
 </head>
 <body>
 <?php
