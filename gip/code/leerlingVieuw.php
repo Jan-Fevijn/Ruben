@@ -7,7 +7,7 @@
     <title></title>
     <link rel="stylesheet"
           type="text/css"
-          href="../../css/css.css" />
+          href="../css/css.css" />
 </head>
 <body>
 <?php

@@ -11,6 +11,7 @@ CREATE TABLE `leerlingen` (
   `wachtwoord` varchar(1000) NOT NULL,
   `email` varchar(45) NOT NULL,
   `oefeningid` int(11) DEFAULT NULL,
+  `actief` TINYINT NULL,
   PRIMARY KEY (`idleerlingen`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=latin1;
@@ -27,6 +28,11 @@ CREATE TABLE `reports` (
   PRIMARY KEY (`idreports`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 INSERT INTO `reports` (`idreports`, `message`, `naam`, `voornaam`, `email`) VALUES (1,'Schrijf hier uw bericht, we antwoorden zo snel mogelijk via uw ingegeven Emailadre--------------------------------------------------------------------------------------------------------------------------s.\r ','aspeslag','ruben','Ruben.aspeslag@gmail.com'),(2,'Schrijf hier uw bericht, we antwoorden zo snel mogelijk via uw ingegeven Emailadres.\r\n','aspeslag','ruben','Ruben.aspeslag@gmail.com'),(3,'Schrijf hier uw bericht, we antwoorden zo snel mogelijk via uw ingegeven Emailadres.\r\n','aspeslag','ruben','Ruben.aspeslag@gmail.com'),(4,'Schrijf hier uw bericht, we antwoorden zo snel mogelijk via uw ingegeven Emailadres.\r\n','aspeslag','ruben','Ruben.aspeslag@gmail.com'),(5,'het werkt niet \r\n','aspeslag','ruben','Ruben.aspeslag@gmail.com'),(6,'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.','Aspeslag','Ruben','ruben.aspeslag@gmail.com'),(7,'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.','Aspeslag','Ruben','ruben.aspeslag@gmail.com'),(8,'this is a message to the admins','Aspeslag','Ruben','ruben.aspeslag@gmail.com'),(9,'this is a message to the admins','Aspeslag','Ruben','ruben.aspeslag@gmail.com'),(10,'this is a message to the admins','Aspeslag','Ruben','ruben.aspeslag@gmail.com');
+
+
+
+
+
 
 DROP TABLE IF EXISTS `oefeningen`;
 CREATE TABLE `oefeningen` (
@@ -86,6 +92,7 @@ CREATE TABLE `leerkrachten` (
   `famielienaam` varchar(20) NOT NULL,
   `wachtwoord` varchar(100) NOT NULL,
   `email` varchar(45) NOT NULL,
+    `actief` TINYINT NULL,
   PRIMARY KEY (`idleerkrachten`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;

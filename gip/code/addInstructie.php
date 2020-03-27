@@ -32,7 +32,7 @@ echo(" <div id='midden' ><a  href= 'admin.php' > back</a> <br/> </div> ")
             <tr>
                 <td>
 
-                    <img src="../../img/instructie.png" height="50" width="50" />
+                    <img src="../img/instructie.png" height="50" width="50" />
                 </td>
                 <td id="instructie1">
                    

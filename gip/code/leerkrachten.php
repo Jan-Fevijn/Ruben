@@ -33,8 +33,8 @@
 				 // maak acc aan 
 
 				 if ($ok == true) {
-					$query = "INSERT INTO leerkrachten (naam, famielienaam, wachtwoord, email)  VALUES ('$voornaam', '$famielienaam', '$password', '$email')";
-				  
+					$query = "INSERT INTO leerkrachten (naam, famielienaam, wachtwoord, email ,actief)  VALUES ('$voornaam', '$famielienaam', '$password', '$email' ,1)";
+				  echo($query);
 				if(mysqli_query($conn, $query)) {
 				
 					$_SESSION['voornaam'] = $voornaam;
@@ -122,8 +122,9 @@
         </table>
 		<?php 
 		echo ("    <form method='POST' action='addClass.php'> ");
-                                echo(" <input type='text' style='display: none' name='id' value='$id'  >");
-                                echo("  <input class='nextBut' type='submit' value='maak nieuwe klas aan'> "); ?>
+        echo(" <input type='text' style='display: none' name='id' value='$id'  >");
+        echo("  <input class='nextBut' type='submit' value='maak nieuwe klas aan'> "); ?>
+		<a href='vieuwInstructieslkr.php' class='nextBut' > bekijk oefeningen </a>
     </div>
 	<?php
 include("footer.php");

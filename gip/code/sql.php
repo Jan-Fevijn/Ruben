@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet"
           type="text/css"
-          href="../../css/css.css" />
+          href="../css/css.css" />
          
 </head>
 <body>
@@ -21,7 +21,7 @@ echo("<div id='midden'> <a  href= 'admin.php'>back</a></div>");
 ?>
 
 <form method='POST'> <br/>
-<div id='midden'> voer sql query in  (geen select statments )<br>
+<div id='midden'> voer sql query in  (geen select querys )<br>
 <textarea rows="10" cols="100" type='text' name="sql"></textarea>
 <br>
 <input type='submit' name='sqll' value='qeury'>

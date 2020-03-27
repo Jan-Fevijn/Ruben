@@ -7,6 +7,15 @@
     <link rel="stylesheet"
           type="text/css"
           href="../css/css.css" />
+
+          <style>
+            tr,td,th,table {
+                border: 0px;
+            }
+            th {
+                font-size:180%;
+            }
+          </style>
 </head>
 <body>
 <?php

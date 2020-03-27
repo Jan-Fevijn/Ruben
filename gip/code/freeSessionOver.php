@@ -20,7 +20,7 @@
 <?php
 include("checkIfLogedIn.php");
 include("dbConnection.php");
-$accType = "leerkracht";
+$accType = "leerling";
 include("banner.php");
                    
 				

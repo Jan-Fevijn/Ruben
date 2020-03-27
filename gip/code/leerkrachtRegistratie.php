@@ -159,7 +159,7 @@ if ($answer == "freeTrail:")  {
 }
 
 if ($ok == true) {
-  	$query = "INSERT INTO leerkrachten (naam, famielienaam, wachtwoord, email)  VALUES ('$voornaam', '$famielienaam', '$password', '$email')";
+  	$query = "INSERT INTO leerkrachten (naam, famielienaam, wachtwoord, email, actief)  VALUES ('$voornaam', '$famielienaam', '$password', '$email' ,1)";
 	
   if(mysqli_query($conn, $query)) {
   

@@ -147,7 +147,7 @@
 					// insert 
 					
 					$password1 = md5($password1);//encrypt the password before saving in the database
-					$query = "INSERT INTO leerlingen (naam, famielienaam, idklas , wachtwoord, email,oefeningid)  VALUES ('$naam', '$famielienaam', '$klasid', '$password1', '$email', 1)";
+					$query = "INSERT INTO leerlingen (naam, famielienaam, idklas , wachtwoord, email,oefeningid, actief)  VALUES ('$naam', '$famielienaam', '$klasid', '$password1', '$email', 1,1)";
 					if(mysqli_query($conn, $query)) {
   
 					if ($debug)	echo "Records added successfully.";

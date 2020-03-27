@@ -6,10 +6,18 @@
     <title></title>
     <link rel="stylesheet"
           type="text/css"
-          href="../../css/css.css" />
+          href="../css/css.css" />
           <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>  
           <script src="http://YOUR-DOMAIN/YOUR-DIRECTORY/textboxio/textboxio.js"></script>
           <script src="../js/textboxio.js"></script>
+          <style>
+                .invisible {
+                    border: 0px;
+                }
+                h3 {
+                    font-size:180%;
+                }
+          </style>
 </head>
 <body>
 <?php 
@@ -69,12 +77,12 @@ if(isset($_POST['editor1'])){
  $sql = "SELECT * FROM adminForum inner join admin order BY idBericht  DESC";
  if($result = mysqli_query($conn, $sql)){
   if(mysqli_num_rows($result) > 0){
-      echo "<table>";
+      echo "<table class='invisible'>";
         
       while($row = mysqli_fetch_array($result)){
-          echo "<tr>";
-              echo "<tr> <th>" .  $row['naam'] ." ".$row['famielienaam']. "</th> </tr>";
-              echo "<tr> <td>" . $row['bericht'] . " </td> </tr>";
+          echo "<tr class='invisible'>";
+              echo "<tr class='invisible'> <th class='invisible' > <h3>" .  $row['naam'] ." ".$row['famielienaam']. "</h3></th> </tr>";
+              echo "<tr class='invisible'> <td class='invisible'>" . $row['bericht'] . " </td> </tr>";
              
           echo "</tr>";
       }

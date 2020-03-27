@@ -27,6 +27,10 @@ include("banner.php");
   include("objects/adminFunctionObjects.php");
    echo ("  <div class='flexListOfAdminFunctions'>");
  
+  // view instructie 
+  $functie->set("view instructie / oefening", "instructie.png", " viewInstructieAdmin", 200 , 200);
+  $functie->write();
+
         // add instructie 
       $functie->set("add instructie / oefening", "instructie.png", "addinstructie", 200 , 200);
       $functie->write();
@@ -57,6 +61,6 @@ include("banner.php");
   <?php
 include("footer.php");
 ?>
-   
+   viewInstructieAdmin.php
 </body>
 </html>
