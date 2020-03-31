@@ -64,6 +64,27 @@ include("banner.php");
     <?php  
     if ($accType == "ADMIN") {
         // specifieke info voor ADMIN 
+    } else {
+
+        // gebruiker inactief maaken ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // gebruiker inactief maaken ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       // gebruiker inactief maaken ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      
+        echo("<form method='POST' >");
+        echo("<tr><td id='midden' colspan = '2'><input class='redButton' type='submit' name='inactieveer' value='account inactief zetten'>  </td> </tr>");
+        echo("</form>");
+
+        if ( isset( $_POST['inactieveer'] ) ){
+            if ($accType == "leerling") {
+               $sql ="UPDATE `dbarduinoeducatief`.`leerlingen` SET `actief` = '0' WHERE (`idleerlingen` = '$id') ";
+             }
+            if ($accType == "leerkracht") {
+                $sql ="UPDATE `dbarduinoeducatief`.`leerkrachten` SET `actief` = '0' WHERE (`idleerkrachten` = '133') ";
+             }
+             $conn->query($sql);
+             header('Location: inactiefUser.php');
+        }
+
     }
     if ($accType == "leerling") {
         // specifieke info voor leerling
@@ -76,6 +97,8 @@ include("banner.php");
         echo("</td> <td> ");
         echo($row['oefeningid']);
         echo ("</td> </tr>"); 
+       
+
     }
     if ($accType == "leerkracht") {
         // specifieke info voor leerkracht 
@@ -128,6 +151,8 @@ if(isset($_POST['password1'])){
 ?>
 <?php
 include("footer.php");
+
+
 ?>
    
 

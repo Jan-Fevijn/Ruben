@@ -90,8 +90,14 @@ include("banner.php");
                     $row = $resultaat->fetch_assoc();
                     if (isset($row['idleerlingen'])) {
                     $id =  $row['idleerlingen'];
+                    $_SESSION["accType"] = "leerling";
                     $_SESSION["id"] = $id;
-                    header('Location: oefeningen.php');
+                    if ($row['actief'] == 0 ) {
+                      header('Location: inactiefUser.php');
+                    } else {
+                      header('Location: oefeningen.php');
+                    }
+                  
                         
                     } else {
                         // geen admin of leerling, check if leerkracht 
@@ -106,8 +112,18 @@ include("banner.php");
                               if (isset($row['idleerkrachten'])) {
                                 $id =  $row['idleerkrachten'];
                                 $_SESSION["id"] = $id;
-                                header('Location: leerkrachten.php');
-                                     
+                              
+                                
+                                
+                                $_SESSION["accType"] = "leerkracht";
+                                $_SESSION["id"] = $id;
+                                if ($row['actief'] == 0 ) {
+                                  header('Location: inactiefUser.php');
+                                } else {
+                                  header('Location: leerkrachten.php');
+                                }
+
+
                                 } else { 
                                     echo("foutief email of wachtwoord ");
                                 }

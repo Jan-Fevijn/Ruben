@@ -10,6 +10,6 @@ if (isset($_SESSION['id'])){
   if ($debug)  echo($_SESSION["id"]);
     $id = $_SESSION["id"];
 }else {
-    //echo("id not found");
+  //  echo("id not found ");
 }
 ?>

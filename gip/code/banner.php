@@ -1,4 +1,12 @@
 <?php 
+    if (isset($accType) === false ) {
+        if (isset($_SESSION['accType'])) {
+            $accType = $_SESSION['accType'];
+          //  echo($accType);
+          //  echo("dddd");
+        } 
+
+    }
         if (isset($_SESSION['id']) and isset($accType)) {
  echo ("<div id='banner'>");
  $id = $_SESSION['id'];
@@ -43,6 +51,7 @@ if ($accType == "leerkracht") {
 
   echo(" </div>");
 } else {
+    
     if (isset($index)) {
        
       echo("  <div id='banner'>");
