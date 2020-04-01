@@ -71,7 +71,7 @@
         }
 
 ?>
-idleerlingen:
+IDleerlingen:
 <input type='text' value='<?php echo($idleerlingen); ?>' name='idleerlingen'>
 actief :
 <input type='text'  value='<?php echo($actief); ?>' name='actief'>
