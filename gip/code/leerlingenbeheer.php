@@ -44,9 +44,79 @@
            }
         }
 
+        $idleerlingen = "";
+        $actief = "";
+        $voornaamLeerling = "";
+        $naamLeerling = "";
+        $emailLleerling = "";
+        $voornaamLeerkracht = "";
+        $naamLeerkracht = "";
+        $emailLeerkracht = "";
+        $klasnaam = "";
+        $klasID = "";
+        $oefeningID = "";
 
-   $sql ="SELECT lln.idleerlingen,  lln.naam  as leerlingNaam , lln.famielienaam as leerlingFamilienaam,lln.oefeningid, lln.email as emailLeerling, lln.actief , sub1.naam as naamLeerkracht,sub1.email as emailLeerkracht, sub1.klasnaam  as klasnaam, sub1.idklas as idklas, sub1.famielienaam as famielninaamLeerkracht from  (select lkr.idleerkrachten, lkr.naam, lkr.famielienaam, k.idklas, k.klasnaam, lkr.email from dbarduinoeducatief.leerkrachten as lkr inner join dbarduinoeducatief.klas as k on lkr.idleerkrachten = k.idleerkracht) as sub1 inner join dbarduinoeducatief.leerlingen as lln on lln.idklas = sub1.idklas ";
-    $result = $conn->query($sql);
+        if (isset($_POST['idleerlingen'])) {
+            $idleerlingen = $_POST['idleerlingen'];
+            $actief = $_POST['actief'];
+            $voornaamLeerling =$_POST['voornaamLeerling'];
+            $naamLeerling = $_POST['naamLeerling'];
+         $emailLleerling = $_POST['emailLleerling'];
+         $voornaamLeerkracht = $_POST['voornaamLeerkracht'];
+          $naamLeerkracht = $_POST['naamLeerkracht'];
+         $emailLeerkracht = $_POST['emailLeerkracht'];
+         $klasnaam = $_POST['klasnaam'];
+         $klasID = $_POST['klasID'];
+          $oefeningID = $_POST['oefeningID'];
+        }
+
+?>
+idleerlingen:
+<input type='text' value='<?php echo($idleerlingen); ?>' name='idleerlingen'>
+actief :
+<input type='text'  value='<?php echo($actief); ?>' name='actief'>
+voornaam leerling:
+<input type='text' value='<?php echo($voornaamLeerling); ?>' name='voornaamLeerling'> <br>
+naam leerling:
+<input type='text' value='<?php echo($naamLeerling); ?>' name='naamLeerling'>
+email leerling:
+<input type='text' value='<?php echo($emailLleerling); ?>' name='emailLleerling'>
+voornaam leerkracht:
+<input type='text' value='<?php echo($voornaamLeerkracht); ?>' name='voornaamLeerkracht'><br>
+naam leerkracht:
+<input type='text' value='<?php echo($naamLeerkracht); ?>' name='naamLeerkracht'>
+email leerkracht:
+<input type='text' value='<?php echo($emailLeerkracht); ?>' name='emailLeerkracht'>
+klasnaam:
+<input type='text' value='<?php echo($klasnaam); ?>' name='klasnaam'><br>
+klas ID:
+<input type='text' value='<?php echo($klasID); ?>' name='klasID'>
+oefening ID:
+<input type='text' value='<?php echo($oefeningID); ?>' name='oefeningID'><br>
+<input type='submit' value ='zoeken'>
+<?php
+
+   $sql ="
+   
+   SELECT 
+   lln.idleerlingen,  lln.naam  as leerlingNaam , lln.famielienaam as leerlingFamilienaam,lln.oefeningid, lln.email as emailLeerling,
+    lln.actief , sub1.naam as naamLeerkracht,sub1.email as emailLeerkracht, sub1.klasnaam  as klasnaam, sub1.idklas as idklas,
+    sub1.famielienaam as famielninaamLeerkracht
+    
+    from  (select lkr.idleerkrachten, lkr.naam,
+    lkr.famielienaam, k.idklas, k.klasnaam, lkr.email from dbarduinoeducatief.leerkrachten as lkr
+    inner join dbarduinoeducatief.klas as k on lkr.idleerkrachten = k.idleerkracht) as sub1 inner join 
+    dbarduinoeducatief.leerlingen as lln on lln.idklas = sub1.idklas 
+    
+    where idleerlingen like '%$idleerlingen%' AND lln.naam like '%$voornaamLeerling%' AND lln.famielienaam like '%$naamLeerling%' AND oefeningid like '%$oefeningID%' AND lln.email like '%$emailLleerling%' 
+    AND  actief like '%$actief%' AND  sub1.naam like '%$voornaamLeerkracht%' AND sub1.email like '%$emailLeerkracht%' AND sub1.klasnaam like '%$klasnaam%' AND  sub1.idklas like '%$klasID%' AND
+     sub1.famielienaam like '%$naamLeerkracht%'
+   
+
+   ";
+
+   // echo($sql);
+   $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
         // output data of each row
