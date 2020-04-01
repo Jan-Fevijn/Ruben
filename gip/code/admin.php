@@ -61,6 +61,6 @@ include("banner.php");
   <?php
 include("footer.php");
 ?>
-   viewInstructieAdmin.php
+  
 </body>
 </html>

@@ -7,6 +7,12 @@
     <link rel="stylesheet"
           type="text/css"
           href="../css/css.css" />
+          <style>
+          form {
+              padding:3%;
+              margin-top:2%;
+          }
+          </style>
 </head>
 <body>
 <form method='POST'>
@@ -49,8 +55,85 @@ include("banner.php");
 
 
 
+        $naam = "";
+        $famielienaam ="";
+        $email = "";
+        $actief = "";
+        $idleerkrachten = "";
+        
+        if (isset($_POST['naam'])) {
+           
+         $naam = $_POST['naam'];
+        $famielienaam = $_POST['famielienaam'];
+        $email = $_POST['email'];
+        $idleerkrachten = $_POST['idleerkrachten'];
+      //  echo($idleerkrachten . "<br>");
+        $_SESSION['actief'] = $_POST['actief'];
+        switch ($_POST['actief']) {
+            case 0:
+               //
+               $actief = "0";
+                break;
+            case 1:
+               //
+               $actief = "1";
+                break;
+            case 2:
+               //
+               $actief = "" ;
+                break;
+        }
 
-$sql = "SELECT * from leerkrachten";
+        }
+
+?>
+<form method='POST'>
+idleerkrachten : <input value='<?php echo($idleerkrachten) ?>' type='text' name='idleerkrachten'>
+naam : <input value='<?php echo($naam) ?>' type='text' name='naam'>
+famielienaam : <input value='<?php echo($famielienaam) ?>' type='text' name='famielienaam'>
+email : <input value='<?php echo($email) ?>' type='text' name='email'>
+<?php 
+if (isset($_SESSION['actief'])){
+   echo(" <select id='actief' name='actief' >");
+   switch ($_SESSION['actief']) {
+    case 0:
+        echo("  <option  value='2'>actief / inactief</option>");
+        echo(" <option value='1'>actief</option>");
+        echo(" <option value='0' selected = 'selected'>inactief</option>");
+        break;
+    case 1:
+        echo("  <option  value='2'>actief / inactief</option>");
+        echo(" <option  selected = 'selected' value='1'>actief</option>");
+        echo(" <option  value='0'>inactief</option>");
+        break;
+    case 2:
+        echo("  <option  selected = 'selected' value='2'>actief / inactief</option>");
+        echo(" <option value='1'>actief</option>");
+        echo(" <option value='0'>inactief</option>");
+        break;
+}
+ 
+   
+  echo("  </select>");
+} else {
+    echo(" <select id='actief' name='actief' >");
+    echo("  <option  value='2'>actief / inactief</option>");
+    echo(" <option value='1'>actief</option>");
+    echo(" <option value='0'>inactief</option>");
+     
+    echo("  </select>");
+}
+
+?>
+
+<input type='submit' value='zoeken'>
+</form>
+<?php 
+
+
+$sql = "SELECT * from leerkrachten WHERE naam like '%$naam%' AND email like '%$email%' AND famielienaam like '%$famielienaam%' 
+AND actief like '%$actief%' and idleerkrachten like '%$idleerkrachten%'";
+// echo($sql . "<br>");
 $result = $conn->query($sql);
                     if($debug) echo("yeep");
 if ($result->num_rows > 0) {
