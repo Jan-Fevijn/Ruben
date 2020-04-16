@@ -77,6 +77,7 @@ if (isset($_POST['email'])) {
     $number_2 = rand(1, 9);
     $answer = substr(md5($number_1+$number_2),5,10);
 }
+
 				
 				
 			
