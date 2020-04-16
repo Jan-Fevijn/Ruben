@@ -24,6 +24,11 @@ include("banner.php");
     </div>
     <?php
 include("footer.php");
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception; 
+require("PHPMailer-master/src/Exception.php");
+require("PHPMailer-master/src/PHPMailer.php");
+require("PHPMailer-master/src/SMTP.php");
 
 if (isset($_POST['email'])) {
     $_SESSION["bericht"] = "";
@@ -42,9 +47,10 @@ if (isset($_POST['email'])) {
       //  $answer = trim(htmlspecialchars($_POST['answer']));
         $bericht = $contact_naam . $return . $bericht_text;
         if ($jouwNaam != "" && $_SESSION["bericht"] != "" ) {
-            include("/PHPMailer-master/src/PHPMailer.php");
-            include("/PHPMailer-master/src/SMTP.php");
-            include("/PHPMailer-master/src/Exception.php");
+
+
+  
+           
             $jouwNaam = '';
             $_SESSION["bericht"] = '';
             $mail = new PHPMailer();

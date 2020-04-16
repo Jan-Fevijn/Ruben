@@ -2123,7 +2123,7 @@ class PHPMailer
         }
         //Validate $langcode
         if (!preg_match('/^[a-z]{2}(?:_[a-zA-Z]{2})?$/', $langcode)) {
-            $langcode = 'en';
+            $langcode = 'nl';
         }
         $foundlang = true;
         $lang_file = $lang_path . 'phpmailer.lang-' . $langcode . '.php';
