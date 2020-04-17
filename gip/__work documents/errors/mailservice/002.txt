@@ -1,0 +1,140 @@
+
+object(PHPMailer\PHPMailer\PHPMailer)#1 (74) {
+ ["Priority"]=> NULL
+ ["CharSet"]=> string(10) "iso-8859-1"
+ ["ContentType"]=> string(21) "multipart/alternative"
+ ["Encoding"]=> string(4) "8bit"
+
+ ["ErrorInfo"]=> string(82) "SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting" 
+
+["From"]=> string(34) "rubenaspeslag@atheneumjanfevijn.be"
+ ["FromName"]=> string(4) "info" 
+["Sender"]=> string(34) "rubenaspeslag@atheneumjanfevijn.be" 
+["Subject"]=> string(4) "Test" ["Body"]=> string(33) "de registratiecode is ...." 
+["AltBody"]=> string(26) "de registratiecode is ...."
+ ["Ical"]=> string(0) "" 
+["MIMEBody":protected]=> string(354) "This is a multi-part message in MIME format. --b1_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY Content-Type: text/plain; charset=us-ascii de registratiecode is .... --b1_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY Content-Type: text/html; charset=us-ascii de registratiecode is .... --b1_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY-- " ["MIMEHeader":protected]=> string(437) "Date: Thu, 16 Apr 2020 18:15:15 +0000 To: sendmail From: info Subject: Test Message-ID: <6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY@localhost> X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer) MIME-Version: 1.0 Content-Type: multipart/alternative; boundary="b1_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY" Content-Transfer-Encoding: 8bit " 
+
+["mailHeader":protected]=> string(0) "" 
+["WordWrap"]=> int(0)
+["Mailer"]=> string(4) "smtp" 
+["Sendmail"]=> string(18) "/usr/sbin/sendmail"
+ ["UseSendmailOptions"]=> bool(true)
+ ["ConfirmReadingTo"]=> string(0) ""
+ ["Hostname"]=> string(0) ""
+ ["MessageID"]=> string(0) ""
+ ["MessageDate"]=> string(0) ""
+ ["Host"]=> string(34) "rubenaspeslag@atheneumjanfevijn.be"
+ ["Port"]=> int(587) ["Helo"]=> string(0) ""
+ ["SMTPSecure"]=> string(3) "tls"
+ ["SMTPAutoTLS"]=> bool(true)
+ ["SMTPAuth"]=> bool(true)
+ ["SMTPOptions"]=> array(0) { }
+ ["Username"]=> string(34) "rubenaspeslag@atheneumjanfevijn.be"
+ ["Password"]=> string(12) "sendmail123!" 
+["AuthType"]=> string(0) ""
+ ["oauth":protected]=> NULL 
+["Timeout"]=> int(300) 
+["dsn"]=> string(0) ""
+ ["SMTPDebug"]=> int(0)
+ ["Debugoutput"]=> string(4) "html" 
+["SMTPKeepAlive"]=> bool(false) 
+["SingleTo"]=> bool(false) 
+["SingleToArray":protected]=> array(0) { }
+ ["do_verp"]=> bool(false)
+ ["AllowEmpty"]=> bool(false) 
+["DKIM_selector"]=> string(0) "" 
+["DKIM_identity"]=> string(0) "" 
+["DKIM_passphrase"]=> string(0) "" 
+["DKIM_domain"]=> string(0) "" 
+["DKIM_copyHeaderFields"]=> bool(true)
+ ["DKIM_extraHeaders"]=> array(0) { } 
+["DKIM_private"]=> string(0) ""
+ ["DKIM_private_string"]=> string(0) "" 
+["action_function"]=> string(0) "" 
+["XMailer"]=> string(0) "" 
+["smtp":protected]=> object(PHPMailer\PHPMailer\SMTP)#2 (12) { 
+["do_debug"]=> int(0) 
+["Debugoutput"]=> string(4) "html" 
+["do_verp"]=> bool(false) 
+["Timeout"]=> int(300) 
+["Timelimit"]=> int(300) 
+["smtp_transaction_id_patterns":protected]=> array(7) { 
+["exim"]=> string(20) "/[\d]{3} OK id=(.*)/" 
+["sendmail"]=> string(28) " /[\d]{3} 2.0.0 (.*) Message/" 
+["postfix"]=> string(34) "/
+[\d]{3} 2.0.0 Ok: queued as (.*)/"
+["Microsoft_ESMTP"]=> string(56) "/[0-9]{3} 2.[\d].0 (.*)@(?:.*) Queued mail for delivery/" 
+["Amazon_SES"]=> string(17) "/[\d]{3} Ok (.*)/"
+["SendGrid"]=> string(28) "/[\d]{3} Ok: queued as (.*)/" 
+["CampaignMonitor"]=> string(35) "/[\d]{3} 2.0.0 OK:([a-zA-Z\d]{48})/"
+ }
+ ["last_smtp_transaction_id":protected]=> NULL 
+["smtp_conn":protected]=> NULL 
+["error":protected]=> array(4) { 
+["error"]=> string(0) "" 
+["detail"]=> string(0) "" 
+["smtp_code"]=> string(0) ""
+["smtp_code_ex"]=> string(0) ""
+ } 
+["helo_rply":protected]=> NULL 
+["server_caps":protected]=> NULL 
+["last_reply":protected]=> string(0) "" 
+} 
+["to":protected]=> array(1)
+ { 
+[0]=> array(2)
+ { [0]=> string(34) 
+"rubenaspeslag@atheneumjanfevijn.be" 
+[1]=> string(8)
+ "sendmail" 
+} 
+} 
+["cc":protected]=> array(0) { } 
+["bcc":protected]=> array(0) { } 
+["ReplyTo":protected]=> array(0) { } 
+["all_recipients":protected]=> array(1) 
+{ 
+["rubenaspeslag@atheneumjanfevijn.be"]=> bool(true) }
+ ["RecipientsQueue":protected]=> array(0) { }
+ ["ReplyToQueue":protected]=> array(0) { } 
+["attachment":protected]=> array(0) { } 
+["CustomHeader":protected]=> array(0) { }
+ ["lastMessageID":protected]=> string(53) 
+"<6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY@localhost>" 
+["message_type":protected]=> string(3) "alt" 
+["boundary":protected]=> array(3) 
+{ 
+[1]=> string(44) "b1_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY" 
+[2]=> string(44) "b2_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY" 
+[3]=> string(44) "b3_6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY" 
+} 
+["language":protected]=> array(21) { 
+["authenticate"]=> string(35) "SMTP Error: Could not authenticate." 
+
+["connect_host"]=> string(43)  "SMTP Error: Could not connect to SMTP host."
+ ["data_not_accepted"]=> string(30) "SMTP Error: data not accepted."
+ ["empty_message"]=> string(18) "Message body empty"
+ ["encoding"]=> string(18) "Unknown encoding: " 
+["execute"]=> string(19) "Could not execute: " 
+["file_access"]=> string(23) "Could not access file: " 
+["file_open"]=> string(33) "File Error: Could not open file: " 
+["from_failed"]=> string(35) "The following From address failed: " 
+["instantiate"]=> string(36) "Could not instantiate mail function." 
+["invalid_address"]=> string(17) "Invalid address: " 
+["invalid_hostentry"]=> string(19) "Invalid hostentry: " 
+["invalid_host"]=> string(14) "Invalid host: " 
+["mailer_not_supported"]=> string(25) " mailer is not supported." 
+["provide_address"]=> string(54) "You must provide at least one recipient email address."
+["recipients_failed"]=> string(45) "SMTP Error: The following recipients failed: " 
+["signing"]=> string(15) "Signing Error: "
+["smtp_connect_failed"]=> string(22) "SMTP connect() failed." 
+["smtp_error"]=> string(19) "SMTP server error: " 
+["variable_set"]=> string(30) "Cannot set or reset variable: " 
+["extension_missing"]=> string(19) "Extension missing: " } ["error_count":protected]=> int(1) ["sign_cert_file":protected]=> string(0) ""
+["sign_key_file":protected]=> string(0) "" 
+["sign_extracerts_file":protected]=> string(0) "" 
+["sign_key_pass":protected]=> string(0) "" 
+["exceptions":protected]=> bool(false) 
+["uniqueid":protected]=> string(41) "6dZetdsy7wNPJ9j8wbj4u0Lqqw3OWVtpKnImz1dnY" 
+} 

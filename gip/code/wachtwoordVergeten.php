@@ -30,10 +30,16 @@ require("PHPMailer-master/src/Exception.php");
 require("PHPMailer-master/src/PHPMailer.php");
 require("PHPMailer-master/src/SMTP.php");
 
+
+$number_1 = rand(1, 9);
+$number_2 = rand(1, 9);
+$answer = substr(md5($number_1+$number_2),5,10);
+
+
 if (isset($_POST['email'])) {
-    $_SESSION["bericht"] = "";
-    $yourmessage = "de registratiecode is ....";
-    $jouwNaam = "";
+    $_SESSION["bericht"] = "de registratiecode is : $answer ";
+    $yourmessage = $_SESSION["bericht"];
+    $jouwNaam = "Ruben";
     $naar = $_POST['email'];
     $onderwerp = 'registratiecode ARDUINOEDUCATIEF';
     $contact_submitted = 'Je bericht werd verstuurd.';
@@ -45,14 +51,14 @@ if (isset($_POST['email'])) {
         $bericht_text = "Message: " . $_SESSION["bericht"];
       //  $user_answer = trim(htmlspecialchars($_POST['user_answer']));
       //  $answer = trim(htmlspecialchars($_POST['answer']));
-        $bericht = $contact_naam . $return . $bericht_text;
+        $bericht = $yourmessage;
         if ($jouwNaam != "" && $_SESSION["bericht"] != "" ) {
 
 
   
            
             $jouwNaam = '';
-            $_SESSION["bericht"] = '';
+            $_SESSION["bericht"] =$yourmessage;
             $mail = new PHPMailer();
             $mail->IsSMTP();
             $mail->Mailer = "smtp";
@@ -61,17 +67,17 @@ if (isset($_POST['email'])) {
             $mail->SMTPSecure = "tls";
             $mail->Port       = 587;
             $mail->Host       = "smtp.gmail.com";
-            $mail->Username   = "sendmail@atheneumjanfevijn.be";
-            $mail->Password   = "sendmail123!";
+            $mail->Username   = "rubenaspeslag@atheneumjanfevijn.be";
+            $mail->Password   = "pcNert20012001";
             $mail->IsHTML(true);
-            $mail->AddAddress("sendmail@atheneumjanfevijn.be", "sendmail");
-            $mail->SetFrom("no-replay@atheneumjanfevijn.be", "info");
+            $mail->AddAddress($_POST['email'], "rubenaspeslag");
+            $mail->SetFrom("no-replay@atheneumjanfevijn.be", "ARDUINOEDUCATIEF");
             $mail->Subject = "Test";
             $content = "<b>" . $bericht . "</b>";
             
             $mail->MsgHTML($content); 
             if(!$mail->Send()) {
-                echo "Fout bij het zenden van email.";
+                echo "Fout bij het zenden van email.<br>";
                 var_dump($mail);
             } else {
                 echo '<p style="color: green;"><strong>'.$contact_submitted.'</strong></p>';
@@ -82,6 +88,7 @@ if (isset($_POST['email'])) {
     $number_1 = rand(1, 9);
     $number_2 = rand(1, 9);
     $answer = substr(md5($number_1+$number_2),5,10);
+  //  echo("<br> $answer");
 }
 
 				
