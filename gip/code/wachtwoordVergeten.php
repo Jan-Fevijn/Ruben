@@ -10,6 +10,7 @@
 </head>
 <body>
 <?php
+include("dbConnection.php");
 include("banner.php");
  session_start();
 
@@ -23,7 +24,11 @@ include("banner.php");
 </div> 
     </div>
     <?php
-include("footer.php");
+//include("footer.php");
+
+
+
+        // send email
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception; 
 require("PHPMailer-master/src/Exception.php");
@@ -31,34 +36,33 @@ require("PHPMailer-master/src/PHPMailer.php");
 require("PHPMailer-master/src/SMTP.php");
 
 
-$number_1 = rand(1, 9);
-$number_2 = rand(1, 9);
-$answer = substr(md5($number_1+$number_2),5,10);
 
-
+    // create verevication code
 if (isset($_POST['email'])) {
-    $_SESSION["bericht"] = "de registratiecode is : $answer ";
-    $yourmessage = $_SESSION["bericht"];
+    $email = $_POST['email'];
+$xx = 0;
+   
+        $number_1 = rand(1, 9);
+        $number_2 = rand(1, 9);
+        $answer = substr(md5($number_1+$number_2),5,10);
+      $_SESSION['verivicatiecode'] = $answer;
+      $_SESSION['email'] = $_POST['email'];
+   
+        // send email
+
+    $bericht = "uw verificatiecode is : $answer ";
     $jouwNaam = "Ruben";
     $naar = $_POST['email'];
-    $onderwerp = 'registratiecode ARDUINOEDUCATIEF';
+    $onderwerp = "uw verificatiecode is : $answer ";
     $contact_submitted = 'Je bericht werd verstuurd.';
  
         $return = "\r";
         $jouwNaam = stripslashes(strip_tags($_POST['email']));
-        $_SESSION["bericht"] = stripslashes(strip_tags($yourmessage));
+     
         $contact_naam = "Name: ".$jouwNaam;
         $bericht_text = "Message: " . $_SESSION["bericht"];
-      //  $user_answer = trim(htmlspecialchars($_POST['user_answer']));
-      //  $answer = trim(htmlspecialchars($_POST['answer']));
-        $bericht = $yourmessage;
         if ($jouwNaam != "" && $_SESSION["bericht"] != "" ) {
-
-
-  
-           
             $jouwNaam = '';
-            $_SESSION["bericht"] =$yourmessage;
             $mail = new PHPMailer();
             $mail->IsSMTP();
             $mail->Mailer = "smtp";
@@ -72,15 +76,16 @@ if (isset($_POST['email'])) {
             $mail->IsHTML(true);
             $mail->AddAddress($_POST['email'], "rubenaspeslag");
             $mail->SetFrom("no-replay@atheneumjanfevijn.be", "ARDUINOEDUCATIEF");
-            $mail->Subject = "Test";
+            $mail->Subject = $onderwerp;
             $content = "<b>" . $bericht . "</b>";
             
             $mail->MsgHTML($content); 
             if(!$mail->Send()) {
-                echo "Fout bij het zenden van email.<br>";
-                var_dump($mail);
+                echo "gelieve een geldig e-mailadres in te geven.<br>";
+               // var_dump($mail);
             } else {
-                echo '<p style="color: green;"><strong>'.$contact_submitted.'</strong></p>';
+               // echo '<p style="color: green;"><strong>'.$contact_submitted.'</strong></p>';
+               header('Location: emailverification.php');
             }
         }
         else echo '<p style="color: red;">Vul aub je naam, een geldig email addres, je bericht en het antwoord op het simpele rekenvraagje in voor het verzenden van je bericht.</p>';
