@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: dbarduinoeducatief
+-- ------------------------------------------------------
+-- Server version	5.6.13
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `klas`
+--
+
+DROP TABLE IF EXISTS `klas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `klas` (
+  `idklas` int(11) NOT NULL AUTO_INCREMENT,
+  `code` decimal(40,0) NOT NULL,
+  `klasnaam` varchar(20) NOT NULL,
+  `idleerkracht` varchar(30) NOT NULL,
+  `formule` int(1) DEFAULT NULL,
+  PRIMARY KEY (`idklas`)
+) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `klas`
+--
+
+LOCK TABLES `klas` WRITE;
+/*!40000 ALTER TABLE `klas` DISABLE KEYS */;
+INSERT INTO `klas` (`idklas`, `code`, `klasnaam`, `idleerkracht`, `formule`) VALUES (86,647449,'6IT N','79',3),(87,147927,'5ITn','2',3),(88,586639,'5ITn','80',3),(89,298385,'6ITn','80',3),(90,736988,'stw','81',3),(91,345572,'6jhz','81',3),(92,586090,'6IT N','81',3),(93,969761,'5ITn','82',3),(94,813233,'5555','83',3),(95,233181,'55553','83',1),(96,163089,'6itn','',3),(97,776703,'6IT N','84',3),(98,661566,'1IT N (klas van rupe','84',3),(99,702902,'','84',3),(100,806971,'5ITn','84',3),(101,380069,'3 stw','87',3),(102,770331,'6itn','88',3),(103,541953,'6 IT N','89',3),(104,118127,'3stw','84',3),(105,783707,'6IT N','84',3),(106,417779,'5ITn','84',3),(107,398910,'1IT N','93',3),(108,465625,'6itn','94',3),(109,946717,'1IT N','95',3),(110,262130,'1IT N','96',3),(111,113073,'3jhz','84',3),(112,376278,'6itn','100',3),(113,333789,'5ITn','100',3),(114,722074,'6IT N','100',3),(115,506000,'6itn','101',3),(116,204452,'6IT N','103',3),(117,532202,'6itn','104',1),(118,861600,'6itn','105',1),(119,976874,'6itn','106',1),(120,533932,'','107',1),(121,501770,'6itn','108',1),(122,975748,'6itn','109',1),(123,425250,'6itn','111',1),(124,988218,'6itn','112',1),(125,575049,'azerty123','114',1),(126,694388,'azerty123','115',1),(127,863275,'6IT N','116',1),(128,414181,'6itn','117',1),(129,170504,'6itn','117',1),(130,263147,'3jhz','117',1),(131,840836,'6itn','117',1),(132,794831,'','117',1),(133,547446,'5ITn','119',3),(134,161413,'6itn','119',3),(135,932435,'6itn','120',1),(136,309372,'3jhz','121',1),(137,302258,'azerty123','122',1),(138,145208,'','123',3),(139,429700,'pieters klas','124',1),(140,889341,'6itn','125',3),(141,160369,'5IT N','125',3),(142,823011,'6itn','125',1),(143,719684,'6IT N','127',3),(144,980143,'','129',2),(145,525858,'6IT N','130',2),(146,380975,'6IT N','131',3),(147,381003,'6IT N','132',3),(148,932435,'6IT N','133',3);
+/*!40000 ALTER TABLE `klas` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-04-18 15:56:17

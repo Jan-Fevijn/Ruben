@@ -16,12 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `admin` (
+  `idadmin` int(11) NOT NULL,
+  `naam` varchar(10) NOT NULL,
+  `famielienaam` varchar(20) NOT NULL,
+  `wachtwoord` varchar(50) NOT NULL,
+  `gebruikersnaam` varchar(20) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  PRIMARY KEY (`idadmin`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `admin`
 --
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` (`idadmin`, `naam`, `famielienaam`, `wachtwoord`, `gebruikersnaam`, `email`) VALUES (1,'Ruben','Aspeslag','09228e7606ae09b4952c80db6a2dcba7','Ruben2001','ruben.aspeslag@gmail.com');
+INSERT INTO `admin` (`idadmin`, `naam`, `famielienaam`, `wachtwoord`, `gebruikersnaam`, `email`) VALUES (1,'Ruben','Aspeslag','72104a570ffdc2434f0a250ee8205455','Ruben2001','ruben.aspeslag@gmail.com');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -34,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-15 14:24:56
+-- Dump completed on 2020-04-18 15:56:18

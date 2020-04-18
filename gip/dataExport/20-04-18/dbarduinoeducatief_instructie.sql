@@ -16,6 +16,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `instructie`
+--
+
+DROP TABLE IF EXISTS `instructie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `instructie` (
+  `idnew_table` int(11) NOT NULL AUTO_INCREMENT,
+  `hoofdstuk` varchar(45) DEFAULT NULL,
+  `nummerOefening` int(11) DEFAULT NULL,
+  `tietel` varchar(50) DEFAULT NULL,
+  `uitleg` varchar(3000) DEFAULT NULL,
+  PRIMARY KEY (`idnew_table`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `instructie`
 --
 
@@ -33,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-15 14:24:57
+-- Dump completed on 2020-04-18 15:56:18
