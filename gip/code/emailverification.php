@@ -25,17 +25,43 @@ include("banner.php");
     echo("email = ".$_SESSION['email'] ." <br>");
        ?>
     <input type="code" name='verivicatiecode' size="30" id="EmailF" /> <br /> <br />
-    <input id="EmailF" type="submit" size="500" /><br /> 
-    
+    <input id="EmailF" type="submit" size="500" /><br /> <label> bent u een : <br>
+    <input type ='radio' id='accType0' value ='leerling' name= 'accType'> <label for='accType0'> leerling <label>
+    <input type ='radio' id='accType1' value ='leerkracht' name= 'accType'> <label for='accType1'> leerkracht <label>
+    <input type ='radio' id='accType2' value ='admin' name= 'accType'>  <label for='accType2'>admin <label> <br>
     <?php
         if (isset( $_SESSION['verivicatiecode'])) {
             if (isset( $_SESSION['email'])) { 
-                
+                $email = $_SESSION['email'];
                 if (isset( $_POST['verivicatiecode'])) {  
                     if ($_POST['verivicatiecode'] ==  $_SESSION['verivicatiecode']) {
                         echo("juist!<br>");
 
-                        
+                        // log in
+                        $_SESSION['accType'] = $_POST['accType'];
+                        switch ($_POST['accType']) {
+                            case "leerling":
+                              $sql = "SELECT idleerlingen as id FROM dbarduinoeducatief.leerlingen where email ='$email'";
+                                break;
+                            case "leerkracht":
+                                $sql = "SELECT idleerkrachten as id FROM dbarduinoeducatief.leerkrachten where email ='$email'";
+                                break;
+                            case "admin":
+                                $sql = "SELECT idadmin as id FROM dbarduinoeducatief.admin where email ='$email'";
+                                break;
+                        }
+
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) { 
+                            $row = $result->fetch_assoc();
+                            $id = $row['id'];
+                            $_SESSION['id'] = $id;
+                            echo($id . " as " .$_POST['accType'] );
+                            header('Location: changePassword.php');
+                        } else {
+                            echo("uw email adress is mogelijk niet in gebruik als " . $_POST['accType']. "<br>");
+                        }
+
                     } else {
                         echo("uw verivicatiecode is foutief , probeer nog een keer <br> ");
                     }

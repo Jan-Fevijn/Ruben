@@ -60,8 +60,9 @@ $xx = 0;
         $jouwNaam = stripslashes(strip_tags($_POST['email']));
      
         $contact_naam = "Name: ".$jouwNaam;
-        $bericht_text = "Message: " . $_SESSION["bericht"];
-        if ($jouwNaam != "" && $_SESSION["bericht"] != "" ) {
+        
+        $bericht_text = "Message: " .$bericht;
+        if ($jouwNaam != "" && $bericht != "" ) {
             $jouwNaam = '';
             $mail = new PHPMailer();
             $mail->IsSMTP();
