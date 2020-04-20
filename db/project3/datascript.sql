@@ -4,6 +4,8 @@ create database if not exists bakerijPol;
 CREATE TABLE `bakerijpol`.`soortbrood` (
   `idsoortBrood` INT NOT NULL AUTO_INCREMENT,
   `naam` VARCHAR(20) NULL,
+   `img` VARCHAR(30) NULL,
+   `hoeveelheid` int NULL,
   PRIMARY KEY (`idsoortBrood`));
 
 
