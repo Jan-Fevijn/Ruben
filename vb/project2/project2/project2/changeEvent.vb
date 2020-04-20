@@ -142,10 +142,7 @@ Public Class changeEvent
         con.Close()
         loadEventen()
     End Sub
-    Private Sub KoppelingenToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        koppelingen.Show()
-        Me.Hide()
-    End Sub
+
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         ADMIN.Show()
         Me.Hide()
