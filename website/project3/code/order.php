@@ -26,21 +26,50 @@
 </head>
 <body>
 <?php 
+   include("dbConn.php");
+    if (isset($_POST['mb'])) {
+       
+        if(isset($_SESSION['machineNumber'])) {
+            if ($_SESSION['machineNumber'] == 0) {
+                $_SESSION['machineNumber'] = $_POST['mb'];
+            } else {
+                $_SESSION['machineNumber'] = $_SESSION['machineNumber'] . $_POST['mb'];
+            }
+        } else {
+            $_SESSION['machineNumber'] = $_POST['mb'];
+          
+        }
+           
+      
+    } else {
+        $_SESSION['machineNumber'] = 0;
+    }
 
+    if (isset($_POST['c'])) {
+        $_SESSION['machineNumber'] = 0;
+    }
 ?>
 
     <form id = 'machineknoppen' method='POST'>
-         <div id='machineNumber'>10</div>
-         <input class='mb' type='submit' value='1' name='mb1'>
-         <input class='mb' type='submit' value='2' name='mb2'>
-         <input class='mb' type='submit' value='3' name='mb3'>
-         <input class='mb' type='submit' value='4' name='mb4'>
-         <input class='mb' type='submit' value='5' name='mb5'>
-         <input class='mb' type='submit' value='6' name='mb6'>
-         <input class='mb' type='submit' value='7' name='mb7'>
-         <input class='mb' type='submit' value='8' name='mb8'>
-         <input class='mb' type='submit' value='9' name='mb9'>
-         <input class='mb' id='mb0' type='submit' value='0' name='mb0'>
+         <div id='machineNumber'>
+         <?php
+         if (isset($_SESSION['machineNumber'])) {
+             echo($_SESSION['machineNumber']);
+         }
+         ?>
+         </div>
+         <input type='hidden' name='submited'>
+         <input class='mb' type='submit' value='1' name='mb'>
+         <input class='mb' type='submit' value='2' name='mb'>
+         <input class='mb' type='submit' value='3' name='mb'>
+         <input class='mb' type='submit' value='4' name='mb'>
+         <input class='mb' type='submit' value='5' name='mb'>
+         <input class='mb' type='submit' value='6' name='mb'>
+         <input class='mb' type='submit' value='7' name='mb'>
+         <input class='mb' type='submit' value='8' name='mb'>
+         <input class='mb' type='submit' value='9' name='mb'>
+         <input class='mb' type='submit' value='c' name='c'>
+         <input class='mb'  type='submit' value='0' name='mb'>
     </form>
 
 </body>
