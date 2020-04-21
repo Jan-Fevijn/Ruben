@@ -33,13 +33,29 @@ Partial Class Form1
         Me.btn7 = New System.Windows.Forms.Button()
         Me.btn0 = New System.Windows.Forms.Button()
         Me.txtLocatie = New System.Windows.Forms.TextBox()
-        Me.ListView2 = New System.Windows.Forms.ListView()
+        Me.locaties = New System.Windows.Forms.ListView()
         Me.listBrooden = New System.Windows.Forms.ListBox()
+        Me.btnCLearLocaties = New System.Windows.Forms.Button()
+        Me.klanten = New System.Windows.Forms.ListView()
+        Me.lblBroden = New System.Windows.Forms.Label()
+        Me.lblKlanten = New System.Windows.Forms.Label()
+        Me.lblSaldoWijzigen = New System.Windows.Forms.Label()
+        Me.lblUserCode = New System.Windows.Forms.Label()
+        Me.lblBudget = New System.Windows.Forms.Label()
+        Me.numUsercode = New System.Windows.Forms.NumericUpDown()
+        Me.numBudget = New System.Windows.Forms.NumericUpDown()
+        Me.btnSaldoWijzigen = New System.Windows.Forms.Button()
+        Me.btnGebruikerToevoegen = New System.Windows.Forms.Button()
+        Me.lblNaamBrood = New System.Windows.Forms.Label()
+        Me.txtNaamBrood = New System.Windows.Forms.TextBox()
+        Me.btnAddBrood = New System.Windows.Forms.Button()
+        CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numBudget, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn1
         '
-        Me.btn1.Location = New System.Drawing.Point(12, 135)
+        Me.btn1.Location = New System.Drawing.Point(7, 154)
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(78, 64)
         Me.btn1.TabIndex = 0
@@ -48,7 +64,7 @@ Partial Class Form1
         '
         'btn2
         '
-        Me.btn2.Location = New System.Drawing.Point(93, 135)
+        Me.btn2.Location = New System.Drawing.Point(88, 154)
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(78, 64)
         Me.btn2.TabIndex = 1
@@ -57,7 +73,7 @@ Partial Class Form1
         '
         'btn3
         '
-        Me.btn3.Location = New System.Drawing.Point(177, 135)
+        Me.btn3.Location = New System.Drawing.Point(172, 154)
         Me.btn3.Name = "btn3"
         Me.btn3.Size = New System.Drawing.Size(78, 64)
         Me.btn3.TabIndex = 2
@@ -66,7 +82,7 @@ Partial Class Form1
         '
         'btn6
         '
-        Me.btn6.Location = New System.Drawing.Point(177, 205)
+        Me.btn6.Location = New System.Drawing.Point(172, 224)
         Me.btn6.Name = "btn6"
         Me.btn6.Size = New System.Drawing.Size(78, 64)
         Me.btn6.TabIndex = 5
@@ -75,7 +91,7 @@ Partial Class Form1
         '
         'btn5
         '
-        Me.btn5.Location = New System.Drawing.Point(93, 205)
+        Me.btn5.Location = New System.Drawing.Point(88, 224)
         Me.btn5.Name = "btn5"
         Me.btn5.Size = New System.Drawing.Size(78, 64)
         Me.btn5.TabIndex = 4
@@ -84,7 +100,7 @@ Partial Class Form1
         '
         'btn4
         '
-        Me.btn4.Location = New System.Drawing.Point(12, 205)
+        Me.btn4.Location = New System.Drawing.Point(7, 224)
         Me.btn4.Name = "btn4"
         Me.btn4.Size = New System.Drawing.Size(78, 64)
         Me.btn4.TabIndex = 3
@@ -93,7 +109,7 @@ Partial Class Form1
         '
         'btn9
         '
-        Me.btn9.Location = New System.Drawing.Point(177, 275)
+        Me.btn9.Location = New System.Drawing.Point(172, 294)
         Me.btn9.Name = "btn9"
         Me.btn9.Size = New System.Drawing.Size(78, 64)
         Me.btn9.TabIndex = 8
@@ -102,7 +118,7 @@ Partial Class Form1
         '
         'btn8
         '
-        Me.btn8.Location = New System.Drawing.Point(93, 275)
+        Me.btn8.Location = New System.Drawing.Point(88, 294)
         Me.btn8.Name = "btn8"
         Me.btn8.Size = New System.Drawing.Size(78, 64)
         Me.btn8.TabIndex = 7
@@ -111,7 +127,7 @@ Partial Class Form1
         '
         'btn7
         '
-        Me.btn7.Location = New System.Drawing.Point(12, 275)
+        Me.btn7.Location = New System.Drawing.Point(7, 294)
         Me.btn7.Name = "btn7"
         Me.btn7.Size = New System.Drawing.Size(78, 64)
         Me.btn7.TabIndex = 6
@@ -120,7 +136,7 @@ Partial Class Form1
         '
         'btn0
         '
-        Me.btn0.Location = New System.Drawing.Point(93, 345)
+        Me.btn0.Location = New System.Drawing.Point(88, 364)
         Me.btn0.Name = "btn0"
         Me.btn0.Size = New System.Drawing.Size(78, 64)
         Me.btn0.TabIndex = 9
@@ -130,36 +146,172 @@ Partial Class Form1
         'txtLocatie
         '
         Me.txtLocatie.Enabled = False
-        Me.txtLocatie.Location = New System.Drawing.Point(12, 66)
+        Me.txtLocatie.Location = New System.Drawing.Point(7, 85)
         Me.txtLocatie.Name = "txtLocatie"
         Me.txtLocatie.Size = New System.Drawing.Size(243, 29)
         Me.txtLocatie.TabIndex = 10
         '
-        'ListView2
+        'locaties
         '
-        Me.ListView2.HideSelection = False
-        Me.ListView2.Location = New System.Drawing.Point(25, 429)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(557, 192)
-        Me.ListView2.TabIndex = 12
-        Me.ListView2.UseCompatibleStateImageBehavior = False
+        Me.locaties.HideSelection = False
+        Me.locaties.Location = New System.Drawing.Point(20, 448)
+        Me.locaties.Name = "locaties"
+        Me.locaties.Size = New System.Drawing.Size(557, 192)
+        Me.locaties.TabIndex = 12
+        Me.locaties.UseCompatibleStateImageBehavior = False
         '
         'listBrooden
         '
         Me.listBrooden.FormattingEnabled = True
         Me.listBrooden.ItemHeight = 24
-        Me.listBrooden.Location = New System.Drawing.Point(306, 73)
+        Me.listBrooden.Location = New System.Drawing.Point(301, 92)
         Me.listBrooden.Name = "listBrooden"
         Me.listBrooden.Size = New System.Drawing.Size(156, 340)
         Me.listBrooden.TabIndex = 13
+        '
+        'btnCLearLocaties
+        '
+        Me.btnCLearLocaties.Location = New System.Drawing.Point(199, 643)
+        Me.btnCLearLocaties.Name = "btnCLearLocaties"
+        Me.btnCLearLocaties.Size = New System.Drawing.Size(158, 77)
+        Me.btnCLearLocaties.TabIndex = 14
+        Me.btnCLearLocaties.Text = "clear locaties"
+        Me.btnCLearLocaties.UseVisualStyleBackColor = True
+        '
+        'klanten
+        '
+        Me.klanten.HideSelection = False
+        Me.klanten.Location = New System.Drawing.Point(735, 92)
+        Me.klanten.Name = "klanten"
+        Me.klanten.Size = New System.Drawing.Size(321, 628)
+        Me.klanten.TabIndex = 15
+        Me.klanten.UseCompatibleStateImageBehavior = False
+        '
+        'lblBroden
+        '
+        Me.lblBroden.AutoSize = True
+        Me.lblBroden.Location = New System.Drawing.Point(149, 22)
+        Me.lblBroden.Name = "lblBroden"
+        Me.lblBroden.Size = New System.Drawing.Size(84, 25)
+        Me.lblBroden.TabIndex = 16
+        Me.lblBroden.Text = "brooden"
+        '
+        'lblKlanten
+        '
+        Me.lblKlanten.AutoSize = True
+        Me.lblKlanten.Location = New System.Drawing.Point(843, 22)
+        Me.lblKlanten.Name = "lblKlanten"
+        Me.lblKlanten.Size = New System.Drawing.Size(75, 25)
+        Me.lblKlanten.TabIndex = 17
+        Me.lblKlanten.Text = "klanten"
+        '
+        'lblSaldoWijzigen
+        '
+        Me.lblSaldoWijzigen.AutoSize = True
+        Me.lblSaldoWijzigen.Location = New System.Drawing.Point(1153, 92)
+        Me.lblSaldoWijzigen.Name = "lblSaldoWijzigen"
+        Me.lblSaldoWijzigen.Size = New System.Drawing.Size(133, 25)
+        Me.lblSaldoWijzigen.TabIndex = 18
+        Me.lblSaldoWijzigen.Text = "saldo wijzigen"
+        '
+        'lblUserCode
+        '
+        Me.lblUserCode.AutoSize = True
+        Me.lblUserCode.Location = New System.Drawing.Point(1062, 145)
+        Me.lblUserCode.Name = "lblUserCode"
+        Me.lblUserCode.Size = New System.Drawing.Size(146, 25)
+        Me.lblUserCode.TabIndex = 19
+        Me.lblUserCode.Text = "gebruikerscode"
+        '
+        'lblBudget
+        '
+        Me.lblBudget.AutoSize = True
+        Me.lblBudget.Location = New System.Drawing.Point(1079, 207)
+        Me.lblBudget.Name = "lblBudget"
+        Me.lblBudget.Size = New System.Drawing.Size(72, 25)
+        Me.lblBudget.TabIndex = 20
+        Me.lblBudget.Text = "budget"
+        '
+        'numUsercode
+        '
+        Me.numUsercode.Location = New System.Drawing.Point(1223, 145)
+        Me.numUsercode.Maximum = New Decimal(New Integer() {1874919424, 2328306, 0, 0})
+        Me.numUsercode.Name = "numUsercode"
+        Me.numUsercode.Size = New System.Drawing.Size(180, 29)
+        Me.numUsercode.TabIndex = 21
+        '
+        'numBudget
+        '
+        Me.numBudget.Location = New System.Drawing.Point(1223, 203)
+        Me.numBudget.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numBudget.Name = "numBudget"
+        Me.numBudget.Size = New System.Drawing.Size(180, 29)
+        Me.numBudget.TabIndex = 22
+        '
+        'btnSaldoWijzigen
+        '
+        Me.btnSaldoWijzigen.Location = New System.Drawing.Point(1084, 267)
+        Me.btnSaldoWijzigen.Name = "btnSaldoWijzigen"
+        Me.btnSaldoWijzigen.Size = New System.Drawing.Size(404, 64)
+        Me.btnSaldoWijzigen.TabIndex = 23
+        Me.btnSaldoWijzigen.Text = "saldo wijzigen"
+        Me.btnSaldoWijzigen.UseVisualStyleBackColor = True
+        '
+        'btnGebruikerToevoegen
+        '
+        Me.btnGebruikerToevoegen.Location = New System.Drawing.Point(1084, 348)
+        Me.btnGebruikerToevoegen.Name = "btnGebruikerToevoegen"
+        Me.btnGebruikerToevoegen.Size = New System.Drawing.Size(404, 64)
+        Me.btnGebruikerToevoegen.TabIndex = 24
+        Me.btnGebruikerToevoegen.Text = "klant toevoegen"
+        Me.btnGebruikerToevoegen.UseVisualStyleBackColor = True
+        '
+        'lblNaamBrood
+        '
+        Me.lblNaamBrood.AutoSize = True
+        Me.lblNaamBrood.Location = New System.Drawing.Point(463, 117)
+        Me.lblNaamBrood.Name = "lblNaamBrood"
+        Me.lblNaamBrood.Size = New System.Drawing.Size(122, 25)
+        Me.lblNaamBrood.TabIndex = 25
+        Me.lblNaamBrood.Text = "naam brood:"
+        '
+        'txtNaamBrood
+        '
+        Me.txtNaamBrood.Location = New System.Drawing.Point(594, 117)
+        Me.txtNaamBrood.Name = "txtNaamBrood"
+        Me.txtNaamBrood.Size = New System.Drawing.Size(135, 29)
+        Me.txtNaamBrood.TabIndex = 26
+        '
+        'btnAddBrood
+        '
+        Me.btnAddBrood.Location = New System.Drawing.Point(507, 164)
+        Me.btnAddBrood.Name = "btnAddBrood"
+        Me.btnAddBrood.Size = New System.Drawing.Size(183, 44)
+        Me.btnAddBrood.TabIndex = 27
+        Me.btnAddBrood.Text = "brood toevoegen"
+        Me.btnAddBrood.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1059, 619)
+        Me.ClientSize = New System.Drawing.Size(1530, 732)
+        Me.Controls.Add(Me.btnAddBrood)
+        Me.Controls.Add(Me.txtNaamBrood)
+        Me.Controls.Add(Me.lblNaamBrood)
+        Me.Controls.Add(Me.btnGebruikerToevoegen)
+        Me.Controls.Add(Me.btnSaldoWijzigen)
+        Me.Controls.Add(Me.numBudget)
+        Me.Controls.Add(Me.numUsercode)
+        Me.Controls.Add(Me.lblBudget)
+        Me.Controls.Add(Me.lblUserCode)
+        Me.Controls.Add(Me.lblSaldoWijzigen)
+        Me.Controls.Add(Me.lblKlanten)
+        Me.Controls.Add(Me.lblBroden)
+        Me.Controls.Add(Me.klanten)
+        Me.Controls.Add(Me.btnCLearLocaties)
         Me.Controls.Add(Me.listBrooden)
-        Me.Controls.Add(Me.ListView2)
+        Me.Controls.Add(Me.locaties)
         Me.Controls.Add(Me.txtLocatie)
         Me.Controls.Add(Me.btn0)
         Me.Controls.Add(Me.btn9)
@@ -173,6 +325,8 @@ Partial Class Form1
         Me.Controls.Add(Me.btn1)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numBudget, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -189,6 +343,20 @@ Partial Class Form1
     Friend WithEvents btn7 As Button
     Friend WithEvents btn0 As Button
     Friend WithEvents txtLocatie As TextBox
-    Friend WithEvents ListView2 As ListView
+    Friend WithEvents locaties As ListView
     Friend WithEvents listBrooden As ListBox
+    Friend WithEvents btnCLearLocaties As Button
+    Friend WithEvents klanten As ListView
+    Friend WithEvents lblBroden As Label
+    Friend WithEvents lblKlanten As Label
+    Friend WithEvents lblSaldoWijzigen As Label
+    Friend WithEvents lblUserCode As Label
+    Friend WithEvents lblBudget As Label
+    Friend WithEvents numUsercode As NumericUpDown
+    Friend WithEvents numBudget As NumericUpDown
+    Friend WithEvents btnSaldoWijzigen As Button
+    Friend WithEvents btnGebruikerToevoegen As Button
+    Friend WithEvents lblNaamBrood As Label
+    Friend WithEvents txtNaamBrood As TextBox
+    Friend WithEvents btnAddBrood As Button
 End Class
