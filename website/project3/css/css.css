@@ -1,0 +1,43 @@
+﻿#machineknoppen {
+    width: 40%;
+    position: fixed;
+    top: 5;
+    left: 60%;
+    height: 50%;
+    font-size:200%;
+}
+
+#machineNumber {
+    background-color: lightgray;
+}
+
+.mb {
+    width: 32%;
+    height: 20%;
+    margin-top: 2px;
+}
+
+#mb0 {
+    margin-left: 32%;
+}
+.order {
+    margin-top: 2%;
+    display: block;
+   padding: 5%;
+   margin-left:20%;
+   font-size:100%;
+}
+#automaat {
+    margin-top: 0%;
+    width:50%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 100%;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+#brood {
+    background-color: white;
+}

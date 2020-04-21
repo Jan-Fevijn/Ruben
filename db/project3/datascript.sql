@@ -24,7 +24,7 @@ CREATE TABLE `bakerijpol`.`broodLocatie` (
   PRIMARY KEY (`idBroodLocatier`));
   
   CREATE TABLE `bakerijpol`.`order` (
-  `idorder` INT NOT NULL,
+  `idorder`  INT NOT NULL AUTO_INCREMENT ,
   `usercode` INT NULL,
   `idSoortbrood` INT NULL,
   `idlocatie` INT NULL,
