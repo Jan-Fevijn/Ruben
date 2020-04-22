@@ -1,7 +1,13 @@
+<?php 
+
+
+
+
+?>
 <h1> keuze :</h1>
 <div id='automaat'> <br>
         <?php 
-           $sql ="SELECT * FROM bakerijpol.broodlocatie inner join soortbrood on soortbrood.idsoortBrood = broodlocatie.IDsoordBrood";
+           $sql ="SELECT * FROM bakerijpol.broodlocatie inner join soortbrood on soortbrood.idsoortBrood = broodlocatie.IDsoordBrood WHERE broodlocatie.hoeveelheid >0 ";
            $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

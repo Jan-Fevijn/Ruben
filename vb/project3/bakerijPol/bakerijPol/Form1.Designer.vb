@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class bakerijPol
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -49,8 +49,15 @@ Partial Class Form1
         Me.lblNaamBrood = New System.Windows.Forms.Label()
         Me.txtNaamBrood = New System.Windows.Forms.TextBox()
         Me.btnAddBrood = New System.Windows.Forms.Button()
+        Me.numHoeveelheid = New System.Windows.Forms.NumericUpDown()
+        Me.lblHoeveelheid = New System.Windows.Forms.Label()
+        Me.btnBroodInAutomaatSteeken = New System.Windows.Forms.Button()
+        Me.lblPrijs = New System.Windows.Forms.Label()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numBudget, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn1
@@ -154,7 +161,7 @@ Partial Class Form1
         'locaties
         '
         Me.locaties.HideSelection = False
-        Me.locaties.Location = New System.Drawing.Point(20, 448)
+        Me.locaties.Location = New System.Drawing.Point(25, 587)
         Me.locaties.Name = "locaties"
         Me.locaties.Size = New System.Drawing.Size(557, 192)
         Me.locaties.TabIndex = 12
@@ -164,14 +171,14 @@ Partial Class Form1
         '
         Me.listBrooden.FormattingEnabled = True
         Me.listBrooden.ItemHeight = 24
-        Me.listBrooden.Location = New System.Drawing.Point(301, 92)
+        Me.listBrooden.Location = New System.Drawing.Point(301, 85)
         Me.listBrooden.Name = "listBrooden"
         Me.listBrooden.Size = New System.Drawing.Size(156, 340)
         Me.listBrooden.TabIndex = 13
         '
         'btnCLearLocaties
         '
-        Me.btnCLearLocaties.Location = New System.Drawing.Point(199, 643)
+        Me.btnCLearLocaties.Location = New System.Drawing.Point(198, 798)
         Me.btnCLearLocaties.Name = "btnCLearLocaties"
         Me.btnCLearLocaties.Size = New System.Drawing.Size(158, 77)
         Me.btnCLearLocaties.TabIndex = 14
@@ -284,18 +291,64 @@ Partial Class Form1
         '
         'btnAddBrood
         '
-        Me.btnAddBrood.Location = New System.Drawing.Point(507, 164)
+        Me.btnAddBrood.Location = New System.Drawing.Point(494, 203)
         Me.btnAddBrood.Name = "btnAddBrood"
         Me.btnAddBrood.Size = New System.Drawing.Size(183, 44)
         Me.btnAddBrood.TabIndex = 27
         Me.btnAddBrood.Text = "brood toevoegen"
         Me.btnAddBrood.UseVisualStyleBackColor = True
         '
-        'Form1
+        'numHoeveelheid
+        '
+        Me.numHoeveelheid.Location = New System.Drawing.Point(225, 438)
+        Me.numHoeveelheid.Name = "numHoeveelheid"
+        Me.numHoeveelheid.Size = New System.Drawing.Size(131, 29)
+        Me.numHoeveelheid.TabIndex = 28
+        '
+        'lblHoeveelheid
+        '
+        Me.lblHoeveelheid.AutoSize = True
+        Me.lblHoeveelheid.Location = New System.Drawing.Point(94, 438)
+        Me.lblHoeveelheid.Name = "lblHoeveelheid"
+        Me.lblHoeveelheid.Size = New System.Drawing.Size(118, 25)
+        Me.lblHoeveelheid.TabIndex = 29
+        Me.lblHoeveelheid.Text = "hoeveelheid"
+        '
+        'btnBroodInAutomaatSteeken
+        '
+        Me.btnBroodInAutomaatSteeken.Location = New System.Drawing.Point(154, 492)
+        Me.btnBroodInAutomaatSteeken.Name = "btnBroodInAutomaatSteeken"
+        Me.btnBroodInAutomaatSteeken.Size = New System.Drawing.Size(276, 78)
+        Me.btnBroodInAutomaatSteeken.TabIndex = 30
+        Me.btnBroodInAutomaatSteeken.Text = "brood in automaat steeken"
+        Me.btnBroodInAutomaatSteeken.UseVisualStyleBackColor = True
+        '
+        'lblPrijs
+        '
+        Me.lblPrijs.AutoSize = True
+        Me.lblPrijs.Location = New System.Drawing.Point(463, 154)
+        Me.lblPrijs.Name = "lblPrijs"
+        Me.lblPrijs.Size = New System.Drawing.Size(108, 25)
+        Me.lblPrijs.TabIndex = 31
+        Me.lblPrijs.Text = "prijs brood:"
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(600, 158)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(128, 29)
+        Me.NumericUpDown1.TabIndex = 32
+        '
+        'bakerijPol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1530, 732)
+        Me.ClientSize = New System.Drawing.Size(1530, 901)
+        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.lblPrijs)
+        Me.Controls.Add(Me.btnBroodInAutomaatSteeken)
+        Me.Controls.Add(Me.lblHoeveelheid)
+        Me.Controls.Add(Me.numHoeveelheid)
         Me.Controls.Add(Me.btnAddBrood)
         Me.Controls.Add(Me.txtNaamBrood)
         Me.Controls.Add(Me.lblNaamBrood)
@@ -323,10 +376,12 @@ Partial Class Form1
         Me.Controls.Add(Me.btn3)
         Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.btn1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "bakerijPol"
+        Me.Text = "bakerijPol"
         CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numBudget, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -359,4 +414,9 @@ Partial Class Form1
     Friend WithEvents lblNaamBrood As Label
     Friend WithEvents txtNaamBrood As TextBox
     Friend WithEvents btnAddBrood As Button
+    Friend WithEvents numHoeveelheid As NumericUpDown
+    Friend WithEvents lblHoeveelheid As Label
+    Friend WithEvents btnBroodInAutomaatSteeken As Button
+    Friend WithEvents lblPrijs As Label
+    Friend WithEvents NumericUpDown1 As NumericUpDown
 End Class
