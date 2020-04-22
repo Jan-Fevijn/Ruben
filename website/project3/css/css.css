@@ -1,7 +1,7 @@
 ﻿#machineknoppen {
     width: 40%;
     position: fixed;
-    top: 5;
+    top: 5%;
     left: 60%;
     height: 50%;
     font-size:200%;
@@ -39,5 +39,6 @@
   
 }
 #brood {
-    background-color: white;
-}
+    
+    padding: 2%;
+}   

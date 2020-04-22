@@ -14,8 +14,6 @@
                             $sql = "UPDATE `bakerijpol`.`user` SET `saldo` = '$saldo' WHERE (`idUser` = '$idUser')";
                            if ($conn->query($sql) === TRUE) {
                             echo "uw aankoop is voltooid<br>";
-                        } else {
-                         
                         }
 
                     }
@@ -24,5 +22,19 @@
       } else {
         header("location: ../index.php ");
       }
+      $sqlUser = "SELECT * FROM bakerijpol.user where code = '$userCode'";
+      $resultUser = $conn->query($sqlUser);
+      if ($resultUser->num_rows > 0) {
+          // output data of each row
+          while($row = $resultUser->fetch_assoc()) {
+              $idUser = $row['idUser'];
+              $code = $row['code'];
+              $saldo = $row['saldo'];
+              echo("<h3> code : $code  saldo = $saldo </h3>");
+          }
+      } else {
+          echo "0 results";
+      }
+
     }
 ?>

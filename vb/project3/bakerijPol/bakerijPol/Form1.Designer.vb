@@ -54,6 +54,8 @@ Partial Class bakerijPol
         Me.btnBroodInAutomaatSteeken = New System.Windows.Forms.Button()
         Me.lblPrijs = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.btnOpnieuwLaadenLocatie = New System.Windows.Forms.Button()
+        Me.btnOpnieuwLadenUsers = New System.Windows.Forms.Button()
         CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numBudget, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,7 +180,7 @@ Partial Class bakerijPol
         '
         'btnCLearLocaties
         '
-        Me.btnCLearLocaties.Location = New System.Drawing.Point(198, 798)
+        Me.btnCLearLocaties.Location = New System.Drawing.Point(138, 796)
         Me.btnCLearLocaties.Name = "btnCLearLocaties"
         Me.btnCLearLocaties.Size = New System.Drawing.Size(158, 77)
         Me.btnCLearLocaties.TabIndex = 14
@@ -339,11 +341,31 @@ Partial Class bakerijPol
         Me.NumericUpDown1.Size = New System.Drawing.Size(128, 29)
         Me.NumericUpDown1.TabIndex = 32
         '
+        'btnOpnieuwLaadenLocatie
+        '
+        Me.btnOpnieuwLaadenLocatie.Location = New System.Drawing.Point(326, 796)
+        Me.btnOpnieuwLaadenLocatie.Name = "btnOpnieuwLaadenLocatie"
+        Me.btnOpnieuwLaadenLocatie.Size = New System.Drawing.Size(220, 72)
+        Me.btnOpnieuwLaadenLocatie.TabIndex = 33
+        Me.btnOpnieuwLaadenLocatie.Text = "opnieuw laaden"
+        Me.btnOpnieuwLaadenLocatie.UseVisualStyleBackColor = True
+        '
+        'btnOpnieuwLadenUsers
+        '
+        Me.btnOpnieuwLadenUsers.Location = New System.Drawing.Point(799, 736)
+        Me.btnOpnieuwLadenUsers.Name = "btnOpnieuwLadenUsers"
+        Me.btnOpnieuwLadenUsers.Size = New System.Drawing.Size(220, 72)
+        Me.btnOpnieuwLadenUsers.TabIndex = 34
+        Me.btnOpnieuwLadenUsers.Text = "opnieuw laaden"
+        Me.btnOpnieuwLadenUsers.UseVisualStyleBackColor = True
+        '
         'bakerijPol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1530, 901)
+        Me.Controls.Add(Me.btnOpnieuwLadenUsers)
+        Me.Controls.Add(Me.btnOpnieuwLaadenLocatie)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.lblPrijs)
         Me.Controls.Add(Me.btnBroodInAutomaatSteeken)
@@ -419,4 +441,6 @@ Partial Class bakerijPol
     Friend WithEvents btnBroodInAutomaatSteeken As Button
     Friend WithEvents lblPrijs As Label
     Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents btnOpnieuwLaadenLocatie As Button
+    Friend WithEvents btnOpnieuwLadenUsers As Button
 End Class

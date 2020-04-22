@@ -1,25 +1,24 @@
 <?php 
 $userCode = $_SESSION['userCode'];
 $machinenummer =  $_SESSION['machineNumber'];
-$sqlUser = "SELECT * FROM bakerijpol.user where code = '$userCode'";
 
 
+
+if (isset($_POST['order'])){
+    $sqlUser = "SELECT * FROM bakerijpol.user where code = '$userCode'";
 $resultUser = $conn->query($sqlUser);
-
 if ($resultUser->num_rows > 0) {
     // output data of each row
     while($row = $resultUser->fetch_assoc()) {
         $idUser = $row['idUser'];
         $code = $row['code'];
         $saldo = $row['saldo'];
-        echo("<h3> code : $code  saldo = $saldo </h3>");
+       // echo("<h3> code : $code  saldo = $saldo </h3>");
     }
 } else {
     echo "0 results";
 }
 
-
-if (isset($_POST['order'])){
     if (isset($_SESSION['userCode'])) {
        
         $sql = "SELECT * FROM bakerijpol.broodlocatie where locatie = $machinenummer";
@@ -55,6 +54,20 @@ if (isset($_POST['order'])){
     }
 
 
+} else {
+    $sqlUser = "SELECT * FROM bakerijpol.user where code = '$userCode'";
+$resultUser = $conn->query($sqlUser);
+if ($resultUser->num_rows > 0) {
+    // output data of each row
+    while($row = $resultUser->fetch_assoc()) {
+        $idUser = $row['idUser'];
+        $code = $row['code'];
+        $saldo = $row['saldo'];
+        echo("<h3> code : $code  saldo = $saldo </h3>");
+    }
+} else {
+    echo "0 results";
+}
 }
 
 ?>

@@ -100,7 +100,7 @@ Public Class bakerijPol
 
         conn.Open()
 
-        Dim mySelectQuery As String = "SELECT locatie,  soortbrood.naam ,broodLocatie.hoeveelheid FROM bakerijpol.broodlocatie inner join soortbrood on broodlocatie.IDsoordBrood = soortbrood.idsoortBrood "
+        Dim mySelectQuery As String = "SELECT locatie,  soortbrood.naam ,broodLocatie.hoeveelheid FROM bakerijpol.broodlocatie inner join soortbrood on broodlocatie.IDsoordBrood = soortbrood.idsoortBrood where broodLocatie.hoeveelheid > 0   order by locatie"
         Dim myCommand As New MySqlCommand(mySelectQuery, conn)
 
         Dim rd As MySqlDataReader
@@ -257,5 +257,13 @@ Public Class bakerijPol
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblPrijs.Click
 
+    End Sub
+
+    Private Sub btnOpnieuwLadenUsers_Click(sender As Object, e As EventArgs) Handles btnOpnieuwLadenUsers.Click
+        loudKlanten()
+    End Sub
+
+    Private Sub btnOpnieuwLaadenLocatie_Click(sender As Object, e As EventArgs) Handles btnOpnieuwLaadenLocatie.Click
+        loudLocaties()
     End Sub
 End Class

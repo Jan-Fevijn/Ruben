@@ -1,9 +1,3 @@
-<?php 
-
-
-
-
-?>
 <h1> keuze :</h1>
 <div id='automaat'> <br>
         <?php 
