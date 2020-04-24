@@ -179,46 +179,8 @@ Public Class bakerijPol
         End If
         loudbroodsoorten()
     End Sub
-    '       -------machineknopen 
-    Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
-        txtLocatie.Text = txtLocatie.Text & 1
-    End Sub
 
-    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
-        txtLocatie.Text = txtLocatie.Text & 2
-    End Sub
 
-    Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
-        txtLocatie.Text = txtLocatie.Text & 3
-    End Sub
-
-    Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btn4.Click
-        txtLocatie.Text = txtLocatie.Text & 4
-    End Sub
-
-    Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
-        txtLocatie.Text = txtLocatie.Text & 5
-    End Sub
-
-    Private Sub btn6_Click(sender As Object, e As EventArgs) Handles btn6.Click
-        txtLocatie.Text = txtLocatie.Text & 6
-    End Sub
-
-    Private Sub btn7_Click(sender As Object, e As EventArgs) Handles btn7.Click
-        txtLocatie.Text = txtLocatie.Text & 7
-    End Sub
-
-    Private Sub btn8_Click(sender As Object, e As EventArgs) Handles btn8.Click
-        txtLocatie.Text = txtLocatie.Text & 8
-    End Sub
-
-    Private Sub btn9_Click(sender As Object, e As EventArgs) Handles btn9.Click
-        txtLocatie.Text = txtLocatie.Text & 9
-    End Sub
-
-    Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
-        txtLocatie.Text = txtLocatie.Text & 0
-    End Sub
 
     Private Sub btnBroodInAutomaatSteeken_Click(sender As Object, e As EventArgs) Handles btnBroodInAutomaatSteeken.Click
         If txtLocatie.Text <> "" Then
@@ -266,4 +228,46 @@ Public Class bakerijPol
     Private Sub btnOpnieuwLaadenLocatie_Click(sender As Object, e As EventArgs) Handles btnOpnieuwLaadenLocatie.Click
         loudLocaties()
     End Sub
+    '       -------machineknopen 
+
+    Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
+        txtLocatie.Text = txtLocatie.Text & 1
+    End Sub
+
+    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        txtLocatie.Text = txtLocatie.Text & 2
+    End Sub
+
+    Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
+        txtLocatie.Text = txtLocatie.Text & 3
+    End Sub
+
+    Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btn4.Click
+        txtLocatie.Text = txtLocatie.Text & 4
+    End Sub
+
+    Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        txtLocatie.Text = txtLocatie.Text & 5
+    End Sub
+
+    Private Sub btn6_Click(sender As Object, e As EventArgs) Handles btn6.Click
+        txtLocatie.Text = txtLocatie.Text & 6
+    End Sub
+
+    Private Sub btn7_Click(sender As Object, e As EventArgs) Handles btn7.Click
+        txtLocatie.Text = txtLocatie.Text & 7
+    End Sub
+
+    Private Sub btn8_Click(sender As Object, e As EventArgs) Handles btn8.Click
+        txtLocatie.Text = txtLocatie.Text & 8
+    End Sub
+
+    Private Sub btn9_Click(sender As Object, e As EventArgs) Handles btn9.Click
+        txtLocatie.Text = txtLocatie.Text & 9
+    End Sub
+
+    Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
+        txtLocatie.Text = txtLocatie.Text & 0
+    End Sub
+
 End Class

@@ -70,7 +70,7 @@ switch ($_SESSION['accType']) {
     case "leerkracht":
         $sql = "UPDATE `dbarduinoeducatief`.`leerkrachten` SET `actief` = '1' WHERE (`idleerkrachten` = '$id')";
         $conn->query($sql);
-        header('Location: leerkracht.php');
+        header('Location: leerkrachten.php');
         break;
     }
 }

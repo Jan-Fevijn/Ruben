@@ -6,14 +6,14 @@ CREATE TABLE `bakerijpol`.`soortbrood` (
   `naam` VARCHAR(20) NULL,
    `img` VARCHAR(30) NULL,
    `hoeveelheid` int NULL,
-   `prijs` int NULL,
+   `prijs` decimal (8,2) NULL,
   PRIMARY KEY (`idsoortBrood`));
 
 
 CREATE TABLE `bakerijpol`.`user` (
   `idUser` INT NOT NULL AUTO_INCREMENT,
   `code` int NULL,
-  `saldo` int NULL,
+  `saldo` decimal (8,2) NULL,
   PRIMARY KEY (`idUser`));
 
 
