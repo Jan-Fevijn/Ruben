@@ -41,10 +41,13 @@ if ($resultUser->num_rows > 0) {
         }
 
         $sqlBrood = "SELECT * FROM bakerijpol.soortbrood where idsoortBrood = $IDsoordBrood  ";
+
         if($resultBrood = mysqli_query($conn, $sqlBrood)){
             if(mysqli_num_rows($resultBrood) > 0){
                 $rowBrood = mysqli_fetch_array($resultBrood);
              $broodprijs =   $rowBrood['prijs'];
+             $_SESSION['broodprijs'] =  $broodprijs;
+           //  echo('brood');
             }
         }
 

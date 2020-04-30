@@ -41,4 +41,23 @@
 #brood {
     
     padding: 2%;
-}   
+}
+
+h2 {
+    text-align:center;
+}
+
+#muntjes {
+    position: fixed;
+    top:50%;
+    left:10%;
+    padding:5%;
+    height: 20%;
+    width:20%;
+    background-color:black;
+}
+.muntje {
+    width: 32%;
+    height: 20%;
+    margin-top: 2px;
+}

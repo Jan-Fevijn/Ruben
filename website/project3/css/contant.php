@@ -8,11 +8,8 @@
 </head>
 <body>
 <?php 
-   include("dbConn.php");
-   include("selects.php");
-   include("buy.php");
+   include("dbConn.php");  
    include("automaat.php");
-   
    include("machineKnoppen.php");
    
    ?>

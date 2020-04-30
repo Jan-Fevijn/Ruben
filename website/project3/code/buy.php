@@ -8,7 +8,8 @@
        $idBroodLocatier = $row['idBroodLocatier'];
        $sql = "UPDATE `bakerijpol`.`broodlocatie` SET `hoeveelheid` = '$hoeveelheid' WHERE (`idBroodLocatier` = '$idBroodLocatier')";
        if ($conn->query($sql) === TRUE) {
-                           $saldo = $saldo - $broodprijs;
+
+                           $saldo = $saldo - $_SESSION['broodprijs'];
                           
                             
                             $sql = "UPDATE `bakerijpol`.`user` SET `saldo` = '$saldo' WHERE (`idUser` = '$idUser')";

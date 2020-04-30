@@ -36,6 +36,7 @@ include("banner.php");
   </form>
 
   <?php 
+  if (isset($_POST['password1'])) {
    // echo($_SESSION['id'] ."<br>");
    // echo($_SESSION['accType'] ."<br>");
    if ($_POST['password1'] == $_POST['password2']) {
@@ -77,6 +78,7 @@ include("banner.php");
    } else {
        echo("de 2 wachtwoorden koomen niet overeen");
    }
+}
   ?>
 </body>
 </html>

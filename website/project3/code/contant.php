@@ -9,11 +9,12 @@
 <body>
 <?php 
    include("dbConn.php");
-   include("selects.php");
-   include("buy.php");
+   include("selectBrood.php");
+  
    include("automaat.php");
    
    include("machineKnoppen.php");
+   include("muntjes.php");
    
    ?>
 

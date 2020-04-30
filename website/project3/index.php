@@ -26,10 +26,13 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 
         $_SESSION['userCode'] = $userCode;
+        $_SESSION['machineNumber'] = 0;
         header("location: code/order.php ");
 
-                     }
-                }
+                     } 
+                } else if ($_POST['userCode'] == "00000000") {
+                    header("location: code/contant.php ");
+                 }
             }
         }
     ?>
