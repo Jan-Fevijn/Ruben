@@ -56,6 +56,11 @@ Partial Class bakerijPol
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.btnOpnieuwLaadenLocatie = New System.Windows.Forms.Button()
         Me.btnOpnieuwLadenUsers = New System.Windows.Forms.Button()
+        Me.lblKas = New System.Windows.Forms.Label()
+        Me.lblMunten = New System.Windows.Forms.Label()
+        Me.btnRealoudMunten = New System.Windows.Forms.Button()
+        Me.btnGeldToevoegen = New System.Windows.Forms.Button()
+        Me.btnClaimMonny = New System.Windows.Forms.Button()
         CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numBudget, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -359,11 +364,61 @@ Partial Class bakerijPol
         Me.btnOpnieuwLadenUsers.Text = "opnieuw laaden"
         Me.btnOpnieuwLadenUsers.UseVisualStyleBackColor = True
         '
+        'lblKas
+        '
+        Me.lblKas.AutoSize = True
+        Me.lblKas.Location = New System.Drawing.Point(1262, 453)
+        Me.lblKas.Name = "lblKas"
+        Me.lblKas.Size = New System.Drawing.Size(71, 25)
+        Me.lblKas.TabIndex = 35
+        Me.lblKas.Text = "Label1"
+        '
+        'lblMunten
+        '
+        Me.lblMunten.AutoSize = True
+        Me.lblMunten.Location = New System.Drawing.Point(1080, 492)
+        Me.lblMunten.Name = "lblMunten"
+        Me.lblMunten.Size = New System.Drawing.Size(71, 25)
+        Me.lblMunten.TabIndex = 36
+        Me.lblMunten.Text = "Label1"
+        '
+        'btnRealoudMunten
+        '
+        Me.btnRealoudMunten.Location = New System.Drawing.Point(1092, 736)
+        Me.btnRealoudMunten.Name = "btnRealoudMunten"
+        Me.btnRealoudMunten.Size = New System.Drawing.Size(173, 66)
+        Me.btnRealoudMunten.TabIndex = 37
+        Me.btnRealoudMunten.Text = "opnieuw laden"
+        Me.btnRealoudMunten.UseVisualStyleBackColor = True
+        '
+        'btnGeldToevoegen
+        '
+        Me.btnGeldToevoegen.Location = New System.Drawing.Point(1270, 736)
+        Me.btnGeldToevoegen.Name = "btnGeldToevoegen"
+        Me.btnGeldToevoegen.Size = New System.Drawing.Size(169, 66)
+        Me.btnGeldToevoegen.TabIndex = 38
+        Me.btnGeldToevoegen.Text = "geld toevoegen"
+        Me.btnGeldToevoegen.UseVisualStyleBackColor = True
+        '
+        'btnClaimMonny
+        '
+        Me.btnClaimMonny.Location = New System.Drawing.Point(1445, 736)
+        Me.btnClaimMonny.Name = "btnClaimMonny"
+        Me.btnClaimMonny.Size = New System.Drawing.Size(169, 66)
+        Me.btnClaimMonny.TabIndex = 39
+        Me.btnClaimMonny.Text = "geld neemen"
+        Me.btnClaimMonny.UseVisualStyleBackColor = True
+        '
         'bakerijPol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1530, 901)
+        Me.ClientSize = New System.Drawing.Size(1626, 901)
+        Me.Controls.Add(Me.btnClaimMonny)
+        Me.Controls.Add(Me.btnGeldToevoegen)
+        Me.Controls.Add(Me.btnRealoudMunten)
+        Me.Controls.Add(Me.lblMunten)
+        Me.Controls.Add(Me.lblKas)
         Me.Controls.Add(Me.btnOpnieuwLadenUsers)
         Me.Controls.Add(Me.btnOpnieuwLaadenLocatie)
         Me.Controls.Add(Me.NumericUpDown1)
@@ -443,4 +498,9 @@ Partial Class bakerijPol
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents btnOpnieuwLaadenLocatie As Button
     Friend WithEvents btnOpnieuwLadenUsers As Button
+    Friend WithEvents lblKas As Label
+    Friend WithEvents lblMunten As Label
+    Friend WithEvents btnRealoudMunten As Button
+    Friend WithEvents btnGeldToevoegen As Button
+    Friend WithEvents btnClaimMonny As Button
 End Class

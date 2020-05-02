@@ -8,6 +8,18 @@ if (isset($_POST['EURO'])) {
         $_SESSION['geldinworp'] = $_POST['EURO'] ;
         $geldinworp =$_POST['EURO'] ;
     }
+  $coin =  $_POST['EURO'];
+  $transaction =  $_POST['EURO'];
+
+   $sql =" INSERT INTO `bakerijpol`.`muntjes` (`value`, `transactie`) VALUES ('$coin', '$transaction')";
+
+   if ($conn->query($sql) === TRUE) {
+   // echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+
 } else {
     if (isset($_SESSION['geldinworp'])) {
         $geldinworp = $_SESSION['geldinworp'] ;
@@ -19,9 +31,9 @@ if (isset($_POST['EURO'])) {
 }
 ?>
 
-<form method='POST' id='muntjes'>
+<form method='POST' id='muntjes' action='contant.php'>
 <label id='lblgeldinworp'> <h2> geldinworp: </h2> </label> 
-<label> <h2>  <?php  echo($geldinworp); ?> </h2> </label> 
+<label> <h2> € <?php  echo($geldinworp); ?> </h2> </label> 
 
 
 

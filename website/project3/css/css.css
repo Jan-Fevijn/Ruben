@@ -1,21 +1,4 @@
-﻿#machineknoppen {
-    width: 40%;
-    position: fixed;
-    top: 5%;
-    left: 60%;
-    height: 50%;
-    font-size:200%;
-}
-
-#machineNumber {
-    background-color: lightgray;
-}
-
-.mb {
-    width: 32%;
-    height: 20%;
-    margin-top: 2px;
-}
+﻿
 
 #mb0 {
     margin-left: 32%;
@@ -47,14 +30,34 @@ h2 {
     text-align:center;
 }
 
+
+#machineknoppen {
+    width: 40%;
+    position: fixed;
+    top: 40%;
+    left: 60%;
+    height: 40%;
+    font-size: 200%;
+}
+
+#machineNumber {
+    background-color: lightgray;
+}
+
+.mb {
+    width: 32%;
+    height: 20%;
+    margin-top: 2px;
+}
+
 #muntjes {
     position: fixed;
-    top:50%;
-    left:10%;
-    padding:5%;
+    top:0%;
+    left:60%;
+
     height: 20%;
-    width:20%;
-    background-color:black;
+    width:40%;
+
 }
 .muntje {
     width: 32%;

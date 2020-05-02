@@ -10,6 +10,7 @@ Public Class bakerijPol
         loudbroodsoorten()
         loudLocaties()
         loudKlanten()
+        loudMunten()
     End Sub
 
     Private Sub loudKlanten()
@@ -228,6 +229,98 @@ Public Class bakerijPol
     Private Sub btnOpnieuwLaadenLocatie_Click(sender As Object, e As EventArgs) Handles btnOpnieuwLaadenLocatie.Click
         loudLocaties()
     End Sub
+    ' ---------------------------------Geld 
+    Private Sub btnRealoudMunten_Click(sender As Object, e As EventArgs) Handles btnRealoudMunten.Click
+        loudMunten()
+    End Sub
+
+    Private Sub loudMunten()
+
+        Dim connStr As String = "server=localhost;user=root;database=bakerijpol;port=3307;password=usbw;"
+        Dim conn As New MySqlConnection(connStr)
+        conn.Open()
+        '  select totaal bedrag ik automaat
+
+        Dim mySelectQuery As String = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes"
+        Dim myCommand As New MySqlCommand(mySelectQuery, conn)
+        Dim rd As MySqlDataReader
+        rd = myCommand.ExecuteReader()
+        While (rd.Read())
+            lblKas.Text = "momenteel zit er €" & rd(0) & "in het automaat"
+        End While
+        conn.Close()
+        conn.Open()
+        Dim I = 0.01
+        lblMunten.Text = ""
+        mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 0.01"
+        While I <> 20
+            conn.Close()
+            conn.Open()
+            'get aantal munten
+
+            Dim myCommand2 As New MySqlCommand(mySelectQuery, conn)
+            Dim rd2 As MySqlDataReader
+
+            Try
+                rd2 = myCommand2.ExecuteReader()
+
+                While (rd2.Read())
+
+                    Dim amount = CDec(rd2(0)) / CDec(I)
+                    lblMunten.Text = lblMunten.Text & "€" & I & " x " & amount & vbCrLf
+                End While
+            Catch ex As Exception
+
+
+                'lblMunten.Text = lblMunten.Text & "€" & I & " x " & 0 & vbCrLf
+                MsgBox(ex.Message)
+            End Try
+
+
+            Select Case I
+                Case 0.01
+                    I = 0.02
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 0.02"
+                Case 0.02
+                    I = 0.05
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 0.05"
+                Case 0.05
+                    I = 0.1
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 0.10"
+                Case 0.1
+                    I = 0.2
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 0.20"
+                Case 0.2
+                    I = 0.5
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 0.50"
+                Case 0.5
+                    I = 1
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 1"
+                Case 1
+                    I = 2
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 2"
+                Case 2
+                    I = 5
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 5"
+                Case 5
+                    I = 10
+                    mySelectQuery = "SELECT sum(transactie) as amount FROM bakerijpol.muntjes where value = 10"
+                Case 10
+                    I = 20
+            End Select
+
+        End While
+
+    End Sub
+
+    Private Sub btnGeldToevoegen_Click(sender As Object, e As EventArgs) Handles btnGeldToevoegen.Click
+        addMuntjes.Show()
+        loudMunten()
+    End Sub
+    Private Sub btnClaimMonny_Click(sender As Object, e As EventArgs) Handles btnClaimMonny.Click
+        geldUitAutomaatHaalen.Show()
+        loudMunten()
+    End Sub
     '       -------machineknopen 
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -269,5 +362,6 @@ Public Class bakerijPol
     Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
         txtLocatie.Text = txtLocatie.Text & 0
     End Sub
+
 
 End Class

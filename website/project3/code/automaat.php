@@ -1,7 +1,7 @@
 <h1> keuze :</h1>
 <div id='automaat'> <br>
         <?php 
-           $sql ="SELECT * FROM bakerijpol.broodlocatie inner join soortbrood on soortbrood.idsoortBrood = broodlocatie.IDsoordBrood WHERE broodlocatie.hoeveelheid >0 ";
+           $sql ="SELECT * FROM bakerijpol.broodlocatie inner join soortbrood on soortbrood.idsoortBrood = broodlocatie.IDsoordBrood WHERE broodlocatie.hoeveelheid >0  order by locatie  ";
            $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -10,7 +10,8 @@ if ($result->num_rows > 0) {
 
   echo("<div id='brood'>");
   echo("<h2> ". $row['naam'] ." </h2>");
-  echo($row['locatie']);
+  echo("druk : " . $row['locatie']);
+  echo("<br>€" . $row['prijs']);
   echo("</div>");
    }
 } else {

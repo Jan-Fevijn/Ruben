@@ -27,7 +27,16 @@ if (isset($_POST['mb'])) {
    }
 ?>
 
-   <form id = 'machineknoppen' method='POST'>
+   <form id = 'machineknoppen' method='POST' action='
+   
+   <?php 
+   if (isset($_SESSION['usercode'])) {
+    echo("order.php");
+} else {
+    echo("contant.php");
+}
+   ?>
+  ' >
         <div id='machineNumber'>
         <?php
         if (isset($_SESSION['machineNumber'])) {
