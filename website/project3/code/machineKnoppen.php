@@ -30,10 +30,11 @@ if (isset($_POST['mb'])) {
    <form id = 'machineknoppen' method='POST' action='
    
    <?php 
-   if (isset($_SESSION['usercode'])) {
+   if (isset($userCode)) {
     echo("order.php");
 } else {
     echo("contant.php");
+  
 }
    ?>
   ' >
