@@ -5,7 +5,7 @@ Imports System.Data
 Imports System.Data.OleDb
 
 Public Class bakerijPol
-    Dim broodsoorten As New List(Of broodsoort)
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loudbroodsoorten()
         loudLocaties()
@@ -50,7 +50,7 @@ Public Class bakerijPol
     End Sub
 
     Private Sub loudbroodsoorten()
-        broodsoorten.Clear()
+
         listBrooden.Items.Clear()
 
         Dim connStr As String = "server=localhost;user=root;database=bakerijPol;port=3307;password=usbw;"
@@ -64,20 +64,11 @@ Public Class bakerijPol
         Dim rd As MySqlDataReader
         rd = myCommand.ExecuteReader()
         While (rd.Read())
-
-            '  MsgBox(rd(0) & rd(1) & rd(2) & rd(3) & rd(4))
-            Dim broodsoord As New broodsoort(rd(0), rd(1), rd(3))
-
-
-            '   MsgBox(evenement.idevent & " " & evenement.van & " " & evenement.datumEnd & " " & evenement.img & " " & evenement.naam)
-            broodsoorten.Add(broodsoord)
+            listBrooden.Items.Add(rd(1))
         End While
 
 
-        For Each broodsoort In broodsoorten
-            listBrooden.Items.Add(broodsoort.naam)
 
-        Next
     End Sub
 
     Private Sub listBrooden_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listBrooden.SelectedIndexChanged
@@ -171,7 +162,7 @@ Public Class bakerijPol
         Dim con As New MySqlConnection(connStr)
 
         con.Open()
-        Dim Query = "INSERT INTO `bakerijpol`.`soortbrood` ( `naam`, `hoeveelheid` , `img`) VALUES ('" & txtNaamBrood.Text & "', '5', '')"
+        Dim Query = "INSERT INTO `bakerijpol`.`soortbrood` ( `naam`, `prijs` ) VALUES ('" & txtNaamBrood.Text & "', ' " & numPrijsBrood.Value & "')"
         MsgBox(Query)
         Dim cmd As MySqlCommand = New MySqlCommand(Query, con)
         Dim y As Integer = cmd.ExecuteNonQuery()
@@ -186,15 +177,24 @@ Public Class bakerijPol
     Private Sub btnBroodInAutomaatSteeken_Click(sender As Object, e As EventArgs) Handles btnBroodInAutomaatSteeken.Click
         If txtLocatie.Text <> "" Then
             If numHoeveelheid.Value <> 0 Then
-                For Each broodsoort In broodsoorten
-                    If broodsoort.id = listBrooden.SelectedIndex + 1 Then
-                        MsgBox(broodsoort.naam & "  " & broodsoort.hoeveelheid & "stuks")
-                        Dim connStr As String = "server=localhost;user=root;database=kokenvoorgroepen;port=3307;password=usbw;"
+                '  For Each broodsoort In broodsoorten
+                Dim connStr As String = "server=localhost;user=root;database=bakerijpol;port=3307;password=usbw;"
+                Dim conn As New MySqlConnection(connStr)
+                '  Try
+                conn.Open()
+                Dim mySelectQuery As String = "SELECT * FROM bakerijpol.soortbrood"
+                Dim myCommand As New MySqlCommand(mySelectQuery, conn)
+                Dim rd As MySqlDataReader
+                rd = myCommand.ExecuteReader()
+                While (rd.Read())
+                    If rd(1) = listBrooden.SelectedItem Then
+
+
                         Dim con As New MySqlConnection(connStr)
 
                         con.Open()
-                        Dim Query = "INSERT INTO `bakerijpol`.`broodlocatie` ( `IDsoordBrood`, `locatie`, `hoeveelheid`) VALUES ( '" & broodsoort.id & "', '" & txtLocatie.Text & "'  , '" & numHoeveelheid.Value & "')"
-                        MsgBox(Query)
+                        Dim Query = "INSERT INTO `bakerijpol`.`broodlocatie` ( `IDsoordBrood`, `locatie`, `hoeveelheid`) VALUES ( '" & rd(0) & "', '" & txtLocatie.Text & "'  , '" & numHoeveelheid.Value & "')"
+                        ' MsgBox(Query)
                         Dim cmd As MySqlCommand = New MySqlCommand(Query, con)
                         Dim y As Integer = cmd.ExecuteNonQuery()
                         If (y > 0) Then
@@ -206,8 +206,8 @@ Public Class bakerijPol
 
 
                     End If
-
-                Next
+                End While
+                ' Next
                 txtLocatie.Text = ""
                 loudLocaties()
             Else

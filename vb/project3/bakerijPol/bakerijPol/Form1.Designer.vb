@@ -53,7 +53,7 @@ Partial Class bakerijPol
         Me.lblHoeveelheid = New System.Windows.Forms.Label()
         Me.btnBroodInAutomaatSteeken = New System.Windows.Forms.Button()
         Me.lblPrijs = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.numPrijsBrood = New System.Windows.Forms.NumericUpDown()
         Me.btnOpnieuwLaadenLocatie = New System.Windows.Forms.Button()
         Me.btnOpnieuwLadenUsers = New System.Windows.Forms.Button()
         Me.lblKas = New System.Windows.Forms.Label()
@@ -64,7 +64,7 @@ Partial Class bakerijPol
         CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numBudget, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numPrijsBrood, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn1
@@ -339,12 +339,12 @@ Partial Class bakerijPol
         Me.lblPrijs.TabIndex = 31
         Me.lblPrijs.Text = "prijs brood:"
         '
-        'NumericUpDown1
+        'numPrijsBrood
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(600, 158)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(128, 29)
-        Me.NumericUpDown1.TabIndex = 32
+        Me.numPrijsBrood.Location = New System.Drawing.Point(594, 152)
+        Me.numPrijsBrood.Name = "numPrijsBrood"
+        Me.numPrijsBrood.Size = New System.Drawing.Size(128, 29)
+        Me.numPrijsBrood.TabIndex = 32
         '
         'btnOpnieuwLaadenLocatie
         '
@@ -421,7 +421,7 @@ Partial Class bakerijPol
         Me.Controls.Add(Me.lblKas)
         Me.Controls.Add(Me.btnOpnieuwLadenUsers)
         Me.Controls.Add(Me.btnOpnieuwLaadenLocatie)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.numPrijsBrood)
         Me.Controls.Add(Me.lblPrijs)
         Me.Controls.Add(Me.btnBroodInAutomaatSteeken)
         Me.Controls.Add(Me.lblHoeveelheid)
@@ -458,7 +458,7 @@ Partial Class bakerijPol
         CType(Me.numUsercode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numBudget, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numHoeveelheid, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numPrijsBrood, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -495,7 +495,7 @@ Partial Class bakerijPol
     Friend WithEvents lblHoeveelheid As Label
     Friend WithEvents btnBroodInAutomaatSteeken As Button
     Friend WithEvents lblPrijs As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents numPrijsBrood As NumericUpDown
     Friend WithEvents btnOpnieuwLaadenLocatie As Button
     Friend WithEvents btnOpnieuwLadenUsers As Button
     Friend WithEvents lblKas As Label
