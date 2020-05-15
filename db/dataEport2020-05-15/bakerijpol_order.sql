@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: bakerijpol
+-- ------------------------------------------------------
+-- Server version	5.6.13
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `order`
+--
+
+DROP TABLE IF EXISTS `order`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order` (
+  `idorder` int(11) NOT NULL AUTO_INCREMENT,
+  `usercode` int(11) DEFAULT NULL,
+  `idSoortbrood` int(11) DEFAULT NULL,
+  `idlocatie` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idorder`)
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order`
+--
+
+LOCK TABLES `order` WRITE;
+/*!40000 ALTER TABLE `order` DISABLE KEYS */;
+INSERT INTO `order` (`idorder`, `usercode`, `idSoortbrood`, `idlocatie`) VALUES (1,1,10,66),(2,1,10,66),(3,1,10,66),(4,1,10,66),(5,1,10,66),(6,1,2,22),(7,1,2,22),(8,1,2,22),(9,1,2,22),(10,1,2,22),(11,1,2,22),(12,1,10,66),(13,1,10,66),(14,1,10,66),(15,1,10,66),(16,1,10,66),(17,1,10,66),(18,1,10,66),(19,1,10,66),(20,1,10,66),(21,1,10,66),(22,1,10,66),(23,1,10,66),(24,1,10,66),(25,1,8,66),(26,1,8,66),(27,1,8,66),(28,1,8,66),(29,1,8,66),(30,0,8,66),(31,0,9,99),(32,0,9,99),(33,0,9,99),(34,0,9,99),(35,0,9,99),(36,0,9,99),(37,0,9,99),(38,0,9,99),(39,0,9,99),(40,0,9,99),(41,0,9,99),(42,0,9,99),(43,0,9,99),(44,0,9,99),(45,0,9,99),(46,0,9,99),(47,0,9,99),(48,0,9,99),(49,0,9,99),(50,0,9,99),(51,0,9,99),(52,0,9,99),(53,0,9,99),(54,0,9,99),(55,0,9,99),(56,0,9,99),(57,0,9,99),(58,0,9,99),(59,0,9,99),(60,0,9,99),(61,0,9,99),(62,0,9,99),(63,0,9,99),(64,0,9,99),(65,0,9,99),(66,0,9,99),(67,0,9,99),(68,0,9,99),(69,0,9,99),(70,0,9,99),(71,0,9,99),(72,0,9,99),(73,0,9,99),(74,0,9,99),(75,0,9,99),(76,0,9,99),(77,0,9,99),(78,0,9,99),(79,0,9,99),(80,0,9,99),(81,0,9,99),(82,0,9,99),(83,0,8,1),(84,0,8,1),(85,0,8,1),(86,0,8,1),(87,0,9,2),(88,0,9,2),(89,0,1,3),(90,0,1,3),(91,0,1,3),(92,0,1,3),(93,0,1,3),(94,0,1,3),(95,0,1,3),(96,0,1,3),(97,0,1,3),(98,0,1,3),(99,0,1,3),(100,0,1,3),(101,0,1,3),(102,0,1,3),(103,0,1,3),(104,0,8,1),(105,312,7,5);
+/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-05-15 11:12:02
