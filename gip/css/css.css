@@ -31,9 +31,7 @@ body {
     width:100%;
 }
 
-ol, ul {
-    list-style: none;
-}
+
 
 blockquote, q {
     quotes: none;
@@ -74,10 +72,10 @@ tr {
 
 
 body {
-   
+   position:fixed;
     background-image: url(../img/achtergrond1.PNG);
 
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
     /*background-color: #290bea;*/
     color: black;

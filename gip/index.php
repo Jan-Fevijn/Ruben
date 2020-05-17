@@ -77,8 +77,8 @@ if (isset($_SESSION['id'])) {
                         <h4>Community</h4>
                         <hr/>
                         <ul class="footer-links">
-                            <li><a id="footerLink" href="#">Blog</a></li><br>
-                            <li><a id="footerLink" href="#">Forum</a></li><br>
+                            <li><a id="footerLink" href="code/planning.php">planning</a></li><br>
+                            <li><a id="footerLink" href="code/logboek.php">logboek</a></li><br>
                             <li><a id="footerLink" href="#">Free Goods</a></li><br>
                         </ul>
                     </div>

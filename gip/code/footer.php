@@ -40,8 +40,8 @@
                         <h4>Community</h4>
                         <hr/>
                         <ul class="footer-links">
-                            <li><a target="_blank" id="footerLink" href="#">Blog</a></li><br>
-                            <li><a target="_blank" id="footerLink" href="#">Forum</a></li><br>
+                            <li><a target="_blank" id="footerLink" href="planning.php">planning</a></li><br>
+                            <li><a target="_blank" id="footerLink" href="logboek.php">logboek</a></li><br>
                             <li><a target="_blank" id="footerLink" href="#">Free Goods</a></li><br>
                         </ul>
                     </div>
