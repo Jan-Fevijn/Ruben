@@ -1,0 +1,5 @@
+Titel: Arduino educatief. 
+Bouw een website op waar je educatief leert werken met een arduino (doelpubliek leerlingen 1ste graad) Je zorgt voor een mooi opgebouwd systeem met een mooie lading aan leermateriaal. (eventueel op te bouwen panelen worden gebouwd door de leerkracht).
+Je kan je registreren op de website en zo het nodige materiaal bezichtigen. Panelen kunnen te aangekocht worden (zorg dus voor een bepaald betalingssysteem)
+Kortom, jij zorgd voor het systeem, de leerkracht voor de educatieve kant.
+Nieuwe fiches / instructies moeten op een eenvoudige manier toegevoegd kunnen worden. 

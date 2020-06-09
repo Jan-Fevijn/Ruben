@@ -1,0 +1,66 @@
+﻿
+
+#mb0 {
+    margin-left: 32%;
+}
+.order {
+    margin-top: 2%;
+    display: block;
+   padding: 5%;
+   margin-left:20%;
+   font-size:100%;
+}
+#automaat {
+    margin-top: 0%;
+    width:50%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 100%;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+#brood {
+    
+    padding: 2%;
+}
+
+h2 {
+    text-align:center;
+}
+
+
+#machineknoppen {
+    width: 40%;
+    position: fixed;
+    top: 40%;
+    left: 60%;
+    height: 40%;
+    font-size: 200%;
+}
+
+#machineNumber {
+    background-color: lightgray;
+}
+
+.mb {
+    width: 32%;
+    height: 20%;
+    margin-top: 2px;
+}
+
+#muntjes {
+    position: fixed;
+    top:0%;
+    left:60%;
+
+    height: 20%;
+    width:40%;
+
+}
+.muntje {
+    width: 32%;
+    height: 20%;
+    margin-top: 2px;
+}

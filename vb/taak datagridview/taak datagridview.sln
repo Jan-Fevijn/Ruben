@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "taak datagridview", "taak datagridview\taak datagridview.vbproj", "{456BEEC4-F1E7-4FDB-85ED-651BB34356BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{456BEEC4-F1E7-4FDB-85ED-651BB34356BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456BEEC4-F1E7-4FDB-85ED-651BB34356BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456BEEC4-F1E7-4FDB-85ED-651BB34356BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456BEEC4-F1E7-4FDB-85ED-651BB34356BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49EB8C37-AF77-4D07-95DE-1338116B3605}
+	EndGlobalSection
+EndGlobal

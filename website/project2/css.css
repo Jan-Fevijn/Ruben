@@ -1,0 +1,257 @@
+#login
+{
+  width: 60%;
+  height:200px;
+  margin: 0 auto;
+  
+}
+
+.midden {
+    text-align: center;
+}
+
+
+#loginSubmit{
+    font-size:300%;
+}
+
+
+body {
+      background-color: lightblue;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+#banner {
+  /*margin-top: 20px;*/
+  /*background-color: aquamarine;*/
+  height: auto;
+  width: 100%;
+ 
+
+}
+#naamInBanner {
+  position: absolute;
+  margin-top: -3%;
+  margin-left: 5%;
+  background-color:none ;
+  color: red;
+}
+#logoutInBanner {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 70%;
+    background-color: none;
+    color: red;
+}
+#statusInBanner {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 90%;
+    background-color: none;
+    color: red;
+}
+#homeInBanner {
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 80%;
+    background-color: none;
+    color: red;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+
+.mameMenuBut {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 30px 100px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    margin-top : 5%;
+}
+
+    .mameMenuBut:hover {
+        background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+        background-color: #f6f6f6;
+    }
+
+    .mameMenuBut:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+
+
+.flexbox{
+    margin-top:5%;
+    height: 100px;
+    display: flex;
+   
+    flex-flow: row wrap;
+   
+    font-size: 300%;
+justify-content: space-around; 
+
+    align-items: center;
+   
+}
+
+.flexbox2 {
+    margin-top: 0%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 300%;
+    justify-content: space-around;
+    align-items: center;
+}
+h3 {
+    font-size: 100%;
+}
+.flexItam {
+    background-color: lightgrey;
+    width: 25%;
+    height: auto;
+    margin-bottom: 3%;
+    font-size: 50%;
+    line-height: 150%;
+    text-align: center;
+    color: black;
+    display: block;
+}
+.flexItamEvent {
+    display:block;
+    background-color: lightgreen;
+    width: 100%;
+    padding:2%;
+    height: auto;
+    
+    font-size: 90%;
+    line-height: 150%;
+    text-align: center;
+    color: black;
+}
+.eventImg {
+    display:block;
+    text-align:center;
+    margin-left:45%;
+    width:10%;
+}
+.info {
+    font-size: 50%;
+    background-color: lightgrey;
+}
+.noSpaceBetween {
+    line-height: 1;
+}
+a {
+    background-color: lightgray;
+    font-size: 100%;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+#Adminbanner {
+    display:block;
+    width: 100%;
+    height: 10%;
+    background-color: lightgray;
+ 
+}
+* {
+    z-index: 0;
+}
+#event {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 20%;
+    font-size: 50%;
+    color: black;
+}
+
+#eventSub {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 20%;
+    font-size: 100%;
+    width: 20%;
+    background-color: lightgray;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+
+#gerecht {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 50%;
+    font-size: 50%;
+    color: black;
+}
+
+#gerechtSub {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 50%;
+    font-size: 100%;
+    width: 20%;
+    background-color: lightgray;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+#gerechtSub:hover {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 50%;
+    font-size: 100%;
+    width: 20%;
+    background-color: blue;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+
+#lijsten {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 80%;
+    font-size: 50%;
+    color: black;
+}
+
+#lijstenSub {
+    position: absolute;
+    background-color: lightgray;
+    margin-left: 80%;
+    font-size: 100%;
+    width: 20%;
+    background-color: lightgray;
+    margin-top: 5%;
+    line-height: 1.8;
+}
+
+#mainbuttons {
+    font-size: 500%;
+    color: black;
+    background-color: lightgray;
+}
