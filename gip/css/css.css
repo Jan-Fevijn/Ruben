@@ -157,7 +157,7 @@ h2 {
     }
 
 #contact {
-    margin-left: 120px;
+    margin-left: 5%;
 }
 
 #contactGeg {
@@ -465,7 +465,7 @@ p {
 #logoutInBanner {
     position: absolute;
    margin-top: -5%;
-    margin-left: 70%;
+    margin-left: 90%;
     background-color:none ;
     color: red;
 }

@@ -36,7 +36,7 @@
                 Email: <input name="email" id="email" type="Email"/>
 
             </div>
-            <p  id="bericht">bericht: </p> <textarea name="bericht" id="berichtBox" rows="6" cols="100">
+            <p  id="bericht">bericht: </p> <textarea name="bericht" id="berichtBox" rows="6" cols="70">
 Schrijf hier uw bericht, we antwoorden zo snel mogelijk via uw ingegeven Emailadres.
 </textarea> <br /> <input value="bericht verzenden" id="verzendBerciht" type="submit" />
 
