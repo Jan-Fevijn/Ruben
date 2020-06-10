@@ -31,7 +31,7 @@ include("dbConnection.php");
 include("checkIfLogedIn.php");
    $accType= "ADMIN";
    include("banner.php");
-   echo("<p> hier kunt u al de instructies zien die uw leerlingen uit aan het leeren zijn. </p>");
+  // echo("<p> hier kunt u al de instructies zien die uw leerlingen uit aan het leeren zijn. </p>");
 
         $sql = "SELECT * from oefeningen";
    
