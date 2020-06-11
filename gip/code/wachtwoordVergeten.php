@@ -83,7 +83,7 @@ $xx = 0;
             $mail->MsgHTML($content); 
             if(!$mail->Send()) {
                 echo "gelieve een geldig e-mailadres in te geven.<br>";
-               // var_dump($mail);
+                var_dump($mail);
             } else {
                // echo '<p style="color: green;"><strong>'.$contact_submitted.'</strong></p>';
                header('Location: emailverification.php');
