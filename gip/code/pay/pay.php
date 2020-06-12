@@ -25,7 +25,7 @@
 <h3>betalen: </h3>
 <tr>
 <th> betaalmethode </th>
-<th> betaaling starten </th> 
+<th> betaling starten </th> 
 <th> extra informatie over de betaalmethode </th>
 </tr>
 <tr> 
@@ -42,7 +42,7 @@
 
 </td>
 <td>
-betaal veilig en vlot met paypal , het maakt niet uit waar u shop, u bankgegevens worden nooit met we webshop gedeeld.
+betaal veilig en vlot met paypal , het maakt niet uit waar u shopt, uw bankgegevens worden nooit met de webshop gedeeld.
 </td>
 </tr>
 </table>

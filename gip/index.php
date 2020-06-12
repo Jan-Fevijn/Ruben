@@ -24,8 +24,8 @@ if (isset($_SESSION['id'])) {
 
             <div id="contentHomeLeft">
                 <h2>Welkom op arduino educatief.</h2>
-                <p id="midden"><b> Arduino educatief is een leerplatform om te leren werken met arduino. <br />
-				Het doelpubliek zijn leerlingen van de 1e graad secundair.</b><br /> <br />
+                <p id="midden"><b> Arduino educatief is een leerplatform om te leren werken met Arduino. <br />
+				Het doelpubliek zijn leerlingen van de 1<sup>ste </sup> graad secundair.</b><br /> <br />
 				<img src="img/arduinoTransparant.png" width="150" height="100" /></p>
 			
             </div>
