@@ -1,0 +1,25 @@
+#navigation {
+    background-color: black;
+}
+a {
+    display : block ;
+    color:white  ;
+    margin-bottom:5%;
+    text-align: center;
+}
+a:hover {
+    color:white  ;
+    text-decoration: none ;
+}
+.sub {
+    line-height: 0%;;
+}
+h3 {
+    text-align: center;
+    background-color: lightgray;
+    padding: 5%;
+}
+img {
+
+    margin-right: 1%;
+}
